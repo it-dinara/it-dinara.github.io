@@ -1,0 +1,407 @@
+@font-face {
+  font-family: "Benguiat";
+  src: url("fonts/Benguiat_gdi.eot");
+  src: url("fonts/Benguiat_gdi.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Benguiat_gdi.woff") format("woff");
+  src: url("fonts/Benguiat_gdi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: black;
+  background-attachment: inherit; }
+
+.logo {
+  margin: 12px 24px;
+  display: inline-block;
+  vertical-align: top; }
+
+.container {
+  width: 960px;
+  margin: 0 auto; }
+
+.container2 {
+  display: inline-block;
+  width: 395px;
+  vertical-align: top;
+  margin: 20px 41px; }
+
+.f-b {
+  font-size: 20px;
+  font-family: "Benguiat";
+  color: white;
+  line-height: 12px;
+  text-align: left;
+  display: block;
+  vertical-align: top;
+  font-weight: 100; }
+
+.f-b2 {
+  font-size: 14px;
+  font-family: "Benguiat";
+  color: #dfdfdf;
+  text-shadow: 0px 1px 0px rgba(60, 169, 0, 0.004);
+  background-color: #68b10a;
+  text-align: center;
+  width: 117px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(104, 177, 10, 0.57);
+  display: block;
+  margin: 15px 0px;
+  vertical-align: top;
+  padding: 4px 0;
+  border: rgba(8, 169, 0, 0.33); }
+
+.container3 {
+  display: inline-block;
+  margin: 26px 0px; }
+
+.username {
+  font-size: 20px;
+  font-family: "Benguiat";
+  color: #dfdfdf;
+  line-height: 0px;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(17, 17, 17, 0.004); }
+
+.money {
+  font-size: 14px;
+  font-family: "Benguiat";
+  color: #dfdfdf;
+  line-height: 0px;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(17, 17, 17, 0.004);
+  margin: 27px 1px; }
+
+.HearthStone {
+  text-align: center;
+  margin: 14px 0px; }
+  .HearthStone img {
+    margin-left: 28px; }
+
+header {
+  height: 95px;
+  background-color: rgba(0, 0, 0, 0.61);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+
+.filter {
+  height: 70px;
+  width: 931px;
+  background-color: rgba(0, 0, 0, 0.62);
+  outline: 1px solid rgba(255, 255, 255, 0.14);
+  outline-offset: -2px;
+  display: inline-block;
+  margin: 42px 15px 26px;
+  vertical-align: top; }
+
+.aType {
+  font-size: 20px;
+  font-family: "Benguiat";
+  color: white;
+  line-height: 2;
+  text-align: left;
+  margin: 15px 18px;
+  display: inline-block; }
+
+.cup {
+  font-size: 14px;
+  font-family: "Benguiat";
+  color: white;
+  display: inline-block;
+  text-align: center;
+  margin: 0px 15px 0px 10px; }
+
+.checkbox {
+  background: url(images/window.png) 0 0 no-repeat;
+  display: inline-block;
+  margin: 0px 0px 4px 6px;
+  vertical-align: middle;
+  position: relative; }
+  .checkbox input[type="checkbox"] {
+    visibility: hidden; }
+  .checkbox label:before {
+    content: "";
+    background-image: url(images/galka.png);
+    width: 17px;
+    height: 13px;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    opacity: 0; }
+
+.checkbox input[type="checkbox"]:checked + label:before {
+  opacity: 1; }
+
+/*	&:after
+		background-image: url(images/galka.png)
+		content: ""
+		width: 17px
+		height: 13px
+		position: absolute
+		display: none
+	&:checked
+		&:after
+			display: block*/
+.Sit {
+  font-size: 14px;
+  font-family: "Benguiat";
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 0px 10px; }
+
+.cost {
+  font-size: 20px;
+  font-family: "Benguiat";
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 24px 14px 0px 53px; }
+
+.line {
+  width: 222px;
+  height: 1px;
+  color: dimgray;
+  background-color: #131313;
+  box-shadow: 0px -1px 0px 0px black, 0px 1px 0px 0px #302f2f;
+  display: inline-block;
+  border-radius: 20px;
+  position: relative;
+  vertical-align: top;
+  margin-top: 36px; }
+  .line:before {
+    background-image: url(images/2.png);
+    content: "";
+    width: 20px;
+    height: 39px;
+    position: absolute;
+    left: 15%;
+    top: -16px; }
+  .line:after {
+    background-image: url(images/2.png);
+    content: "";
+    width: 20px;
+    height: 39px;
+    position: absolute;
+    left: 47%;
+    top: -16px; }
+
+.tin-tack {
+  display: inline-block;
+  position: relative;
+  vertical-align: top; }
+
+.filterCont {
+  display: inline-block;
+  vertical-align: top;
+  margin: 30px 16px; }
+
+.tugric {
+  font-size: 24px;
+  font-family: "Benguiat";
+  color: white;
+  line-height: 0;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.004);
+  display: block; }
+
+.tugricOf {
+  font-size: 12px;
+  font-family: "Benguiat";
+  color: white;
+  line-height: 0;
+  text-align: start;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.004);
+  margin: 18px 16px;
+  display: block; }
+
+.table {
+  vertical-align: top;
+  display: inline-block;
+  width: 640px; }
+
+.tableIn {
+  display: inline-block;
+  width: 186px;
+  height: 264px;
+  background-color: rgba(0, 0, 0, 0.78);
+  outline: 1px solid rgba(255, 255, 255, 0.14);
+  outline-offset: -2px;
+  vertical-align: top;
+  margin: 0px 11px 26px 12px;
+  position: relative;
+  overflow: hidden; }
+  .tableIn:hover {
+    box-shadow: 0px 0px 14px rgba(0, 189, 252, 0.78); }
+  .tableIn_modA:after {
+    background-image: url(images/trophy-7.png);
+    width: 233px;
+    height: 214px;
+    opacity: 0.06;
+    position: absolute;
+    left: -86px;
+    top: 48px;
+    content: "";
+    z-index: 5; }
+  .tableIn_modB:after {
+    background-image: url(images/medal-6.png);
+    width: 152px;
+    height: 217px;
+    opacity: 0.06;
+    position: absolute;
+    left: -13px;
+    top: 47px;
+    content: "";
+    z-index: 5; }
+  .tableIn__cupLit {
+    font-size: 26px;
+    font-family: "Benguiat";
+    color: white;
+    line-height: 1.538;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.72);
+    margin: 6px 0px 32px 0px;
+    text-align: center;
+    z-index: 10;
+    position: relative; }
+  .tableIn__row {
+    padding: 0px 33px;
+    height: 36px;
+    vertical-align: top;
+    z-index: 10;
+    position: relative; }
+    .tableIn__row_hasHint:hover .tableIn__hint {
+      display: block; }
+  .tableIn__hint {
+    width: 176px;
+    background-color: black;
+    font-size: 16px;
+    font-family: "Benguiat";
+    color: white;
+    padding: 0px 0px 0px 11px;
+    line-height: 2.5;
+    text-align: left;
+    margin: 9px -19px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.72), inset 0px 0px 6px 1px #131313;
+    display: none; }
+  .tableIn__icon {
+    display: inline-block; }
+    .tableIn__icon_people {
+      background-image: url(images/user-22.png);
+      width: 26px;
+      height: 18px;
+      margin: 0px 0px -2px 0px; }
+    .tableIn__icon_dollar {
+      background-image: url(images/coin-2.png);
+      width: 20px;
+      height: 20px;
+      margin: 12px 0px -5px 0px; }
+    .tableIn__icon_top {
+      background-image: url(images/coin-8.png);
+      width: 22px;
+      height: 25px;
+      margin: 11px 0px -7px 0px; }
+    .tableIn__icon_time {
+      background-image: url(images/time-2.png);
+      width: 21px;
+      height: 21px;
+      margin: 16px 0px -5px 0px; }
+  .tableIn__text {
+    font-size: 16px;
+    font-family: "Benguiat";
+    color: white;
+    line-height: 2.5;
+    text-align: left;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.47);
+    display: inline-block;
+    margin: 0px 0px 0px 12px; }
+
+.infoTable {
+  display: inline-block;
+  width: 289px;
+  height: 552px;
+  background-color: rgba(0, 0, 0, 0.78);
+  outline: 1px solid rgba(255, 255, 255, 0.14);
+  outline-offset: -2px;
+  vertical-align: top;
+  margin: 0px 12px;
+  font-size: 26pxs;
+  font-family: "Benguiat";
+  color: white;
+  line-height: 1.538;
+  position: relative;
+  overflow: hidden; }
+  .infoTable form {
+    display: inline-block; }
+  .infoTable:after {
+    background-image: url(images/info-4.png);
+    width: 349px;
+    height: 349px;
+    opacity: 0.06;
+    position: absolute;
+    left: -72px;
+    top: 50px;
+    content: "";
+    z-index: 5; }
+  .infoTable h3 {
+    font-size: 26px;
+    font-family: "Benguiat";
+    color: white;
+    line-height: 1.538;
+    font-weight: normal;
+    margin: 11px 21px; }
+  .infoTable p {
+    font-size: 15px;
+    font-family: "Benguiat";
+    color: rgba(255, 255, 255, 0.431);
+    line-height: 1.6;
+    text-align: left;
+    padding: 12px 41px 0px 21px; }
+
+.buttom {
+  font-size: 18px;
+  font-family: "Benguiat";
+  color: #dfdfdf;
+  text-shadow: 0px -1px 0px rgba(0, 125, 169, 0.004);
+  background-color: #00bdfc;
+  text-align: center;
+  width: 120px;
+  border-radius: 5px;
+  box-shadow: inset 0px -2px 0px 1px rgba(0, 0, 0, 0.47);
+  display: inline-block;
+  margin: 7px 15px 0px 22px;
+  padding: 4px 0px;
+  z-index: 145;
+  border: none; }
+
+.buttomPlay {
+  font-size: 18px;
+  font-family: "Benguiat";
+  color: #dfdfdf;
+  text-shadow: 0px -1px 0px rgba(8, 169, 0, 0.004);
+  background-color: #059b00;
+  text-align: center;
+  width: 102px;
+  border-radius: 5px;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.47);
+  display: inline-block;
+  margin: 0px 0px;
+  padding: 5px 0px;
+  z-index: 142;
+  border: none; }
+
+.CyWin {
+  font-size: 14px;
+  font-family: "Benguiat";
+  color: rgba(223, 223, 223, 0.239);
+  display: inline-block;
+  padding: 33px 13px; }
+
+.use {
+  font-size: 14px;
+  font-family: "Benguiat";
+  color: rgba(223, 223, 223, 0.239);
+  text-decoration: underline;
+  margin-left: 623px;
+  display: inline-block; }
