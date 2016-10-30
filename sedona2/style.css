@@ -132,6 +132,7 @@ p {
   margin-bottom: 55px; }
 
 .section-feature {
+  width: 400px;
   padding-left: 70px;
   padding-right: 70px;
   height: 256px;
@@ -207,6 +208,7 @@ p {
   clear: both; }
 
 .section-feature__last {
+  width: auto;
   background: #eeeeee;
   color: black;
   padding-left: 68px;
