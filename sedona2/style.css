@@ -1,4 +1,3 @@
-@charset "UTF-8";
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -89,7 +88,7 @@ p {
 
 .logo-a {
   display: block;
-  padding-top: 76px; }
+  padding-top: 455px; }
 
 .logo-a__images {
   display: block;
@@ -358,20 +357,18 @@ input {
 
 .form__num {
   position: relative; }
-  .form__num:before {
-    content: "—";
+  .form__num_minus {
     position: absolute;
     left: 37px;
-    top: 0px;
+    top: 10px;
     width: 15px;
     height: 15px;
     color: #c1c1c1;
     z-index: 1; }
-  .form__num:after {
-    content: "+";
+  .form__num_plus {
     position: absolute;
     right: 14px;
-    top: -2px;
+    top: 7px;
     width: 15px;
     height: 15px;
     color: #c1c1c1;

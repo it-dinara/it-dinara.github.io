@@ -23,13 +23,8 @@
 			</header>
 			
 			<div class="logo">
-				<picture>
-					
-				</picture>
 				<a class="logo-a" href="#">
-					<img class="logo-a__images" src="images/WELCOME.png" alt="">
-					<img class="logo-a__images" src="images/SEDONA.png" alt="">
-					<img class="logo-a__images" src="images/Because-the Grand Canyon.png" alt="">
+
 				</a>
 				<div class="decoration"></div>
 				<div class="decoration-end"></div>
@@ -113,12 +108,20 @@
 						<div class="form__group form__group_wrapper">
 							<div class="form__group form__group_flex">
 								<label class="form__label form__label_flex" for="adults">взрослые: </label>
-								<span class="form__num"><input class="form__input form__input_flex" id="adults" type="number" value="2"></span>
+								<span class="form__num">
+								<a href="" class="form__num_minus">—</a>
+								<input class="form__input form__input_flex" id="adults" type="number" value="2">
+								<a href="#" class="form__num_plus">+</a>
+								</span>
 							</div>
 							
 							<div class="form__group form__group_flex">
 								<label class="form__label form__label_flex" for="children">дети: </label>
-								<span class="form__num"><input class="form__input form__input_flex" id="children" type="number" value="0"></span>
+								<span class="form__num">
+								<a href="" class="form__num_minus">—</a>
+								<input class="form__input form__input_flex" id="children" type="number" value="0">
+								<a href="#" class="form__num_plus">+</a>
+								</span>
 							</div>
 						</div>
 						<input class="form__button" type="submit" value="найти"></input>
