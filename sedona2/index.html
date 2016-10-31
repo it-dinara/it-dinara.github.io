@@ -10,21 +10,21 @@
 	<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body class="Sedona">
+<div class="main-wrapper">
 	<div class="wrapper">
-		
 			<header class="header">
-				<ul class="top-menu">
-					<li class="top-menu__li"><a href="#info">информация</a></li>
-					<li class="top-menu__li"><a href="#foto">фото и видео</a></li>
-					<li class="top-menu__li "><a href="#map" class="top-menu__li-tringle" ></a></li>
-					<li class="top-menu__li"><a href="#map">карта штата</a></li>
-					<li class="top-menu__li"><a href="#hotel">гостиницы</a></li>
+				<ul class="menu">
+					<li class="menu__li"><a href="#info">информация</a></li>
+					<li class="menu__li"><a href="#foto">фото и видео</a></li>
+					<li class="menu__li "><a href="#map" class="menu__li-tringle" ></a></li>
+					<li class="menu__li"><a href="#map">карта штата</a></li>
+					<li class="menu__li"><a href="#hotel">гостиницы</a></li>
 				</ul>
 			</header>
 			
 			<div class="logo">
 				<a class="logo-a" href="#">
-
+	
 				</a>
 				<div class="decoration"></div>
 				<div class="decoration-end"></div>
@@ -89,8 +89,8 @@
 			<div class="after-wrapper">
 				<h2 class="after-wrapper__headline">заинтересовались?</h2>
 				<p class="after-wrapper__text">укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-
-
+	
+	
 				<div class="popup" id="hotel" action="/auth" method="post">
 					<div class="popup__header"><h3>поиск гостиницы в седоне</h3></div>
 							
@@ -104,7 +104,7 @@
 							<label class="form__label" for="date-departure">дата выезда: </label>
 							<input class="form__input" id="date-departure" type="text">
 						</div>
-
+	
 						<div class="form__group form__group_wrapper">
 							<div class="form__group form__group_flex">
 								<label class="form__label form__label_flex" for="adults">взрослые: </label>
@@ -126,8 +126,8 @@
 						</div>
 						<input class="form__button" type="submit" value="найти"></input>
 					</form>
-
-
+	
+	
 				</div>
 			</div>
 			<div class="map" id="map">
@@ -135,8 +135,8 @@
 			</div>
 	</div>
 	<footer class="footer">
-			<div class="contacs"><a href="#">#visitsedona</a></div>
-			<div class="social-buttons">
+			<div class="col contacs"><a href="#">#visitsedona</a></div>
+			<div class="col social-buttons">
 				<a href="http://twitter.com" class="btn-social-container">
 					<span class="btn-social btn-social-twitter"></span>
 				</a>
@@ -147,13 +147,16 @@
 					<span class="btn-social btn-social-youtube"></span>
 				</a>
 			</div>
-			<div class="copyright">
-				<span class="copyright__designer-by">website by</span>
-				<a href="#" class="copyright__designer-link copyright__designer-link-by"></a>
-				<span class="copyright__designer-for"> for</span>
-				<a href="#" class="copyright__designer-link copyright__designer-link-for"></a>
+			<div class="col copyright">
+				<p class="copyright__designer">
+					website by
+					<a href="#" class="copyright__designer-link copyright__designer-link-by"></a>
+					for
+					<a href="#" class="copyright__designer-link copyright__designer-link-for"></a>
+				</p>
 			</div>
 	</footer>
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js?v=3"></script>
 	<script src="./js/main.js?v=3"></script>
 </body>
