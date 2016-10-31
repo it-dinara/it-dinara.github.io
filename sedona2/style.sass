@@ -334,7 +334,7 @@ p
 	left: 316px
 	font-weight: bold
 	&__header
-		font-size: 1.3em
+		font-size: 1.13em
 		background: #766357
 		height: 86px
 		line-height: 82px
@@ -344,21 +344,21 @@ p
 	background: #81b3d2
 	color: white
 	height: 60px
-	margin-bottom: 54px
-	padding-left: 50px
-	padding-right: 50px
 	margin: 0 auto
 	line-height: 60px
 	font-size: 1.3em
 	font-weight: bold
-	font-size: 1.3em
 	width: 459px
-	margin-top: 40px
+	margin-top: 
 	text-transform: uppercase
+	text-align: center
 
 .form
-	margin-top: 55px
-	padding: 0 56px
+	padding-top: 54px
+	width: 459px
+	margin: 0 auto
+	font-size: 0.9em
+	text-align: left
 
 h3
 	margin: 0
@@ -367,16 +367,29 @@ input
 	border: none
 
 .form__input
-	width: 345px
-	margin-bottom: 29px
-	padding: 7px 15px
+	width: 347px
+	height: 38px
+	padding: 0px 15px
 	background: #f2f2f2
 	position: relative
 	&_flex
 		text-align: center
+		height: 40px
+		width: 118px
+		margin-left: 24px
+
 .form__group
 	position: relative
+	margin-bottom: 29px
+	&_flex
+		width: 230px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center
 	&_calendar
+		display: flex
+		justify-content: space-between
+		align-items: center
 		&:after
 			content: ""
 			background: url(images/spritesheet.png)
@@ -385,7 +398,7 @@ input
 			height: 22px
 			position: absolute
 			right: 10px
-			top: 5px
+			top: 7px
 
 .form__num
 	position: relative
@@ -408,23 +421,12 @@ input
 		color: #c1c1c1
 		font-size: 21px
 
-
-
-.form__group_flex
-	padding-bottom: 20px
-	display: inline-block
-
-.form__input_flex
-	padding: 6px 10px
-	width: 116px
-	margin-left: 24px
-
 .form__group_wrapper
 	display: flex
 	justify-content: space-between
-	padding-left: 2px
 
-
+.form__group_flex:last-child
+	padding-left: 52px
 
 
 
