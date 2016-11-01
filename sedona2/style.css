@@ -241,13 +241,9 @@ p {
 
 .footer {
   background: #fff;
-  height: 121px;
-  width: 1200px;
+  width: auto;
   position: relative;
-  padding-top: 39px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around; }
+  padding: 39px 0px; }
 
 .col {
   display: inline-block;
