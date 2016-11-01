@@ -93,7 +93,7 @@ p
 .main-wrapper
 	display: table
 	box-shadow: 0 0 15px 5px rgba(0,1,1,0.2)
-	min-width: 768px
+	width: 1200px
 	margin: 0 auto
 	overflow: hidden
 	height: 100%
@@ -278,11 +278,16 @@ p
 	width: auto
 	position: relative
 	padding: 39px 0px
+	&:after
+		content: ""
+		display: table
+		clear: both
 
 .col
 	display: inline-block
 	text-align: center
 	width: 400px
+	float: left
 
 .contacs
 	font-size: 1.32em
