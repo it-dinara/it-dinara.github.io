@@ -3,11 +3,58 @@
 <head>
 	<meta charset="UTF-8">
 	<title>it-dinara menu</title>
+	<link rel="stylesheet" href="./animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<style>
+		html{
+			height: 100%;
+		}
+		body{
+			height: 100%;
+			font-size: 90px;
+			background: url(images/1218827-dark-souls.png);
+			margin: 0;
+			font-family: 'Tangerine', cursive;
+		}
+		ul, li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			color: pink;
+		}
+		.wrapper{
+			height: 100%;
+			text-align: center;
+		}
+		.wrapper:before {
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			content: "";
+		}
+
+		ul {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		li{
+			line-height: 95px;
+			text-shadow: 1px 1px 8px rgb(255, 192, 198);
+		}
+	</style>
 </head>
 <body>
-	<ul>
-		<li><a href="./cyberwin">cyberwin</a></li>
-		<li><a href="./sedona2">sedona</a></li>
-	</ul>
+	<div class="wrapper">
+		<ul class="">
+			<li class="wow rubberBand" data-wow-iteration="1"><a href="./cyberwin">Cyberwin</a></li>
+			<li class="wow tada" data-wow-iteration="1"><a href="./Barbershop">Barbershop</a></li>
+			<li class="wow shake" data-wow-iteration="1"><a href="./sedona2">Sedona</a></li>
+		</ul>
+	</div>
+	<script src="./wow.min.js"></script>
+	<script>
+	new WOW().init();
+	</script>
 </body>
 </html>
