@@ -1,0 +1,443 @@
+@font-face
+	font-family: 'PT Sans Narrow', sans-serif
+	src: url("fonts/PT_Sans-Narrow-Web-Bold.ttf")
+	src: url("fonts/PT_Sans-Narrow-Web-Regular.ttf")
+	font-size: 16px
+html
+	width: 100%
+	height: 100%
+body
+	font-family: 'PT Sans Narrow', sans-serif
+	color: rgb(247, 244, 241)
+	background: black url(images/Layer-8.jpg) no-repeat 50% 0
+	width: 100%
+	height: 100%
+	margin: 0
+
+.wrapper
+	min-height: 100%
+	overflow: hidden
+	position: relative
+
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+li
+	margin: 0
+	padding: 0
+
+html, body
+	height: 100%
+
+a
+	text-decoration: none
+	color: white
+
+.top-menu
+	a
+		text-align: center
+		&:hover
+			box-shadow: 0 5px 0 0 #f7f4f1
+//	border-bottom: solid 5px rgb(247, 244, 241)
+		&:link
+		&:visited
+		&:active
+*
+	box-sizing: border-box
+.header
+	background-color: black
+	max-height: 71px
+
+.layout-center-wrapper
+	margin: 0 auto
+	padding: 0
+	width: 940px
+
+.top-menu
+	width: 780px
+	display: inline-block
+
+	li
+		display: inline-block
+		margin-right: 25px
+		margin-left: 21px
+
+	a
+		display: block
+		padding-top: 25px
+		padding-bottom: 26px
+		transition: 40ms
+
+.account-menu
+	position: relative
+	float: right
+	max-width: 170px
+	vertical-align: top
+	a
+		display: block
+		padding-top: 24px
+		padding-right: 3px
+
+.account-menu-enter:before
+			content: ""
+			position: absolute
+			background-image: url("images/In-(alt).png")
+			width: 16px
+			height: 16px
+			background-repeat: no-repeat
+			left: -33px
+			top: 26px
+.account-menu-enter-disabled:before
+	opacity: 0.3
+
+//Личный кабинет
+.login-popup
+	font-weight: bold
+	font-size: 14px
+	font-family: 'PT Sans Narrow', sans-serif
+	color: black
+	position: absolute
+	display: none
+	top: 120px
+	left: 50%
+	width: 460px
+	min-height: 430px
+	padding: 50px 80px
+	margin-left: -230px
+	background: white
+	z-index: 1
+
+	&_active
+		display: block 
+
+.login-form
+	position: relative
+	font-weight: bold
+	font-size: 14px
+	.restore
+		text-decoration: inherit
+		color: initial
+		float: right
+		box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.31), 0px 1px 0px 0px rgba(51, 51, 51, 0.48)
+	input[type="submit"]
+		width: 300px
+		margin-top: 15px
+		padding: 14px 10px
+		border: none
+		color: #fff
+		background-color: black
+	input[type="text"],
+	input[type="password"],
+	input[type="submit"]
+		display: block
+		font-weight: bold
+		font-size: 14px
+		font-family: 'PT Sans Narrow', sans-serif
+	input[type="text"],
+	input[type="password"]
+		width: 300px
+		margin-bottom: 10px
+		padding: 12px 15px
+		padding-right: 40px
+		border: 2px solid black
+		color: black
+		background-color: #f9f6f3
+	input[type="password"]
+		margin-bottom: 15px
+	.login-field
+		background: url(images/User.png) no-repeat 270px 14px
+	.password-field
+		background: url(images/Locked-2.png) no-repeat 270px 14px
+	input[type="checkbox"]
+		vertical-align: middle
+		margin-right: 13px
+		visibility: hidden
+	.designer-window
+		position: relative
+		&:before
+			content: ""
+			width: 18px
+			height: 18px
+			background: #fff
+			border: 2px solid black
+			display: inline-block
+			position: absolute
+		&:after
+			content: ""
+			background-image: url(images/x.png)
+			width: 12px
+			height: 12px
+			position: absolute
+			top: 5px
+			left: 5px
+			opacity: 1
+
+
+/*		background: url(images/window.png) 0 0 no-repeat
+		height: 20px
+		display: inline-block*/
+.logo
+	margin: 58px 291px 18px
+	display: inline-block
+	vertical-align: top
+
+.feature:after
+	content: ''
+	display: table
+	clear: both
+
+.feature li
+	width: 296px
+	float: left
+	margin-right: 24px
+	&:last-child
+		margin-right: 0
+
+.feature-title
+	font-size: 30px
+	font-weight: bold
+	position: relative
+	margin-bottom: 72px
+	text-align: center
+
+	+ p
+		text-align: center
+		font-size: 14px
+		font-weight: bold
+		line-height: 1.714
+
+.feature-title:after
+	content: ""
+	position: absolute
+	background-image: url(images/Shape-1.png)
+	width: 30px
+	height: 29px
+	top: 52px
+	right: 132px
+
+.index-section
+	max-height: 430px
+	background-color: #f6f3f0
+	color: black
+	font-size: 30px
+	text-align: left
+	font-weight: bold
+	margin-top: 34px
+	padding-left: 80px
+	padding-right: 80px
+	padding-top: 46px
+	padding-bottom: 62px
+	position: relative
+	a
+		color: black
+		font-size: 14px
+		text-align: left
+		font-weight: bold
+		:last-child
+			color: white
+	.btn
+		display: inline-block
+		padding: 12px 31px 13px 35px
+		background-color: black
+		color: white
+		margin-top: 14px
+	.forward
+		background-color: #ffffff
+		color: black
+		float: right
+		padding: 16px 40px 13px 52px
+	.ago
+		padding: 16px 51px 13px 54px
+
+	.date
+		display: inline-block
+		font-size: 14px
+		font-style: italic
+		font-weight: normal
+		margin-top: 6px
+		vertical-align: top
+	p.address,p.work-time
+		color: black
+		font-size: 14px
+		text-align: left
+		font-weight: bold
+		margin-bottom: 24px
+		line-height: 24px
+	.way
+		margin-top: 22px
+		padding: 12px 32px 14px 32px
+		background-color: #ffffff
+		color: black
+	.feedback
+		margin-top: 22px
+		padding: 12px 23px 13px 27px
+		margin-right: 91px
+		float: right
+	p.client
+		color: black
+		font-size: 14px
+		text-align: left
+		font-weight: bold
+		margin-bottom: 7px
+		line-height: 24px
+	.send
+		padding: 12px 123px 13px 115px
+		margin-top: 35px
+
+.index-left-column
+	display: inline-block
+	width: 390px
+	vertical-align: top
+	position: relative
+
+	&:after
+		content: ""
+		background-image: url("images/Layer-17.png")
+		position: absolute
+		width: 8px
+		height: 278px
+		right: -3px
+		top: 24px
+.index-right-column
+	display: inline-block
+	width: 300px
+	margin-left: 83px
+	position: relative
+
+
+
+.index-title
+	margin-bottom: 26px
+
+.index-gallery
+	background-image: url(images/Layer-21.png)
+	margin-top: 40px
+	width: 286px
+	height: 164px
+	margin-bottom: 26px
+//	position: absolute
+//	top: 125px
+//	left: 97px
+.ago
+
+.forward
+	background-color: #ffffff
+//.index-text
+//	line-height: 15px
+ul.index-text
+	margin-top: 10px
+	width: 300px
+
+.index-text a
+	display: block
+	line-height: 23px
+	margin-top: 15px
+//color="#ffffff"
+ul.feature
+	margin-bottom: 66px
+
+@mixin placeholder()
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+
+.input
+	display: inline-block
+	width: 140px
+	border: solid 2px
+	margin-right: 13px
+	margin-top: 20px
+	font-size: 14px
+	line-height: 38px
+	padding: 0 15px
+	&:nth-of-type(2n) 
+		margin-right: 0
+	@include placeholder()
+		color: black
+		text-align: left
+		font-weight: bold
+		text-align: left
+		opacity: 1
+
+.footer
+	background-color: #202020
+	height: 190px
+	margin-top: 58px
+	position: relative
+	line-height: 23px
+	font-weight: bold
+	font-size: 14px
+	padding-top: 56px
+	.layout-center-wrapper
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	.contacs-address
+		line-height: 24px
+
+	// Блок соц-сети
+	.social-buttons
+		text-align: center
+		margin: -1px 0px 0px -93px
+
+	// Черный квадрат под икноку соц. сети
+	.btn-social-container
+		display: inline-block
+		text-align: center
+		background-color: black
+		width: 43px
+		height: 43px
+		line-height: 38px
+		margin: -2px 11px 0px -8px
+		&:hover
+			background: #333
+			.btn-social
+				transform: rotate(360deg)
+
+	// Иконка соц. сети
+	.btn-social
+		display: inline-block
+		vertical-align: middle
+		transition: 250ms ease-out
+
+	.btn-social-vk
+		background: url(images/vk.png) no-repeat 0 0
+		width: 12px
+		height: 13px
+
+	.btn-social-fb
+		background: url(images/fb.png) no-repeat 0 0
+		width: 9px
+		height: 17px
+
+	.btn-social-insta
+		background: url(images/insta.png) no-repeat 0 0
+		width: 15px
+		height: 15px
+
+	.designer
+		padding-left: 25px
+
+	.designer-address
+		background-color: black
+		padding: 12px 28px 13px 27px
+	
+	// Давайте дружить!
+	.friends
+		margin: 2px 5px 5px -17px
+
+	div.contacs-address
+
+
+
+
+
+

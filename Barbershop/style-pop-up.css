@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'PT Sans Narrow', sans-serif;
+  src: url("fonts/PT_Sans-Narrow-Web-Bold.ttf");
+  src: url("fonts/PT_Sans-Narrow-Web-Regular.ttf");
+  font-size: 16px; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #f7f4f1;
+  background: black url(images/Layer-8.jpg) no-repeat 50% 0;
+  width: 100%;
+  height: 100%; }
+
+.pop-up {
+  background: url(images/Barbershop-price.png); }
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+li {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 400ms; }
+
+.top-menu a {
+  text-align: center; }
+  .top-menu a:hover {
+    box-shadow: 0 24px 0 -20px #f7f4f1; }
+
+* {
+  box-sizing: border-box; }
+
+.header {
+  background-color: black;
+  max-height: 71px; }
+
+.layout-center-wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 940px; }
+
+.top-menu {
+  width: 780px;
+  display: inline-block; }
+  .top-menu li {
+    display: inline-block;
+    margin-right: 25px;
+    margin-left: 21px; }
+  .top-menu a {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 26px;
+    transition: 40ms; }
+
+.account-menu {
+  position: relative;
+  float: right;
+  max-width: 170px;
+  vertical-align: top; }
+  .account-menu a {
+    display: block;
+    padding-top: 24px;
+    padding-right: 3px; }
+
+.account-menu-enter:before {
+  content: "";
+  position: absolute;
+  background-image: url("images/In-(alt).png");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  left: -33px;
+  top: 26px; }
+
+.account-menu-enter-disabled:before {
+  opacity: 0.3; }
+
+.page-title, .inner-content {
+  color: black;
+  font-weight: bold; }
+
+.page-title {
+  margin: 3.2em 0; }
+
+/*	text-transform: uppercase*/
+.page-title h1 {
+  margin: 0;
+  font-size: 1.875em;
+  line-height: 1.4; }
+
+.inner-content {
+  font-size: 0.875em;
+  line-height: 1.714;
+  margin-top: 3.55em;
+  width: 950px; }
+
+.inner-content h1,
+.inner-content h2 {
+  margin-top: 2em;
+  margin-bottom: 1em; }
+
+.inner-content h1 {
+  font-size: 2.15em;
+  line-height: 1.4em; }
+
+.inner-content h2 {
+  font-size: 1.7em;
+  line-height: 1.25; }
+
+ul.custon-list-1 {
+  margin-bottom: 4.6em;
+  margin-top: 2em; }
+
+.inner-content p {
+  margin: 2.1em 0; }
+
+.mega-title {
+  margin-top: 6.1em;
+  margin-bottom: 0.9em;
+  text-align: center; }
+
+.mega-title h1 {
+  position: relative;
+  display: inline;
+  font-size: 3.4em;
+  padding: 0 25px;
+  background: url(images/Barbershop-price.png);
+  z-index: 2;
+  line-height: 1; }
+
+.mega-title:after {
+  content: "";
+  position: relative;
+  z-index: 1;
+  top: -1.7em;
+  display: block;
+  border-bottom: 2px black solid; }
+
+.custon-list-1 li {
+  padding-left: 20px;
+  margin-bottom: 1em;
+  background: url("images/rhombus.png") no-repeat 0 50%;
+  font-size: 1em;
+  text-transform: uppercase; }
+
+.prices {
+  width: 460px;
+  border-collapse: collapse;
+  margin-top: 2.5em;
+  margin-bottom: 8.599em; }
+
+.prices th,
+.prices td {
+  width: 50%;
+  padding: 0.6em 17px;
+  border: 2px solid black; }
+
+.prices th {
+  text-align: left; }
+
+.prices td {
+  text-align: center; }
+
+.inner-best,
+.inner-cost {
+  display: inline-block;
+  width: 468px;
+  vertical-align: top; }
+
+.inner-cost {
+  margin-left: 9px; }
+
+.footer {
+  height: 190px;
+  background-color: #202020;
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 1.714em;
+  margin-top: 3.4em;
+  padding-top: 4.1em; }
+  .footer .layout-center-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .footer .contacs-address {
+    line-height: 24px; }
+  .footer .social-buttons {
+    text-align: center;
+    margin: -1px 0px 0px -93px; }
+  .footer .btn-social-container {
+    display: inline-block;
+    text-align: center;
+    background-color: black;
+    width: 43px;
+    height: 43px;
+    line-height: 38px;
+    margin: -2px 11px 0px -8px; }
+    .footer .btn-social-container:hover {
+      background: #333; }
+      .footer .btn-social-container:hover .btn-social {
+        transform: rotate(360deg); }
+  .footer .btn-social {
+    display: inline-block;
+    vertical-align: middle;
+    transition: 250ms ease-out; }
+  .footer .btn-social-vk {
+    background: url(images/vk.png) no-repeat 0 0;
+    width: 12px;
+    height: 13px; }
+  .footer .btn-social-fb {
+    background: url(images/fb.png) no-repeat 0 0;
+    width: 9px;
+    height: 17px; }
+  .footer .btn-social-insta {
+    background: url(images/insta.png) no-repeat 0 0;
+    width: 15px;
+    height: 15px; }
+  .footer .designer {
+    padding-left: 25px; }
+  .footer .designer-address {
+    background-color: black;
+    padding: 12px 28px 13px 27px; }
+  .footer .friends {
+    margin: 2px 5px 5px -17px; }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Barbershop</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body class="inner-page">
+	<div class="wrapper">
+		<div class="header">
+			<div class="layout-center-wrapper">
+				<ul class="top-menu">
+					<li><a href="index.html">ГЛАВНАЯ</a></li>
+					<li><a href="#">ИНФОРМАЦИЯ</a></li>
+					<li><a href="#">НОВОСТИ</a></li>
+					<li><a href="price-list.html">ПРАЙС-ЛИСТ</a></li>
+					<li><a href="shop.html">МАГАЗИН</a></li>
+					<li><a href="#">КОНТАКТЫ</a></li>
+				</ul>
+				<div class="account-menu">
+					<a href="#" class="account-menu-enter account-menu-enter-disabled">ВХОД</a>
+				</div>
+			</div>
+		</div>
+		<div class="login-popup">
+			<h1>ЛИЧНЫЙ КАБИНЕТ</h1>
+			<p>ВВЕДИТЕ ПОЖАЛУЙСТА СВОЙ ЛОГИН И ПАРОЛЬ <br>ЕСЛИ ВЫ ЗАБЫЛИ ПАРОЛЬ</p>
+			<form class="login-form" action="/auth" method="post">
+				<input class="login-field" type="text" name="login" placeholder="Логин">
+				<input class="password-field" type="password" name="password" placeholder="Пароль">
+				<a class="restore" href="/restore">Я ЗАБЫЛ ПАРОЛЬ</a>
+				<label class="designer-window"><input type="checkbox" name="remember">ЗАПОМНИТЕ МЕНЯ</label>
+				<!-- <label class="designer-x"></label>  -->
+				<input class="input-enter" type="submit" value="ВОЙТИ">
+			</form>
+
+		</div>
+
+		<div class="layout-center-wrapper">
+			<div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			<ul class="feature">
+				<li>
+					<div class="feature-title">БЫСТРО</div>
+					<p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
+				</li>
+				<li>
+					<div class="feature-title">КРУТО</div>
+					<p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.<br>
+					МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО!<br>
+					ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.</p>
+				</li>
+				<li>
+					<div class="feature-title">ДОРОГО</div>
+					<p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И<br> НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА<br> НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+				</li>
+			</ul>
+			<div class="index-section">
+				<div class="index-left-column">
+					<div class="index-title">НОВОСТИ</div>
+					<ul class="index-text">
+						<li>
+							<a href="#">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</a>
+							<span class="date">25 сентября</span>
+						</li>
+						<li>
+							<a href="#">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДЕТЕЛЬ МНОЖЕТСВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</a>
+							<span class="date">19 сентября</span>
+						</li>
+					</ul>
+					<a href="#" class="btn">ВСЕ НОВОСТИ</a>
+				</div>
+				<div class="index-right-column">
+					<div class="index-title">ФОТОГАЛЕРЕЯ</div>
+					<div class="index-gallery"></div>
+					<a href="#" class="btn ago">НАЗАД</a>
+					<a href="#" class="btn forward">ВПЕРEД</a>
+				</div>
+			</div>
+			<div class="index-section">
+				<div class="index-left-column">
+					<div class="index-title">КОНТАКТНАЯ ИНФОРМАЦИЯ</div>
+					<ul class="index-text">
+						<li>
+							<p class="address" href="#">BARBERSHOP «BORODINSKI»<br>
+							АДРЕС: Г. МОСКВА, УЛ. СОБАКИ ПАВЛОВА, Д. 13 <br>
+							ТЕЛЕФОН: +7 (495) 666-02-666</p>
+						</li>
+						<li>
+							<p class="work-time" href="#">ВРЕМЯ РАБОТЫ: <br>
+							ПН — ПТ: С 10:00 ДО 22:00 <br>
+							СБ — ВС: С 10:00 ДО 19:00</p>
+						</li>
+					</ul>
+					<a href="#" class="btn way">КАК ПРОЕХАТЬ</a>
+					<a href="#" class="btn feedback">ОБРАТНАЯ СВЯЗЬ</a>
+				</div>
+				<div class="index-right-column">
+					<div class="index-title">ЗАПИСАТЬСЯ</div>
+					<p class="client">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+					<input class="input"type="text" placeholder="ДАТА">
+					<input class="input"type="text" placeholder="ВРЕМЯ">
+					<input class="input"type="text" placeholder="ВАШЕ ИМЯ">
+					<input class="input"type="text" placeholder="ТЕЛЕФОН">
+					<a href="#" class="btn send">ОТПРАВИТЬ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="layout-center-wrapper">
+			<div class="contacs-address">
+				BARBERSHOP «BORODINSKI» <br>
+				АДРЕС: Г. МОСКВА, УЛ. СОБАКИ ПАВЛОВА, Д. 13 <br>
+				ТЕЛЕФОН: +7 (495) 666-02-666
+			</div>
+
+			<div class="social-buttons">
+				<div class="friends">ДАВАЙТЕ ДРУЖИТЬ!</div>
+
+				<a href="http://vk.com" class="btn-social-container">
+					<span class="btn-social btn-social-vk"></span>
+				</a>
+				<a href="http://facebook.com"class="btn-social-container">
+					<span class="btn-social btn-social-fb"></span>
+				</a>
+				<a href="http://instagram.com"  class="btn-social-container">
+					<span class="btn-social btn-social-insta"></span>
+				</a>
+			</div>
+
+			<div class="copyright">
+				<span class="designer">ДИЗАЙН САЙТА:</span>
+				<p><a class="designer-address" href="http://glukhanko.ru/">GLUKHANKO.RU</a></p>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/common.js"></script>
+</body>
+</html>

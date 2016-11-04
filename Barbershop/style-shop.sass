@@ -1,0 +1,187 @@
+@font-face
+	font-family: 'PT Sans Narrow', sans-serif
+	src: url("fonts/PT_Sans-Narrow-Web-Bold.ttf")
+	src: url("fonts/PT_Sans-Narrow-Web-Regular.ttf")
+	font-size: 16px
+html
+	width: 100%
+	height: 100%
+body
+	font-family: 'PT Sans Narrow', sans-serif
+	color: black
+	background: black url(images/Layer-8.jpg) no-repeat 50% 0
+	width: 100%
+	height: 100%
+	font-weight: bold
+	text-transform: uppercase
+*
+	box-sizing: border-box
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+li
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+	color: black
+
+h2
+	font-size: 1.1em
+	line-height: 1.25
+	margin: 
+
+.shop
+	background: url(images/Barbershop-price.png)
+
+.layout-center-wrapper
+	width: 960px
+	margin: 0 auto
+	padding: 0
+
+.items-title 
+	font-size: 1.51em
+	line-height: 1.2
+
+.bread-crumbs__item
+	font-size: 1.1em
+	line-height: 1.25
+	position: relative
+	margin-right: 35px
+	&:after
+		content: ""
+		width: 8px
+		height: 8px
+		transform: rotate(45deg)
+		background-color: black
+		position: absolute
+		right: -25px
+		top: 50%
+		margin-top: -4px
+	&:last-child:after
+		display: none
+
+.items-check__block
+	margin-bottom: 17px
+
+.items-navigation
+	vertical-align: top
+	display: inline-block
+	width: 220px
+
+.items-navigation,
+.container-big
+	font-size: 0.89em
+
+
+.items-check__checkbox
+	display: none
+	// position: absolute
+	// left: -9999px
+	// z-index: 0
+
+	&:checked + .items-check__label:after
+		content: ""
+		background-image: url(images/x.png)
+		width: 12px
+		height: 12px
+		position: absolute
+		top: 5px
+		left: 5px
+		opacity: 1
+
+.items-check__label
+
+	line-height: 1.25
+	position: relative
+	padding-left: 40px
+	&:before
+		content: ""
+		width: 18px
+		height: 18px
+		background: #fff
+		border: 2px solid black
+		display: inline-block
+		position: absolute
+		left: 0
+
+.items-check__label_checked
+	&:after
+		content: ""
+		background-image: url(images/x.png)
+		width: 12px
+		height: 12px
+		position: absolute
+		top: 5px
+		left: 5px
+		opacity: 1
+
+.items-block
+	margin-bottom: 62px
+
+.items-block__section
+	color: white
+	background: black
+	width: 200px
+	height: 45px
+	margin-bottom: 15px
+	vertical-align: middle
+	line-height: 40px
+	padding-left: 10px
+
+.items-block__section_active
+	color: black
+	background: white
+
+.container-big
+	display: inline-block
+	width: 730px
+	margin-left: 5px
+
+.container-for
+	display: inline-block
+	width: 220px
+	height: 288px
+	background: white
+	margin-top: 20px
+	margin-left: 10px
+	margin-right: 10px
+
+.container-for__text
+	padding-left: 15px
+
+.container-for__price
+	margin-left: 15px
+
+.container-for__price
+	width: 187px
+	height: 42px
+	background: #e5e5e5
+	line-height: 42px
+	text-align: center
+	&:hover
+		color: #fff
+		background: black
+
+.paginator
+	margin-top: 40px
+	margin-left: 15px
+
+.paginator__page
+	display: inline-block
+	width: 43px
+	height: 46px
+	color: #fff
+	background: black
+	line-height: 46px
+	text-align: center
+	font-size: 0.99em
+	margin-right: 4px
+
+.paginator__page_active
+		color: black
+		background: #fff
+		box-shadow: inset 0 -5px 0 0 black
