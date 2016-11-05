@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Sedona2</title>
 	<link rel="stylesheet" href="normalize.css?v=3">
+	<link rel="stylesheet" href="jquery-ui.css">
 	<link rel="stylesheet" href="style.css?v=3">
 
 </head>
@@ -95,34 +96,37 @@
 					<form class="form">
 						<div class="form__group form__group_calendar">
 							<label class="form__label" for="date-arrival">дата заезда: </label>
-							<input class="form__input" id="date-arrival" type="text">
+							<input class="form__input js-datepicker" id="date-arrival" type="text">
 						</div>
 							
 						<div class="form__group form__group_calendar">
 							<label class="form__label" for="date-departure">дата выезда: </label>
-							<input class="form__input" id="date-departure" type="text">
+							<input class="form__input js-datepicker" id="date-departure" type="text">
 						</div>
 	
 						<div class="form__group form__group_wrapper">
 							<div class="form__group form__group_flex">
 								<label class="form__label form__label_flex" for="adults">взрослые: </label>
 								<span class="form__num">
-								<a href="#" class="form__num_minus">—</a>
-								<input class="form__input form__input_flex" id="adults" type="number" value="2">
-								<a href="#" class="form__num_plus">+</a>
+								<a href="#" class="form__num_minus js-minus js-action">—</a>
+								<input data-test="false" class="form__input form__input_flex js-input js-adults" id="adults" type="number" value="2">
+								<a href="#" class="form__num_plus js-plus js-action">+</a>
 								</span>
 							</div>
 							
 							<div class="form__group form__group_flex">
+								
 								<label class="form__label form__label_flex" for="children">дети: </label>
 								<span class="form__num">
-								<a href="" class="form__num_minus">—</a>
-								<input class="form__input form__input_flex" id="children" type="number" value="0">
-								<a href="#" class="form__num_plus">+</a>
+								<a href="" class="form__num_minus js-minus js-action">—</a>
+								<input class="form__input form__input_flex js-input js-children" id="children" type="number" value="0">
+								<a href="#" class="form__num_plus js-plus js-action">+</a>
 								</span>
+								
 							</div>
+
 						</div>
-						<input class="form__button" type="submit" value="найти"></input>
+						<input class="form__button" type="submit" value="найти">
 					</form>
 	
 	
@@ -156,6 +160,7 @@
 	</footer>
 </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js?v=3"></script>
+	<script src="./js/jquery-ui.min.js"></script>
 	<script src="./js/main.js?v=3"></script>
 </body>
 </html>
