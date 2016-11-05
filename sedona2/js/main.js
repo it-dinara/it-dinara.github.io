@@ -1,56 +1,57 @@
-var adultsVal = $('#adults').val();
-var childrenVal = $('#children').val();
-
-$('#adults').on('change', function (event) {
-	adultsVal = $(this).val();
-
-	//если взрослых меньше 0, то взрослые 0
-	if (adultsVal < 0){
-		$(this).val(0);
-	}
-
-	//если взрослые равен 0, то дети равно 0
-	if (adultsVal == 0){
-		$('#children').val(0);
-	}
-	
-	console.log('adultsVal: ', $('#adults').val() );
-	console.log('childrenVal: ', $('#children').val() );
-});
-
-
-$('#children').on('change', function (event) {
-	childrenVal = $(this).val();
-
-	//если дети меньше 0, то дети 0
-	if (childrenVal < 0){
-		$(this).val(+1);
-	}
-	
-	//если взрослые равен 0, то дети равно 0
-	if (adultsVal == 0){ 
-		$('#children').val(0);
-	}
-
-	console.log('adultsVal: ', $('#adults').val() );
-	console.log('childrenVal: ', $('#children').val() );
-});
-//если кликаем по плюсику, то увеличиваем на 1, для этого надо привязать инпут к 
+//если кликаем по плюсику, то увеличиваем на 1
 //если кликаем по минусы, то уменьшаем на 1
 
-var plus = $('.form__num_plus');
-$('.form__num_plus').on('click',function(event){
-	event.preventDefault();
-	var adultsVal = parseInt( $('#adults').val() );
-	plus = $('#adults').val(adultsVal+1);
-	console.log('adultsVal: ', $('#adults').val() );
+$('.js-input').on('change', foo);
+$('.js-action').on('click', foo);
+
+
+$('.js-datepicker').datepicker({
+	dateFormat: "yy---mm---dd"
 });
 
-var minus = $('.form__num_minus');
-$('.form__num_minus').on('click',function(event){
-	event.preventDefault();
-	var adultsVal = parseInt( $('#adults').val() );
-	plus = $('#adults').val(adultsVal-1);
-	console.log('adultsVal: ', $('#adults').val() );
-});
+function foo (event) {
+	var $input = $(this).parent().find('.js-input');
+	var val = parseInt( $input.val() ) || 0;
+	
+	if ($(this).hasClass('js-action')){
+		event.preventDefault();
 
+		if ($(this).hasClass('js-plus') || $(this).hasClass('js-input')) {
+			val++;
+		} else {
+			val--;
+		}
+		
+	}
+
+	var res = validate(val);
+	$input.val(res);
+
+	var adults = parseInt($('#adults').val());
+	
+	
+	/*
+	
+	console.log(typeof adults); // string  // number
+	console.log(adults == 0);   // true    // true
+	console.log(adults === 0);  // false   // true
+	console.log(adults + 1);    // ?? 01   // 1
+	
+	*/
+	
+	if (adults == 0){
+		$('#children').val(0);
+	}
+}
+
+function validate (count) {
+	if (count <= 0) {
+		return 0;
+	} else {
+		if (count > 4) {
+			return 4;
+		} else {
+			return count;
+		}
+	}
+}
