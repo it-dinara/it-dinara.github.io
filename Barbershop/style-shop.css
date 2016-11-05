@@ -64,8 +64,7 @@ h2 {
     background-color: black;
     position: absolute;
     right: -25px;
-    top: 50%;
-    margin-top: -4px; }
+    top: 35%; }
   .bread-crumbs__item:last-child:after {
     display: none; }
 

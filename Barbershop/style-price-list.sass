@@ -19,7 +19,10 @@ body
 	min-height: 100%
 	overflow: hidden
 	position: relative
+	margin-bottom: 4em
 
+h1
+	margin: 0
 ul
 	list-style: none
 	margin: 0
@@ -50,6 +53,9 @@ a
 .header
 	background-color: black
 	max-height: 71px
+	li:hover
+		background-color: #333
+
 .layout-center-wrapper
 	margin: 0 auto
 	padding: 0
@@ -60,14 +66,14 @@ a
 	display: inline-block
 	li
 		display: inline-block
-		margin-right: 25px
-		margin-left: 21px
-
-	a
-		display: block
+		padding-right: 25px
+		padding-left: 21px
 		padding-top: 25px
 		padding-bottom: 26px
+	a
+		display: block
 		transition: 40ms
+
 .account-menu
 	position: relative
 	float: right
@@ -77,6 +83,7 @@ a
 		display: block
 		padding-top: 24px
 		padding-right: 3px
+
 .account-menu-enter:before
 			content: ""
 			position: absolute
@@ -86,6 +93,7 @@ a
 			background-repeat: no-repeat
 			left: -33px
 			top: 26px
+
 .account-menu-enter-disabled:before
 	opacity: 0.3
 
@@ -94,41 +102,62 @@ a
 	font-weight: bold
 
 .page-title
-	margin: 3.2em 0/*размер отступа делим на базовый размер шрифта 50px / 16px */
-/*	text-transform: uppercase*/
+	margin-top: 3.2em /* размер отступа делим на базовый размер шрифта 50px / 16px */
+
+.page-title a
+	color: black
+	position: relative
+	margin-right: 35px
+	font-size: 0.9em
+	line-height: 3.5em
+	&:after
+		content: ""
+		width: 8px
+		height: 8px
+		background-color: black
+		transform: rotate(45deg)
+		position: absolute
+		right: -25px
+		top: 35%
+	&:last-child:after
+		display: none
+
+
+
+
 .page-title h1
 	margin: 0
 	font-size: 1.875em/*размер шрифта дизайнера делим на базовый размер шрифта 30px / 16px */
 	line-height: 1.4/*высоту строки делим на размер шрифта дизайнера 42px / 30px */
+
 .inner-content
 	font-size: 0.875em/*задаём базовый шрифт этому классу - размер шрифта, который больше всего используется делим на базовый 14px / 16px*/
 	line-height: 1.714/*24px / 14px*/
-	margin-top: 3.55em/*если хотим получить те же 50px, 50px / 14px */
-	width: 950px
-
-.inner-content h1,
-.inner-content h2
-	margin-top: 2em
-	margin-bottom: 1em
+	margin-top: 2.55em/*если хотим получить те же 50px, 50px / 14px = 3.55(и по PerfectPicxel результат всё равно не верный))), ПОЭТОМУ Я ВСЁ ПЕРЕДЕЛАЮ В ПИКСЕЛИ!!!*/
+	width: 940px
 
 .inner-content h1
 	font-size: 2.15em
 	line-height: 1.4em
+
 .inner-content h2
 	font-size: 1.7em
-	line-height: 1.25
+	line-height: 1.215em
+
 ul.custon-list-1
-	margin-bottom: 4.6em
+	margin-bottom: 2.8em
 	margin-top: 2em
+
 .inner-content p
-	margin-top: 30px
 	display: inline-block
 	width: 49%
 	vertical-align: top
+	&:last-child
+		padding-left: 16px
 .mega-title
-	margin-top: 6.1em
-	margin-bottom: 0.9em
+	margin-bottom: 2.9em
 	text-align: center
+
 .mega-title h1
 	position: relative
 	display: inline
@@ -137,6 +166,7 @@ ul.custon-list-1
 	background: url(images/Barbershop-price.png)
 	z-index: 2
 	line-height: 1
+
 .mega-title:after
 	content: ""
 	position: relative
@@ -156,7 +186,6 @@ ul.custon-list-1
 	width: 460px
 	border-collapse: collapse
 	margin-top: 2.5em
-	margin-bottom: 8.599em
 
 .prices th,
 .prices td
@@ -169,13 +198,16 @@ ul.custon-list-1
 
 .prices td
 	text-align: center
+
 .inner-best,
 .inner-cost
 	display: inline-block
 	width: 468px
 	vertical-align: top
+
 .inner-cost
-	margin-left: 9px
+	padding-left: 8px
+
 .footer
 	overflow: hidden
 	height: 190px
@@ -239,7 +271,8 @@ ul.custon-list-1
 	.designer-address
 		background-color: black
 		padding: 12px 28px 13px 27px
-	
+		&:hover
+			background: #333
 	// Давайте дружить!
 	.friends
 		margin: 2px 5px 5px -17px
