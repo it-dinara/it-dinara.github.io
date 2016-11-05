@@ -17,7 +17,8 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  margin-bottom: 64px; }
 
 ul {
   list-style: none;
@@ -362,7 +363,6 @@ ul.feature {
 .footer {
   background-color: #202020;
   height: 190px;
-  margin-top: 64px;
   position: relative;
   line-height: 23px;
   font-weight: bold;
