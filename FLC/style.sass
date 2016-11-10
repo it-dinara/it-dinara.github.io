@@ -1,0 +1,651 @@
+@font-face
+	font-family: "Open Sans"
+	font-size: 12px
+
+html, body
+	height: 100%
+
+body
+	font-family: "Open Sans"
+	color: #444444
+
+
+*
+	box-sizing: border-box
+h1,
+h2
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+li
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+	list-style-type: none
+
+
+input
+	border: none
+	padding: 0
+	margin: 0
+
+p
+	margin: 0
+
+.main
+	margin: 0 auto
+	width: 1350px
+
+.header__line1
+	background: #2a251f
+	font-weight: 800
+	color: white
+	font-size: 15px
+	padding: 0 90px
+	padding-left: 90px
+	padding-right: 90px
+	padding-bottom: 5px
+	padding-top: 10px
+	position: relative
+
+.header__contact
+	padding-right: 37px
+	color: white
+
+
+.header__search
+	font-weight: 400
+	font-size: 12px
+	font-style: italic
+	position: absolute
+	right: 375px
+	top: 6px
+	border-radius: 2px
+	padding: 4px 2px 4px 11px
+
+.header__search-img
+	background: url(images/sprite.png) no-repeat
+	width: 17px
+	height: 17px
+	background-position: -41px -139px
+	position: absolute
+	top: 11px
+	right: 381px
+
+.header__work-time
+	float: right
+	font-size: 13px
+
+.header__work-time_num
+	font-weight: 400
+	padding-left: 3px
+
+.header__wrapper
+	background: #e6e6e6
+
+.header__line2
+	padding-left: 90px
+	padding-right: 122px
+	padding-top: 8px
+	padding-bottom: 8px
+
+.header__logo
+	display: inline-block
+	background: url(images/sprite.png) no-repeat
+	width: 70px
+	height: 68px
+	background-position: -205px -61px
+
+.header__wrapper-title
+	display: inline-block
+	vertical-align: top
+	line-height: 22px
+	width: 289px
+	margin-left: 15px
+	text-transform: uppercase
+	border-left: solid 2px #999999
+	padding-left: 17px
+	padding-right: 13px
+	padding-bottom: 10px
+	padding-top: 10px
+
+.header__title-first
+	font-size: 14px
+	font-weight: 400
+
+.header__title-second
+	font-size: 13px
+	font-weight: 500
+
+.enroll
+	margin-left: 55px
+	display: inline-block
+	margin-top: 10px
+	vertical-align: top
+
+.enroll__item
+	display: inline-block
+	font-size: 15px
+	padding: 7px 17px 5px 12px
+	a
+		color: white
+
+.enroll__item-a
+	display: inline-block
+	line-height: 15px
+	font-size: 13px
+
+	&_width1
+		width: 88px
+	&_width2
+		width: 190px
+	&_width3
+		width: 175px
+
+
+.enroll__item-a-img
+	background: url(images/sprite.png) no-repeat
+	width: 26px
+	height: 26px
+	background-position: -5px -139px
+	display: inline-block
+	margin-top: 2px
+	margin-right: 12px
+
+
+.enroll__item-span
+	font-weight: 600
+	font-size: 13px
+
+
+.enroll__item_color1
+	/* IE10+ */ 
+	background-image: -ms-linear-gradient(top, #7171db 0%, #4949C9 100%)
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #7171db 0%, #4949C9 100%)
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #7171db 0%, #4949C9 100%)
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7171db), color-stop(100, #4949C9))
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #7171db 0%, #4949C9 100%)
+
+	/* W3C Markup */ 
+	background-image: linear-gradient(to bottom, #7171db 0%, #4949C9 100%)
+	width: 160px
+	height: 45px
+
+	&:hover
+		/* IE10+ */ 
+		background-image: -ms-linear-gradient(top, #2828a1 0%, #12127C 100%)
+		/* Mozilla Firefox */ 
+		background-image: -moz-linear-gradient(top, #2828a1 0%, #12127C 100%)
+		/* Opera */ 
+		background-image: -o-linear-gradient(top, #2828a1 0%, #12127C 100%)
+		/* Webkit (Safari/Chrome 10) */ 
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2828a1), color-stop(100, #12127C))
+		/* Webkit (Chrome 11+) */ 
+		background-image: -webkit-linear-gradient(top, #2828a1 0%, #12127C 100%)
+		/* W3C Markup */ 
+		background-image: linear-gradient(to bottom, #2828a1 0%, #12127C 100%)
+.enroll__item_color2
+	/* IE10+ */ 
+	background-image: -ms-linear-gradient(top, #3AAD2C 0%, #1d8c13 100%)
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #3AAD2C 0%, #1d8c13 100%)
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #3AAD2C 0%, #1d8c13 100%)
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3AAD2C), color-stop(100, #1d8c13))
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #3AAD2C 0%, #1d8c13 100%)
+
+	/* W3C Markup */ 
+	background-image: linear-gradient(to bottom, #3AAD2C 0%, #1d8c13 100%)
+
+	&:hover
+		/* IE10+ */ 
+		background-image: -ms-linear-gradient(top, #25951A 0%, #1E7A15 100%)
+
+		/* Mozilla Firefox */ 
+		background-image: -moz-linear-gradient(top, #25951A 0%, #1E7A15 100%)
+
+		/* Opera */ 
+		background-image: -o-linear-gradient(top, #25951A 0%, #1E7A15 100%)
+
+		/* Webkit (Safari/Chrome 10) */ 
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #25951A), color-stop(100, #1E7A15))
+
+		/* Webkit (Chrome 11+) */ 
+		background-image: -webkit-linear-gradient(top, #25951A 0%, #1E7A15 100%)
+
+		/* W3C Markup */ 
+		background-image: linear-gradient(to bottom, #25951A 0%, #1E7A15 100%)
+
+.enroll__item_color3
+	/* IE10+ */ 
+	background-image: -ms-linear-gradient(top, #F78E12 0%, #f36807 100%)
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #F78E12 0%, #f36807 100%)
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #F78E12 0%, #f36807 100%)
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F78E12), color-stop(100, #f36807))
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #F78E12 0%, #f36807 100%)
+
+	/* W3C Markup */ 
+	background-image: linear-gradient(to bottom, #F78E12 0%, #f36807 100%)
+
+	&:hover
+		/* IE10+ */ 
+		background-image: -ms-linear-gradient(top, #F7780B 0%, #D6680A 100%)
+
+		/* Mozilla Firefox */ 
+		background-image: -moz-linear-gradient(top, #F7780B 0%, #D6680A 100%)
+
+		/* Opera */ 
+		background-image: -o-linear-gradient(top, #F7780B 0%, #D6680A 100%)
+
+		/* Webkit (Safari/Chrome 10) */ 
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F7780B), color-stop(100, #D6680A))
+
+		/* Webkit (Chrome 11+) */ 
+		background-image: -webkit-linear-gradient(top, #F7780B 0%, #D6680A 100%)
+
+		/* W3C Markup */ 
+		background-image: linear-gradient(to bottom, #F7780B 0%, #D6680A 100%)
+
+
+.nav
+	list-style-type: none
+	padding-left: 90px
+
+.nav__item
+	display: inline-block
+	padding-right: 26px
+	position: relative
+	height: 30px
+	font-weight: 900
+	font-size: 12px
+	text-transform: uppercase
+	color: #444444
+	&-a
+		color: #444444
+		&:hover
+			color: #adacac
+
+
+.nav__hover
+	display: none
+	position: absolute
+	left: 0
+	top: 29px
+	background-color: #2e2e2b
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6)
+
+.nav__item:hover .nav__hover
+	display: inline-block
+
+.nav__hover-item
+	width: 203px
+	height: 32px
+	border-bottom: 1px solid rgba(255, 255, 255, 0.18)
+	padding-left: 20px
+	font-weight: 200
+	vertical-align: 30px
+	&-a
+		vertical-align: -webkit-baseline-middle
+		color: #b9b9b8
+
+
+.triangle
+	position: absolute
+	left: 24px
+	top: -5px
+	color: #444444
+
+.nav__triangle
+	background: url(images/sprite.png) no-repeat
+	width: 9px
+	height: 8px
+	background-position: -71px -61px
+	position: absolute
+	top: 5px
+
+	&_position1
+		left: 65px
+
+	&_position2
+		left: 103px
+
+	&_position3
+		left: 118px
+	&:hover
+		background-color: #adacac
+
+.promo
+	background: url("images/slider.jpg")
+	height: 478px
+
+.promo__block
+	display: inline-block
+
+.promo__h1
+	padding-left: 118px
+	font-size: 36px
+	font-weight: 700
+	text-transform: uppercase
+	line-height: 38px
+	padding-top: 66px
+	padding-bottom: 17px
+
+.promo__ul
+	padding-left: 162px
+
+.promo__text
+	font-size: 30px
+	position: relative
+	line-height: 32px
+	margin-bottom: 18px
+
+	&-checked
+		background: url(images/sprite.png) no-repeat
+		width: 28px
+		height: 23px
+		background-position: -249px -28px
+		position: absolute
+		top: 4px
+		left: -40px
+
+
+// Форма
+
+.form
+	background: url("images/rectangle.png") no-repeat
+	width: 330px
+	height: 317px
+	display: inline-block
+	vertical-align: top
+	margin-top: 83px
+	margin-left: 232px
+	padding-left: 60px
+	padding-top: 30px
+
+	&__title
+		text-transform: uppercase
+		font-weight: 400
+		line-height: 26px
+		font-size: 24px
+		margin-bottom: 14px
+
+		&_red
+			color: red
+			line-height: 26px
+
+	&__input
+			border: 1px solid rgb(226, 223, 223)
+			border-radius: 2px
+			padding: 4px 10px
+			background: rgb(239, 239, 239)
+			margin-bottom: 9px
+			box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.04)
+
+	&__input_submit
+		color: white
+		font-weight: 700
+		font-size: 12px
+		background-color: rgb(233, 11, 11)
+		box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.04)
+		width: 198px
+		height: 40px
+		&:hover
+			background-color: rgb(184, 1, 1)
+
+.form__checkbox-label
+	font-size: 12px
+	position: relative
+	padding-left: 45px
+	vertical-align: top
+	&:before
+		content: ""
+		width: 9px
+		height: 9px
+		background: #fff
+		border: 1px solid rgba(0, 0, 0, 0.44)
+		display: inline-block
+		position: absolute
+		left: 25px
+		top: 3px
+
+.form__checkbox-input
+	display: none
+	&:checked + .form__checkbox-label:after
+		content: ""
+		background-image: url(images/sprite.png)
+		width: 16px
+		height: 13px
+		background-position: -249px -5px
+		position: absolute
+		top: 2px
+		left: 25px
+		opacity: 1
+
+.slider-button
+	background: #ffffff
+	height: 20px
+	line-height: 15px
+
+	&__item
+		display: inline-block
+		height: 4px
+		width: 381px
+		background: #8ebf18
+		margin-left: 90px
+
+
+.features
+	height: 32px
+	background: #8ebf18
+	padding-left: 276px
+	padding-right: 300px
+
+	&__item
+		display: inline-block
+		padding-right: 20px
+		vertical-align: middle
+
+	&__a
+		color: white
+		font-size: 12px
+		font-weight: 700
+		text-transform: uppercase
+		vertical-align: -4px
+
+.features__img
+	background-image: url(images/sprite.png)
+	display: inline-block
+	margin-right: 15px
+	vertical-align: -16px
+	margin-bottom: 15px
+
+	&_inglish
+		width: 15px
+		height: 11px
+		background-position: -5px -5px
+
+	&_german
+		width: 14px
+		height: 11px
+		background-position: -109px -61px
+
+	&_french
+		width: 14px
+		height: 11px
+		background-position: -133px -61px
+
+	&_italian
+		width: 14px
+		height: 11px
+		background-position: -157px -61px
+
+	&_spanish
+		width: 14px
+		height: 11px
+		background-position: -181px -61px
+
+.blurb__big-item
+	text-transform: uppercase
+	font-size: 30px
+	text-align: center
+	display: inline-block
+	width: 354px
+	vertical-align: 19px
+
+.blurb__title-red
+		color: red
+		font-weight: 200
+		line-height: 38px
+
+.blurb__title-p
+		color: #444444
+		font-weight: 700
+		line-height: 38px
+
+.blurb
+	background: white
+	height: 221px
+	padding-right: 92px
+	padding-left: 103px
+
+.blurb__item
+	display: inline-block
+	width: 167px
+	text-align: center
+	margin-right: 30px
+	padding-top: 46px
+	padding-bottom: 37px
+
+.blurb__text
+	padding-top: 15px
+
+
+.blurb__head
+	line-height: 16px
+	font-size: 14px
+
+.blurb__footer
+	font-weight: 700
+	line-height: 16px
+	font-size: 14px
+
+
+
+.blurb__img
+	background-image: url(images/sprite.png)
+	text-align: center
+	display: inline-block
+	height: 100px
+
+
+	&_pic1
+		width: 35px
+		height: 64px
+		background-position: -292px -5px
+		top: 0
+		left: 1px
+
+	&_pic2
+		width: 63px
+		height: 63px
+		background-position: -270px -139px
+		top: 0
+		left: 1px
+
+
+	&_pic3
+		width: 102px
+		height: 64px
+		background-position: -5px -231px
+		top: 0
+		left: 1px
+
+	&_pic4
+		width: 106px
+		height: 64px
+		background-position: -117px -231px
+		top: 0
+		left: 1px
+
+.ad
+	background: url("images/bg.jpg")
+	background-repeat: repeat
+	height: 590px
+	padding-top: 35px
+
+.ad__skype
+	display: inline-block
+	text-align: right
+
+.ad__skype-img
+	position: relative
+	bottom: -30px
+	left: -100px
+
+.ad__wrapper
+	display: inline-block
+	width: 50%
+
+.ad__wrapper-p
+	width: 366px
+	display: inline-block
+
+.ad__business
+	display: inline-block
+	text-align: right
+
+.ad__children
+	display: inline-block
+
+.ad__title
+	background: #ffffff
+	font-size: 18px
+	font-weight: 200
+	text-transform: uppercase
+	display: inline-block
+
+.ad__text
+	background: #ffffff
+	display: inline-block
+	font-size: 24px
+
+.ad__bold
+	background: #ffffff
+	font-weight: 700
+	text-transform: uppercase
+	font-size: 30px
+
+.ad__capslock
+	font-weight: 200
+	font-size: 30px
+	background: #ffffff
+	width: 251px
