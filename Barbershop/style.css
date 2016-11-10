@@ -36,9 +36,14 @@ a {
   text-decoration: none;
   color: white; }
 
-.top-menu a {
+a.btn:hover {
+  background: #333; }
+
+.top-menu a,
+.account-menu a {
   text-align: center; }
-  .top-menu a:hover {
+  .top-menu a:hover,
+  .account-menu a:hover {
     box-shadow: 0 5px 0 0 #f7f4f1; }
 
 * {
@@ -74,7 +79,8 @@ a {
   .account-menu a {
     display: block;
     padding-top: 24px;
-    padding-right: 3px; }
+    padding-right: 3px;
+    padding-bottom: 26px; }
 
 .account-menu-enter:before {
   content: "";
