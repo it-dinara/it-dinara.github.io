@@ -621,7 +621,8 @@ p {
   width: 251px; }
 
 .teachers {
-  margin-bottom: 48px; }
+  margin-bottom: 48px;
+  height: 569px; }
 
 .teachers__button {
   width: 90px;
@@ -959,6 +960,14 @@ p {
   .footer .footer__link {
     color: #fff;
     text-decoration: none; }
+  .footer .footer__block {
+    display: inline-block;
+    vertical-align: top; }
+  .footer .footer__title {
+    font-size: 15px;
+    font-weight: 600; }
+  .footer .footer__text {
+    font-size: 11px; }
   .footer .footer-small-wrapper {
     position: relative;
     display: inline-block;
