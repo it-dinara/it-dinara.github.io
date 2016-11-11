@@ -146,4 +146,12 @@
 .sprite-youtube2 {
   width: 97px;
   height: 82px;
-  background-position: -337px -5px; }
+  background-position: -337px -5px;
+    background-position-filter: grayscale(100%);
+    background-position--webkit-filter: grayscale(100%);
+    background-position--moz-filter: grayscale(100%);
+    background-position--ms-filter: grayscale(100%);
+    background-position--o-filter: grayscale(100%);
+    background-position-filter: url(desaturate.svg#greyscale);
+    background-position-filter: gray;
+    background-position--webkit-filter: grayscale(1); }

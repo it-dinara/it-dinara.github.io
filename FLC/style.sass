@@ -1,6 +1,12 @@
+
 @font-face
-	font-family: "Open Sans"
-	font-size: 12px
+	font-family: "StudioScriptC"
+	src: url('fonts/StudioScriptC.eot')
+	src: url('fonts/StudioScriptC.eot?#iefix') format('embedded-opentype')
+	src: url('fonts/StudioScriptC.woff') format('woff')
+	src: url('fonts/StudioScriptC.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
 
 html, body
 	height: 100%
@@ -183,8 +189,7 @@ p
 
 	/* W3C Markup */ 
 	background-image: linear-gradient(to bottom, #7171db 0%, #4949C9 100%)
-	width: 160px
-	height: 45px
+
 
 	&:hover
 		/* IE10+ */ 
@@ -691,3 +696,395 @@ p
 	width: 251px
 
 
+//		Учителя
+
+.teachers
+	margin-bottom: 48px
+
+.teachers__button
+	width: 90px
+	height: 437px
+	position: relative
+	display: inline-block
+
+	/* IE10+ */ 
+	background-image: -ms-linear-gradient(left, #F59F0A 0%, #ff7f04 100%)
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(left, #F59F0A 0%, #ff7f04 100%)
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(left, #F59F0A 0%, #ff7f04 100%)
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #F59F0A), color-stop(100, #ff7f04))
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(left, #F59F0A 0%, #ff7f04 100%)
+
+	/* W3C Markup */ 
+	background-image: linear-gradient(to right, #F59F0A 0%, #ff7f04 100%)
+
+	&:hover
+		/* IE10+ */ 
+		background-image: -ms-linear-gradient(left, #F79012 0%, #F36C08 100%)
+
+		/* Mozilla Firefox */ 
+		background-image: -moz-linear-gradient(left, #F79012 0%, #F36C08 100%)
+
+		/* Opera */ 
+		background-image: -o-linear-gradient(left, #F79012 0%, #F36C08 100%)
+
+		/* Webkit (Safari/Chrome 10) */ 
+		background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #F79012), color-stop(100, #F36C08))
+
+		/* Webkit (Chrome 11+) */ 
+		background-image: -webkit-linear-gradient(left, #F79012 0%, #F36C08 100%)
+
+		/* W3C Markup */ 
+		background-image: linear-gradient(to right, #F79012 0%, #F36C08 100%)
+
+.teachers__button-title,
+.teachers__button-text
+	transform: rotate(270deg)
+	display: inline-block
+	color: #fff
+	position: absolute
+
+
+.teachers__button-title
+	text-transform: uppercase
+	font-size: 22px
+	font-weight: normal
+	height: 25px
+	width: 110px
+	top: 195px
+	left: -18px
+
+.teachers__button-text
+	font-size: 18px
+	font-weight: 600
+	height: 25px
+	width: 163px
+	top: 200px
+	left: -20px
+
+.teachers__button-icon
+	background: url(images/sprite.png) no-repeat
+	width: 22px
+	height: 24px
+	background-position: -5px -61px
+	display: inline-block
+	position: absolute
+	bottom: 75px
+	left: 37px
+
+//Таблички учителей
+
+.teachers__slider
+	display: inline-block
+	vertical-align: top
+	margin-top: 68px
+	width: auto
+	position: absolute
+	overflow: hidden
+
+
+.teachers__icon
+	width: 163px
+	text-align: center
+	display: inline-block
+	margin-left: 28px
+	border: 1px solid rgba(128, 128, 128, 0.25)
+	padding-bottom: 8px
+	border-top: none
+	filter: grayscale(100%)
+	-webkit-filter: grayscale(100%)
+	-moz-filter: grayscale(100%)
+	-ms-filter: grayscale(100%)
+	-o-filter: grayscale(100%)
+	filter: url(desaturate.svg#greyscale)
+	filter: gray
+	-webkit-filter: grayscale(1)
+	&:hover
+		filter: none
+		-webkit-filter: none
+		-moz-filter: none
+		-ms-filter: none
+		-o-filter: none
+		filter: none
+		filter: none
+		-webkit-filter: none
+
+.teachers__name
+	font-weight: 700
+	font-size: 14px
+	line-height: 14px
+	padding-bottom: 7px
+
+.teachers__subject
+	font-weight: normal
+	font-size: 12px
+	padding-bottom: 3px
+
+.teachers__experience
+	font-weight: 700
+	font-size: 12px
+
+
+//		Отзывы
+
+.review
+	color: black
+	width: 1170px
+	margin: 0 auto
+	padding-bottom: 50px
+
+.review__h2
+	text-transform: uppercase
+	font-size: 30px
+	font-weight: 700
+	margin-bottom: 40px
+
+.review__icon
+	height: 249px
+	width: 570px
+	display: inline-block
+	color: black
+	border: 1px solid rgba(128, 128, 128, 0.25)
+	padding-top: 19px
+	padding-bottom: 25px
+	padding-left: 20px
+	padding-right: 23px
+	&:hover
+		border: 1px solid black
+
+
+
+.review__block
+	display: inline-block
+
+
+//		Зелёный блок
+.review__icon_none
+	background: #8cc63f
+	text-align: center
+	vertical-align: top
+	&:hover
+		border: none
+		background: #8EC940
+
+.review__link
+	color: #fff
+	font-size: 30px
+	line-height: 197px
+	font-weight: 300
+
+
+//		Отзывы фотки
+.review__img
+	display: inline-block
+	vertical-align: top
+
+
+//		Отзывы текст
+.review__text-wrapper
+	width: 365px
+	display: inline-block
+	padding-left: 25px
+
+.review__name
+	font-size: 14px
+	font-weight: bold
+	padding-bottom: 10px
+
+.review__title
+	font-size: 13px
+	font-weight: 600
+	padding-bottom: 10px
+
+.review__text
+	font-size: 13px
+	font-weight: 600
+
+
+//		блок с ценами
+.price
+	background: url("images/bg.jpg")
+	height: 553px
+	padding-top: 57px
+	padding-left: 90px
+	position: relative
+
+.price__h2
+	text-transform: uppercase
+	color: black
+	padding-bottom: 44px
+	font-size: 28px
+
+
+.price__promo
+	font-family: "StudioScriptC"
+	font-size: 21px
+	font-weight: 600
+	position: absolute
+	top: 24px
+	right: 188px
+	color: rgba(0, 0, 0, 0.86)
+
+.price__wrapper
+	margin: 0 auto
+	width: 1060px
+	height: 354px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+
+
+
+.price__block
+	color: #fff
+	text-align: center
+	display: inline-block
+	width: 294px
+	height: 333px
+	box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.57)
+
+	&_big
+		transform: scale(1.08) translateY(-12px)
+
+.enroll__border
+	border: 1px solid white
+
+.price__h3
+	text-transform: uppercase
+	font-size: 25px
+	font-weight: 600
+
+.price__title
+	font-size: 19px
+	font-weight: 300
+
+.price__text
+	font-size: 23px
+	text-transform: uppercase
+	font-weight: 400
+
+.more
+	.more__button-wrapper
+		text-align: center
+
+	.more__button
+		background: #e92937
+		color: #fff
+		width: 400px
+		padding: 0 62px 0 0px
+		line-height: 48px
+		font-size: 18px
+		font-weight: bold
+		display: inline-block
+		position: relative
+		&:after
+			content: ''
+			background: url(images/sprite.png) no-repeat
+			width: 17px
+			height: 17px
+			position: absolute
+			width: 24px
+			height: 13px
+			background-position: -37px -61px
+			right: 96px
+			top: 18px
+
+	.more__text-wrapper
+		width: 1170px
+		margin: 0 auto
+		position: relative
+		padding-top: 36px
+
+	.more__title
+		font-size: 14px
+		font-weight: 600
+		font-style: italic
+		line-height: 18px
+		margin-bottom: 18px
+
+	.more__text
+		font-size: 14px
+		font-weight: 400
+		color: #000
+		margin-bottom: 31px
+
+	.more__text-span
+		font-weight: 600
+
+	.more__h3
+		font-size: 24px
+		margin-bottom: 14px
+
+	.more__h3-orange
+		color: #f15b05
+
+	.more__h3-green
+		color: #2a981e
+
+	.more__ul
+		margin-bottom: 14px
+	.more__li
+		position: relative
+		padding-left: 40px
+		font-size: 15px
+		margin-bottom: 5px
+		&:before
+			color: #6d6767
+			content: "• "
+			position: absolute
+			left: 13px
+			top: 0px
+			font-size: 34px
+			line-height: 23px
+
+	.more__ps
+		display: block
+		position: relative
+		text-align: right
+		.more__ps-div
+			width: 690px
+			display: inline-block
+			font-style: italic
+			font-size: 23px
+			color: #6d6969
+			font-weight: 200
+
+.footer
+	background: #2e2e2b
+	position: relative
+	.footer__wrapper
+		color: #fff
+		width: 1220px
+		margin: 0 auto
+		position: relative
+
+	.footer__link
+		color: #fff
+		text-decoration: none
+	.footer__block
+	.footer__call
+	.footer__title
+	.footer__text
+	.footer__address
+
+	.footer-small-wrapper
+		position: relative
+		display: inline-block
+		width: 20%
+		vertical-align: top
+
+	.footer-bigger-wrapper
+		position: relative
+		display: inline-block
+		width: 80%
+		vertical-align: top
