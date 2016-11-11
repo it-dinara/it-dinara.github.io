@@ -532,34 +532,64 @@ p {
     top: 0;
     left: 1px; }
 
+.ad-center-layout {
+  background: #e6e6e6; }
+
 .ad {
-  background: url("images/bg.jpg");
-  background-repeat: repeat;
-  height: 590px;
-  padding-top: 35px; }
+  height: 591px;
+  width: 1170px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex; }
+
+.ad__wrapper {
+  display: inline-block; }
 
 .ad__skype {
   display: inline-block;
-  text-align: right; }
-
-.ad__skype-img {
-  position: relative;
-  bottom: -30px;
-  left: -100px; }
-
-.ad__wrapper {
-  display: inline-block;
-  width: 50%; }
-
-.ad__wrapper-p {
-  width: 366px;
-  display: inline-block; }
+  text-align: right;
+  background-image: url("images/skype.png");
+  width: 591px;
+  height: 591px;
+  padding-top: 35px; }
+  .ad__skype:hover {
+    filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -webkit-filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -moz-filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -ms-filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -o-filter: drop-shadow(5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%); }
 
 .ad__business {
-  display: inline-block;
-  text-align: right; }
+  display: block;
+  text-align: right;
+  background: url("images/business.png");
+  width: 580px;
+  height: 296px;
+  padding-top: 35px; }
+  .ad__business:hover {
+    filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -webkit-filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -moz-filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -ms-filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -o-filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.62)) opacity(70%); }
 
 .ad__children {
+  display: block;
+  background: url("images/children.png");
+  width: 580px;
+  height: 294px;
+  padding-top: 19px; }
+  .ad__children:hover {
+    filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -webkit-filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -moz-filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -ms-filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%);
+    -o-filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.62)) opacity(70%); }
+
+.ad__p {
   display: inline-block; }
 
 .ad__title {
