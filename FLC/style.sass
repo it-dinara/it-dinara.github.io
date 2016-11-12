@@ -19,7 +19,8 @@ body
 *
 	box-sizing: border-box
 h1,
-h2
+h2,
+h3
 	margin: 0
 	padding: 0
 
@@ -97,10 +98,10 @@ p
 	background: #e6e6e6
 
 .header__line2
-	padding-left: 90px
-	padding-right: 122px
 	padding-top: 8px
 	padding-bottom: 8px
+	width: 1169px
+	margin: 0 auto
 
 .header__logo
 	display: inline-block
@@ -131,7 +132,7 @@ p
 	font-weight: 500
 
 .enroll
-	margin-left: 55px
+	margin-left: 47px
 	display: inline-block
 	margin-top: 10px
 	vertical-align: top
@@ -140,6 +141,9 @@ p
 	display: inline-block
 	font-size: 15px
 	padding: 7px 17px 5px 12px
+	margin-right: 21px
+	&:last-child
+		margin-right: 0
 	a
 		color: white
 
@@ -574,16 +578,16 @@ p
 
 
 	&_pic1
-		width: 35px
-		height: 64px
-		background-position: -292px -5px
+		width: 63px
+		height: 63px
+		background-position: -270px -139px
 		top: 0
 		left: 1px
 
 	&_pic2
-		width: 63px
-		height: 63px
-		background-position: -270px -139px
+		width: 35px
+		height: 64px
+		background-position: -292px -5px
 		top: 0
 		left: 1px
 
@@ -699,14 +703,14 @@ p
 //		Учителя
 
 .teachers
-	margin-bottom: 48px
-	height: 569px
+	height: 477px
 
 .teachers__button
 	width: 90px
 	height: 437px
 	position: relative
 	display: inline-block
+	margin-right: 27px
 
 	/* IE10+ */ 
 	background-image: -ms-linear-gradient(left, #F59F0A 0%, #ff7f04 100%)
@@ -795,7 +799,7 @@ p
 	width: 163px
 	text-align: center
 	display: inline-block
-	margin-left: 28px
+	margin-right: 23px
 	border: 1px solid rgba(128, 128, 128, 0.25)
 	padding-bottom: 8px
 	border-top: none
@@ -839,7 +843,7 @@ p
 	color: black
 	width: 1170px
 	margin: 0 auto
-	padding-bottom: 50px
+	height: 653px
 
 .review__h2
 	text-transform: uppercase
@@ -857,6 +861,10 @@ p
 	padding-bottom: 25px
 	padding-left: 20px
 	padding-right: 23px
+	margin-bottom: 30px
+	margin-right: 24px
+	&:nth-of-type(2n)
+		margin-right: 0
 	&:hover
 		border: 1px solid black
 
@@ -912,15 +920,18 @@ p
 //		блок с ценами
 .price
 	background: url("images/bg.jpg")
-	height: 553px
-	padding-top: 57px
+	height: 534px
+	padding-top: 51px
 	padding-left: 90px
+	padding-right: 90px
 	position: relative
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.32)
+	z-index: 1
 
 .price__h2
 	text-transform: uppercase
 	color: black
-	padding-bottom: 44px
+	padding-bottom: 56px
 	font-size: 28px
 
 
@@ -935,7 +946,7 @@ p
 
 .price__wrapper
 	margin: 0 auto
-	width: 1060px
+	width: 1055px
 	height: 354px
 	display: -webkit-flex
 	display: -moz-flex
@@ -953,12 +964,15 @@ p
 	width: 294px
 	height: 333px
 	box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.57)
+	padding-top: 21px
 
 	&_big
 		transform: scale(1.08) translateY(-12px)
 
 .enroll__border
 	border: 1px solid white
+	margin-top: 25px
+	text-align: left
 
 .price__h3
 	text-transform: uppercase
@@ -968,13 +982,15 @@ p
 .price__title
 	font-size: 19px
 	font-weight: 300
+	line-height: 41px
 
 .price__text
 	font-size: 23px
-	text-transform: uppercase
 	font-weight: 400
+	line-height: 25px
 
 .more
+	padding-bottom: 38px
 	.more__button-wrapper
 		text-align: center
 
@@ -1063,34 +1079,89 @@ p
 .footer
 	background: #2e2e2b
 	position: relative
+	width: 100%
 	.footer__wrapper
 		color: #fff
-		width: 1220px
+		width: 1272px
 		margin: 0 auto
 		position: relative
 
 	.footer__link
 		color: #fff
 		text-decoration: none
+
 	.footer__block
 		display: inline-block
 		vertical-align: top
+
+		&_col-1
+			padding-right: 50px
+
+		&_col-2
+			padding-right: 84px
+
+		&_col-3
+			padding-right: 104px
+
+		&_col-4
+			padding-right: 74px
+
+		&_col-5
+			padding-right: 0
+
 	.footer__call
+		padding-bottom: 10px
+		line-height: 20px
+
 	.footer__title
 		font-size: 15px
 		font-weight: 600
+
 	.footer__text
 		font-size: 11px
+
 	.footer__address
+		padding-bottom: 17px
 
 	.footer-small-wrapper
+		padding-top: 22px
 		position: relative
 		display: inline-block
-		width: 20%
+		width: 22%
 		vertical-align: top
 
+	.footer__social-btn
+		background: url(images/sprite.png) no-repeat
+		position: absolute
+
+	.footer__social-btn_ok
+		width: 100px
+		height: 82px
+		background-position: -160px -139px
+		top: 23px
+		right: -27px
+		&:hover
+			right: -20px
+
+	.footer__social-btn_youtube
+		width: 97px
+		height: 82px
+		background-position: -337px -5px
+		top: 82px
+		right: -24px
+		&:hover
+			right: -17px
+
+
 	.footer-bigger-wrapper
+		padding-left: 52px
+		padding-top: 20px
 		position: relative
 		display: inline-block
-		width: 80%
+		width: 77%
 		vertical-align: top
+		box-shadow: -6px 0px 6px rgba(0, 0, 0, 0.6)
+		padding-bottom: 33px
+
+	.enroll-footer
+		margin-left: 181px
