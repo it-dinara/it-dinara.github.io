@@ -45,6 +45,11 @@ input {
 p {
   margin: 0; }
 
+.container {
+  box-shadow: 0px 0px 15px rgba(46, 46, 43, 0.55);
+  width: 1350px;
+  margin: 0 auto; }
+
 .main {
   margin: 0 auto;
   width: 1350px; }
@@ -996,7 +1001,8 @@ p {
     position: relative;
     display: inline-block;
     width: 22%;
-    vertical-align: top; }
+    vertical-align: top;
+    overflow: hidden; }
   .footer .footer__social-btn {
     background: url(images/sprite.png) no-repeat;
     position: absolute; }
