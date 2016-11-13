@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
 <div class="container">
@@ -83,8 +84,8 @@
 				<h1 class="promo__h1">Дистанционное<br>обучение<br>по skype</h1>
 				<ul class="promo__ul">
 					<li class="promo__text"><span class="promo__text-checked"></span>Гарантированный<br> результат</li>
-					<li class="promo__text"><span class="promo__text-checked"></span>Занятия с<br> квалифицированным<br> преподавателем</li>
-					<li class="promo__text"><span class="promo__text-checked"></span>Курсы для любого уровня сложности</li>
+					<li class="promo__text"><span class="promo__text-checked"></span>Занятия с<br> квалифицированным<br> преподавателеми</li>
+					<li class="promo__text"><span class="promo__text-checked"></span>Курсы для любого уровня</li>
 				</ul>
 			</div>
 			<form action="" class="form">
@@ -183,6 +184,14 @@
 				<p class="teachers__button-text">преподавателей</p>
 			</div>
 			<div class="teachers__slider">
+				<div class="teachers__icon">
+					<img src="images/foto.png" alt="" class="teachers__img">
+					<div class="teachers__text">
+						<p class="teachers__name">Голубева Екатерина Владимировна</p>
+						<p class="teachers__subject">Английский язык</p>
+						<p class="teachers__experience">Стаж 10 лет</p>
+					</div>
+				</div>
 				<div class="teachers__icon">
 					<img src="images/foto.png" alt="" class="teachers__img">
 					<div class="teachers__text">
@@ -460,6 +469,11 @@
 		</div>
 	</footer>
 </div>
-
+<script>
+	var polyfilter_scriptpath = './lib/';
+	var polyfilter_skip_stylesheets = true;
+</script>
+<script src="./lib/cssParser.js"></script>
+<script src="./lib/css-filters-polyfill.js"></script>
 </body>
 </html>
