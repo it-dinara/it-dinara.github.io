@@ -61,8 +61,7 @@ p {
   font-size: 15px;
   padding-left: 90px;
   height: 37px;
-  line-height: 41px;
-  position: relative; }
+  line-height: 41px; }
 
 .header__contact {
   padding-right: 43px;
@@ -93,9 +92,10 @@ p {
   width: 17px;
   height: 17px;
   background-position: -41px -139px;
-  position: absolute;
-  top: 13px;
-  right: 401px; }
+  position: relative;
+  display: inline-block;
+  top: 5px;
+  right: 28px; }
 
 .header__work-time {
   margin-left: 27px;
@@ -449,10 +449,9 @@ p {
   .features__ul {
     height: 29px;
     padding-top: 3px;
-    margin: 0 auto;
     display: block;
-    width: 800px;
-    line-height: 20px; }
+    line-height: 20px;
+    padding-left: 250px; }
   .features__item {
     display: inline-block;
     padding-right: 9px;
@@ -514,7 +513,6 @@ p {
 .blurb {
   background: white;
   height: 221px;
-  padding-right: 92px;
   padding-left: 103px; }
 
 .blurb__item {
