@@ -513,15 +513,15 @@ p {
 .blurb {
   background: white;
   height: 221px;
-  padding-left: 103px; }
+  padding-left: 103px;
+  padding-bottom: 37px;
+  padding-top: 46px; }
 
 .blurb__item {
   display: inline-block;
   width: 167px;
   text-align: center;
-  margin-right: 30px;
-  padding-top: 46px;
-  padding-bottom: 37px; }
+  margin-right: 30px; }
 
 .blurb__text {
   padding-top: 15px; }
