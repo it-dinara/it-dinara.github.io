@@ -56,17 +56,18 @@ p
 	width: 1350px
 
 .header__line1
-	background: #2a251f
+	background: #625e5a
 	font-weight: 700
 	color: white
 	font-size: 15px
-	padding-left: 90px
-	height: 37px
-	line-height: 41px
+	padding-left: 92px
+	height: 32px
+	line-height: 31px
 
 .header__contact
-	padding-right: 43px
+	padding-right: 36px
 	color: white
+	letter-spacing: 0.55px
 
 .header__block1
 	display: inline-block
@@ -77,26 +78,28 @@ p
 	width: 43%
 
 .header__search
+	font-style: italic
 	font-weight: 400
 	font-size: 12px
-	font-style: italic
+	color: black
 	border-radius: 2px
-	padding-left: 15px
+	padding-left: 13px
 	height: 23px
 	width: 152px
 	vertical-align: text-top
-	line-height: 23px
+	line-height: 24px
+	margin-right: -15px
 
 
 .header__search-img
-	background: url(images/sprite.png) no-repeat
-	width: 17px
-	height: 17px
-	background-position: -41px -139px
+	background: url(images/sprite_1.png) no-repeat
+	width: 10px
+	height: 10px
+	background-position: -273px -5px
 	position: relative
 	display: inline-block
-	top: 5px
-	right: 28px
+	top: 0px
+	right: 7px
 
 .header__work-time
 	margin-left: 27px
@@ -108,69 +111,66 @@ p
 	font-weight: 400
 
 .header__wrapper
-	background: #e6e6e6
+
 
 .header__line2
-	padding-top: 8px
-	padding-bottom: 8px
-	width: 1169px
+	padding-top: 11px
+	width: 1193px
 	margin: 0 auto
 
 .header__logo
 	display: inline-block
-	background: url(images/sprite.png) no-repeat
-	width: 70px
-	height: 68px
-	background-position: -205px -61px
+	background: url(images/sprite_1.png) no-repeat
+	width: 115px
+	height: 114px
+	background-position: -148px -5px
 
 .header__wrapper-title
 	display: inline-block
 	vertical-align: top
 	line-height: 22px
-	width: 289px
-	margin-left: 15px
+	margin-left: 24px
 	text-transform: uppercase
-	border-left: solid 2px #999999
-	padding-left: 17px
-	padding-right: 13px
 	padding-bottom: 10px
-	padding-top: 10px
+	padding-top: 11px
 
 .header__title-first
-	font-size: 14px
-	font-weight: 400
+	font-size: 18px
+	font-weight: bold
 
 .header__title-second
-	font-size: 13px
+	font-size: 14px
 	font-weight: 500
 
 .enroll
-	margin-left: 47px
 	display: inline-block
 	margin-top: 10px
 	vertical-align: top
+	float: right
+	margin-right: 43px
 
 .enroll__item
-	display: inline-block
 	font-size: 15px
-	padding: 7px 17px 5px 12px
-	margin-right: 17px
+	padding: 7px 29px 5px 12px
+	margin-bottom: 13px
+	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.57)
 	&:last-child
 		margin-right: 0
 	a
 		color: white
 
+.enroll__item_padding
+	padding: 7px 17px 5px 12px
+
 .enroll__item-a
 	display: inline-block
 	line-height: 15px
 	font-size: 13px
-
+	&_1
+		line-height: 29px
+		vertical-align: top
 	&_width1
 		width: 90px
-	&_width2
-		width: 190px
-	&_width3
-		width: 175px
 
 
 .enroll__item-a-img
@@ -299,20 +299,25 @@ p
 
 
 .nav
+	background: #3aad2c
 	list-style-type: none
-	padding-left: 90px
+	padding-left: 80px
+	height: 44px
+	line-height: 42px
 
 .nav__item
 	display: inline-block
-	padding-right: 26px
+	padding-right: 15.5px
 	position: relative
-	height: 30px
 	font-weight: 900
 	font-size: 12px
 	text-transform: uppercase
 	color: #444444
+	border-right: 1px solid rgba(255, 255, 255, 0.28)
+	line-height: 27px
+	padding-left: 11.5px
 	&-a
-		color: #444444
+		color: white
 		&:hover
 			color: #adacac
 
@@ -352,56 +357,98 @@ p
 	color: #444444
 
 .nav__triangle
-	background: url(images/sprite.png) no-repeat
+	background: url(images/sprite_1.png) no-repeat
 	width: 9px
 	height: 8px
-	background-position: -71px -61px
+	background-position: -5px -5px
 	position: absolute
-	top: 5px
+	top: 23px
 
 	&_position1
-		left: 65px
+		left: 35px
 
 	&_position2
-		left: 103px
+		left: 55px
 
 	&_position3
-		left: 118px
+		left: 67px
 
 
 .promo
-	background: url("images/slider.jpg")
-	height: 470px
-
-.promo__block
-	display: inline-block
-
-.promo__h1
-	padding-left: 118px
-	font-size: 36px
-	font-weight: 700
-	text-transform: uppercase
-	line-height: 36px
-	padding-top: 61px
-	padding-bottom: 26px
-
-.promo__ul
-	padding-left: 161px
-
-.promo__text
-	font-size: 30px
+	background: url("images/slider_1.jpg")
+	height: 549px
 	position: relative
-	line-height: 29px
-	margin-bottom: 20px
 
-	&-checked
-		background: url(images/sprite.png) no-repeat
-		width: 28px
-		height: 23px
-		background-position: -249px -28px
+	.promo__phrase
+		font-family: "StudioScriptC"
+		font-size: 23px
+		font-weight: 600
 		position: absolute
-		top: 4px
-		left: -40px
+		top: 146px
+		right: 432px
+		color: rgba(0, 0, 0, 0.86)
+		letter-spacing: 0.5px
+		text-align: center
+		line-height: 23px
+		&:before
+			content: ""
+			position: absolute
+			right: -23px
+			top: -17px
+			background: url(images/sprite_1.png) no-repeat
+			width: 52px
+			height: 19px
+			background-position: -86px -5px
+
+	.promo__block
+		display: inline-block
+
+	.promo__h1
+		padding-left: 87px
+		font-size: 36px
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 36px
+		padding-bottom: 27px
+		color: #f5730b
+
+	.promo__ul
+		padding-left: 157px
+		font-style: italic
+		position: relative
+
+	.promo__text
+		font-size: 26px
+		position: relative
+		line-height: 29px
+		margin-bottom: 21px
+
+	.promo__text-checked
+		background: url(images/sprite_1.png) no-repeat
+		width: 38px
+		height: 35px
+		background-position: -86px -34px
+		position: absolute
+		top: 0px
+		left: -52px
+
+	.promo__icon
+		background: url(images/sprite_1.png) no-repeat
+		position: absolute
+		top: 24px
+
+	.promo__icon_before
+		width: 21px
+		height: 39px
+		background-position: -24px -5px
+		left: 26px
+
+	.promo__icon_after
+		width: 21px
+		height: 38px
+		background-position: -55px -5px
+		right: -55px
+
 
 
 // Форма
@@ -412,111 +459,100 @@ p
 	height: 317px
 	display: inline-block
 	vertical-align: top
-	margin-top: 79px
-	margin-right: 83px
-	padding-left: 68px
+	margin-top: 78px
+	margin-right: -295px
 	padding-top: 21px
 	float: right
 
-	&__title
+	.form__block
+		padding-left: 68px
+
+	.form__title
 		text-transform: uppercase
 		font-weight: 400
-		line-height: 26px
+		line-height: 22px
 		font-size: 24px
-		margin-bottom: 5px
+		margin-bottom: 15px
+		text-align: center
 
-		&_red
-			color: red
-			line-height: 26px
+	.form__title_color
+		color: #f5730b
 
-	&__input
-			border: 1px solid rgb(226, 223, 223)
-			border-radius: 2px
-			padding: 0px 13px
-			background: rgb(239, 239, 239)
-			margin-bottom: 9px
-			box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.04)
-			height: 34px
-			width: 199px
-			font-size: 12px
+	.form__input
+		border: 1px solid rgb(226, 223, 223)
+		border-radius: 2px
+		padding: 0px 13px
+		background: rgb(239, 239, 239)
+		margin-bottom: 9px
+		box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.04)
+		height: 34px
+		width: 199px
+		font-size: 12px
 
-	&__input_submit
+	.form__input_submit
 		color: white
 		font-weight: 700
 		font-size: 12px
-		background-color: rgb(233, 11, 11)
+		background-color: #f5730b
 		box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.04)
 		width: 198px
 		height: 42px
 		margin-top: 10px
 		cursor: pointer
 		&:hover
-			background-color: rgb(184, 1, 1)
+			background-color: #f56210
+	.form__checkbox-label
+		font-size: 12px
+		position: relative
+		padding-left: 38px
+		&:before
+			content: ""
+			width: 9px
+			height: 9px
+			background: #fff
+			border: 1px solid rgba(0, 0, 0, 0.44)
+			display: inline-block
+			position: absolute
+			left: 17px
+			top: 3px
 
-.form__checkbox-label
-	font-size: 12px
-	position: relative
-	padding-left: 38px
-	&:before
-		content: ""
-		width: 9px
-		height: 9px
-		background: #fff
-		border: 1px solid rgba(0, 0, 0, 0.44)
-		display: inline-block
-		position: absolute
-		left: 17px
-		top: 3px
-
-.form__checkbox-input
-	display: none
-	&:checked + .form__checkbox-label:after
-		content: ""
-		background-image: url(images/sprite.png)
-		width: 16px
-		height: 13px
-		background-position: -249px -5px
-		position: absolute
-		top: 2px
-		left: 16px
-		opacity: 1
-
-.slider-button
-	background: #ffffff
-	height: 20px
-	line-height: 15px
-
-	&__item
-		display: inline-block
-		height: 4px
-		width: 381px
-		background: #8ebf18
-		margin-left: 90px
+	.form__checkbox-input
+		display: none
+		&:checked + .form__checkbox-label:after
+			content: ""
+			background-image: url(images/sprite.png)
+			width: 16px
+			height: 13px
+			background-position: -249px -5px
+			position: absolute
+			top: 2px
+			left: 16px
+			opacity: 1
 
 
 .features
 	height: 32px
-	background: #8ebf18
+	background: #6a6ad8
 
 	&__ul
 		height: 29px
 		padding-top: 3px
 		display: block
 		line-height: 20px
-		padding-left: 250px
+		padding-left: 272px
 
 
 	&__item
 		display: inline-block
 		padding-right: 9px
 		padding-left: 5px
-		margin-right: 12px
+		margin-right: 18px
 		&:hover
 			background: #b3d464
 
 	&__a
 		color: white
-		font-size: 12px
+		font-size: 14px
 		font-weight: 700
 		text-transform: uppercase
 		vertical-align: -4px
@@ -524,7 +560,7 @@ p
 .features__img
 	background-image: url(images/sprite.png)
 	display: inline-block
-	margin-right: 30px
+	margin-right: 11px
 	margin-bottom: -1px
 
 	&_inglish
@@ -572,10 +608,10 @@ p
 
 .blurb
 	background: white
-	height: 221px
+	height: 239px
 	padding-left: 103px
 	padding-bottom: 37px
-	padding-top: 46px
+	padding-top: 65px
 
 .blurb__item
 	display: inline-block
@@ -1023,6 +1059,8 @@ p
 	border: 1px solid white
 	margin-top: 18px
 	text-align: left
+	display: inline-block
+	width: 163px
 
 .price__h3
 	text-transform: uppercase
@@ -1173,26 +1211,29 @@ p
 			padding-right: 0
 
 	.footer__call
-		padding-bottom: 10px
+		padding-bottom: 1px
 		line-height: 20px
 
 	.footer__title
 		font-size: 15px
 		font-weight: 600
+		line-height: 23px
 
 	.footer__text
 		font-size: 11px
+		line-height: 18px
 
 	.footer__address
-		padding-bottom: 17px
+		padding-bottom: 8px
 
 	.footer-small-wrapper
-		padding-top: 22px
+		padding-top: 19px
 		position: relative
 		display: inline-block
 		width: 22%
 		vertical-align: top
 		overflow: hidden
+		height: 230px
 
 	.footer__social-btn
 		background: url(images/sprite.png) no-repeat
@@ -1204,18 +1245,28 @@ p
 		height: 82px
 		background-position: -160px -139px
 		top: 23px
-		right: -27px
+		right: -38px
 		&:hover
-			right: -20px
+			right: -25px
 
 	.footer__social-btn_youtube
 		width: 97px
 		height: 82px
 		background-position: -337px -5px
 		top: 82px
-		right: -24px
+		right: -34px
 		&:hover
-			right: -17px
+			right: -22px
+
+	.footer__social-btn_insta
+		background: url(images/sprite_1.png) no-repeat
+		width: 58px
+		height: 48px
+		background-position: -74px -79px
+		top: 155px
+		right: -11px
+		&:hover
+			right: 0px
 
 
 	.footer-bigger-wrapper
@@ -1227,6 +1278,12 @@ p
 		vertical-align: top
 		box-shadow: -6px 0px 6px rgba(0, 0, 0, 0.6)
 		padding-bottom: 33px
+		height: 230px
 
 	.enroll-footer
-		margin-left: 181px
+		margin-right: 0
+		margin-top: -49px
+
+	.enroll__item_footer
+		display: inline-block
+		margin-right: 13px
