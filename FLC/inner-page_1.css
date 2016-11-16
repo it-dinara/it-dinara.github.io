@@ -37,7 +37,6 @@ a {
   list-style-type: none; }
 
 input {
-  border: none;
   padding: 0;
   margin: 0; }
 
@@ -331,6 +330,18 @@ p {
     left: 103px; }
   .nav__triangle_position3 {
     left: 118px; }
+
+.wrapper__big {
+  display: inline-block;
+  width: 69%; }
+
+.wrapper__small {
+  display: inline-block;
+  width: 29%; }
+
+.price__table {
+  display: inline-block;
+  width: 49%; }
 
 .footer {
   background: #2e2e2b;
