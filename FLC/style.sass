@@ -678,8 +678,8 @@ p
 
 .advertising
 	height: 591px
-	width: 1170px
 	margin: 0 auto
+	width: 86.6%
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -688,7 +688,8 @@ p
 
 .advertising__wrapper
 	display: inline-block
-
+	width: 86.6%
+	margin: 0 auto
 
 .advertising__skype
 	display: inline-block
@@ -921,76 +922,76 @@ p
 	margin: 0 auto
 	height: 653px
 
-.review__h2
-	text-transform: uppercase
-	font-size: 30px
-	font-weight: 700
-	margin-bottom: 33px
+	.review__h2
+		text-transform: uppercase
+		font-size: 30px
+		font-weight: 700
+		margin-bottom: 33px
 
-.review__icon
-	height: 251px
-	width: 570px
-	display: inline-block
-	color: black
-	border: 1px solid rgba(128, 128, 128, 0.25)
-	padding-top: 15px
-	padding-left: 20px
-	margin-bottom: 29px
-	margin-right: 25px
-	position: relative
-	&:nth-of-type(2n)
-		margin-right: 0
-	&:hover
-		border: 1px solid black
-
-
+	.review__icon
+		height: 251px
+		width: 570px
+		display: inline-block
+		color: black
+		border: 1px solid rgba(128, 128, 128, 0.25)
+		padding-top: 15px
+		padding-left: 20px
+		margin-bottom: 29px
+		margin-right: 25px
+		position: relative
+		&:nth-of-type(2n)
+			margin-right: 0
+		&:hover
+			border: 1px solid black
 
 
-.review__block
-	display: inline-block
 
 
-//		Зелёный блок
-.review__icon_none
-	background: #8cc63f
-	text-align: center
-	vertical-align: top
-	&:hover
-		border: none
-		background: #8EC940
-
-.review__link
-	color: #fff
-	font-size: 30px
-	line-height: 197px
-	font-weight: 300
+	.review__block
+		display: inline-block
 
 
-//		Отзывы фотки
-.review__img
-	display: inline-block
-	vertical-align: top
+	//		Зелёный блок
+	.review__icon_none
+		background: #8cc63f
+		text-align: center
+		vertical-align: top
+		&:hover
+			border: none
+			background: #8EC940
+
+	.review__link
+		color: #fff
+		font-size: 30px
+		line-height: 197px
+		font-weight: 300
 
 
-//		Отзывы текст
-.review__text-wrapper
-	width: 372px
-	display: inline-block
-	padding-left: 23px
+	//		Отзывы фотки
+	.review__img
+		display: inline-block
+		vertical-align: top
 
-.review__name
-	font-size: 14px
-	font-weight: bold
-	padding-bottom: 8px
 
-.review__title
-	font-size: 13px
-	font-weight: 600
-	padding-bottom: 19px
+	//		Отзывы текст
+	.review__text-wrapper
+		width: 372px
+		display: inline-block
+		padding-left: 23px
 
-.review__text
-	font-size: 13px
-	font-weight: 600
+	.review__name
+		font-size: 14px
+		font-weight: bold
+		padding-bottom: 8px
+
+	.review__title
+		font-size: 13px
+		font-weight: 600
+		padding-bottom: 19px
+
+	.review__text
+		font-size: 13px
+		font-weight: 600
 
 
 //		блок с ценами
@@ -1004,82 +1005,78 @@ p
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.32)
 	z-index: 1
 
-.price__h2
-	text-transform: uppercase
-	color: black
-	padding-bottom: 53px
-	font-size: 30px
+	.price__h2
+		text-transform: uppercase
+		color: black
+		padding-bottom: 53px
+		font-size: 30px
 
-
-.price__promo
-	font-family: "StudioScriptC"
-	font-size: 23px
-	font-weight: 600
-	position: absolute
-	top: 32px
-	right: 236px
-	color: rgba(0, 0, 0, 0.86)
-	letter-spacing: 0.5px
-	&:before
-		content: ""
+	.price__promo
+		font-family: "StudioScriptC"
+		font-size: 23px
+		font-weight: 600
 		position: absolute
-		right: 299px
-		top: 27px
-		background: url(images/sprite.png) no-repeat
-		width: 110px
-		height: 31px
-		background-position: -129px -5px
+		top: 32px
+		right: 236px
+		color: rgba(0, 0, 0, 0.86)
+		letter-spacing: 0.5px
+		&:before
+			content: ""
+			position: absolute
+			right: 299px
+			top: 27px
+			background: url(images/sprite.png) no-repeat
+			width: 110px
+			height: 31px
+			background-position: -129px -5px
 
-.price__wrapper
-	margin: 0 auto
-	width: 1055px
-	height: 354px
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	justify-content: space-between
+	.price__wrapper
+		margin: 0 auto
+		width: 90%
+		height: 354px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
 
+	.price__block
+		color: #fff
+		text-align: center
+		display: inline-block
+		width: 294px
+		height: 333px
+		box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.57)
+		padding-top: 20px
 
+		&_big
+			transform: scale(1.08) translateY(-12px)
 
-.price__block
-	color: #fff
-	text-align: center
-	display: inline-block
-	width: 294px
-	height: 333px
-	box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.57)
-	padding-top: 20px
+	.enroll__border
+		border: 1px solid white
+		margin-top: 18px
+		text-align: left
+		display: inline-block
 
-	&_big
-		transform: scale(1.08) translateY(-12px)
+	.price__h3
+		text-transform: uppercase
+		font-size: 25px
+		font-weight: 600
 
-.enroll__border
-	border: 1px solid white
-	margin-top: 18px
-	text-align: left
-	display: inline-block
-	width: 163px
+	.price__title
+		font-size: 18px
+		font-weight: 300
+		line-height: 41px
 
-.price__h3
-	text-transform: uppercase
-	font-size: 25px
-	font-weight: 600
+	.price__title_margin
+		margin-top: 5px
 
-.price__title
-	font-size: 18px
-	font-weight: 300
-	line-height: 41px
-
-.price__title_margin
-	margin-top: 5px
-
-.price__text
-	font-size: 23px
-	font-weight: 400
-	line-height: 25px
-	letter-spacing: 0.3px
+	.price__text
+		font-size: 23px
+		font-weight: 400
+		line-height: 25px
+		letter-spacing: 0.3px
 
 .more
 	padding-bottom: 31px
@@ -1111,7 +1108,7 @@ p
 			top: 18px
 
 	.more__text-wrapper
-		width: 1170px
+		width: 86.6%
 		margin: 0 auto
 		position: relative
 		padding-top: 60px
@@ -1178,7 +1175,7 @@ p
 
 	.footer__wrapper
 		color: #fff
-		width: 1272px
+		width: 94.2%
 		margin: 0 auto
 		position: relative
 
@@ -1233,7 +1230,7 @@ p
 		width: 22%
 		vertical-align: top
 		overflow: hidden
-		height: 230px
+		padding-top: 33px
 
 	.footer__social-btn
 		background: url(images/sprite.png) no-repeat
@@ -1278,7 +1275,6 @@ p
 		vertical-align: top
 		box-shadow: -6px 0px 6px rgba(0, 0, 0, 0.6)
 		padding-bottom: 33px
-		height: 230px
 
 	.enroll-footer
 		margin-right: 0
