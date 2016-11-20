@@ -1,0 +1,53 @@
+layout-center-wrapper:
+	layout-center	-1
+	wrap-center	-2
+	wrap-central-3
+	wrap-centric-4
+	layout-wrapper -5 ой стр уже есть
+	wrapper-center
+	wrapper-central -8
+	wrapper-centric
+	layout-central	-7
+	layout-centric		9
+
+
+sheet/page__mini-title:		-9
+	mini-title	-1
+	mini-header	-2
+	mini-headline-3
+	mini-heading-4
+	mini-caption-5
+	wee-title-6
+	wee-header-7
+	wee-headline-8
+	wee-heading
+	wee-caption
+
+wrapper__big:
+	wrapper__large	-1
+	wrapper__massive-2
+	wrapper__massy-5
+	wrap__big-6
+	wrap__large
+	wrap__massive
+	wrap__massy
+
+
+wrapper__small:
+	wrapper__smaller	-1
+	wrapper__little	-2
+	wrapper__lesser
+	wrapper__less
+	wrapper__petite
+	wrap__small-5
+	wrap__smaller
+	wrap__little-6
+	wrap__lesser
+	wrap__less
+	wrap__petite
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+.a-dot {
+  color: grey;
+  border-bottom: dotted 1px grey; }
+
+.a-green {
+  color: #049404; }
+
+.a-blue {
+  color: #2196F3; }
+
+.wee-header {
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 21px;
+  padding-left: 19px;
+  color: grey; }
+
+.layout-central {
+  width: 89.6%;
+  margin: 0 auto;
+  height: 517px; }
+
+.col-1,
+.col-2,
+.col-3 {
+  display: inline-block;
+  width: 33%; }
+
+.h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  margin-top: 36px;
+  margin-bottom: 71px;
+  padding-left: 20px; }
+
+.students-img {
+  vertical-align: bottom; }
+
+.col-2 {
+  vertical-align: top;
+  position: relative; }
+  .col-2:after {
+    content: "";
+    position: absolute;
+    top: 277px;
+    right: -45px;
+    background-image: url(../images/sprite_7.png);
+    width: 125px;
+    height: 59px;
+    background-position: -5px -68px; }
+
+.archive {
+  margin-top: 72px; }
+
+.archive__li {
+  font-size: 22px;
+  line-height: 36px;
+  color: black;
+  padding-left: 9px; }
+
+.download__a {
+  font-size: 16px;
+  color: grey; }
+
+.col-3 {
+  vertical-align: top;
+  margin-top: 110px;
+  padding-left: 43px;
+  position: relative; }
+  .col-3:before {
+    content: "";
+    position: absolute;
+    top: 62px;
+    left: -88px;
+    background-image: url(../images/sprite_7.png);
+    width: 133px;
+    height: 25px;
+    background-position: -5px -5px; }
+  .col-3:after {
+    content: "";
+    position: absolute;
+    top: 129px;
+    left: -80px;
+    background-image: url(../images/sprite_7.png);
+    width: 135px;
+    height: 18px;
+    background-position: -5px -40px; }

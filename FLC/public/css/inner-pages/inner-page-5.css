@@ -1,0 +1,149 @@
+.a-dot {
+  color: grey;
+  border-bottom: dotted 1px grey; }
+
+.a-green {
+  color: #049404; }
+
+.a-blue {
+  color: #2196F3; }
+
+.mini-caption {
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 22px;
+  color: grey;
+  padding-left: 90px; }
+
+.news__h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  padding-left: 90px; }
+
+.wrapper__massy {
+  display: inline-block;
+  width: 64%; }
+
+.wrap__small {
+  display: inline-block;
+  width: 27.666%;
+  vertical-align: top;
+  margin-left: 8%; }
+
+.news__icon {
+  display: inline-block;
+  color: #444;
+  border-bottom: 1px solid rgba(14, 14, 14, 0.12);
+  padding-bottom: 32px;
+  padding-top: 33px;
+  padding-left: 90px; }
+  .news__icon:last-child {
+    border: none; }
+
+.news__img {
+  display: inline-block;
+  vertical-align: top; }
+
+.news__title-orange {
+  color: #f5730b;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 23px;
+  margin-top: -2px;
+  padding-bottom: 1px; }
+
+.news__text-wrapper {
+  display: inline-block;
+  width: 500px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 11px;
+  line-height: 18px; }
+
+.news__footer {
+  margin-top: 10px;
+  font-size: 11px; }
+
+.news__author,
+.news__date,
+.read__more {
+  display: inline-block;
+  text-transform: uppercase; }
+
+.news__author {
+  padding-right: 18px; }
+
+.read__more {
+  color: #444;
+  border: solid 1px #444;
+  border-radius: 4px;
+  padding: 2px 30px 2px 11px;
+  margin-left: 170px;
+  position: relative; }
+  .read__more:after {
+    position: absolute;
+    content: "";
+    background: url(../images/sprite_5.png) no-repeat;
+    top: 3px;
+    right: 8px;
+    width: 14px;
+    height: 16px;
+    background-position: -25px -5px; }
+
+.left-h3 {
+  font-size: 24px;
+  font-weight: 300;
+  padding-left: 6px;
+  padding-bottom: 28px;
+  padding-top: 30px; }
+
+.left__text {
+  line-height: 18px;
+  font-size: 14px;
+  padding-left: 16px;
+  color: black;
+  font-weight: 400;
+  padding-top: 11px;
+  padding-bottom: 11px; }
+
+.left__text_green {
+  background: #37aa2a;
+  color: white; }
+
+.pagginator {
+  margin-top: 10px;
+  margin-bottom: 51px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 394px; }
+
+.page__img {
+  background: url(../images/sprite_5.png) no-repeat;
+  display: inline-block; }
+
+.page__img_back {
+  width: 10px;
+  height: 8px;
+  background-position: -5px -23px; }
+
+.page__img_front {
+  width: 10px;
+  height: 8px;
+  background-position: -5px -5px; }
+
+.page {
+  display: inline-block;
+  height: 21px;
+  width: 19px; }
+
+.page_green {
+  background: #37aa2a;
+  color: white; }
+
+.page__a {
+  padding-right: 7px;
+  color: #444; }

@@ -1,0 +1,86 @@
+.a-dot {
+  color: grey;
+  border-bottom: dotted 1px grey; }
+
+.a-green {
+  color: #049404; }
+
+.a-blue {
+  color: #2196F3; }
+
+.page__mini-title {
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 22px;
+  color: grey;
+  margin-bottom: 36px;
+  padding-left: 19px; }
+
+.layout-centric {
+  width: 89.6%;
+  margin: 0 auto; }
+
+.book-h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #27279f;
+  padding-left: 19px;
+  letter-spacing: 0.5px;
+  margin-bottom: 13px; }
+
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+.book {
+  float: left;
+  padding: 28px 3px 27px 0px;
+  width: 50%; }
+  .book:nth-of-type(2n+1) {
+    border-right: 1px solid rgba(0, 0, 0, 0.13); }
+  .book:nth-of-type(1), .book:nth-of-type(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13); }
+
+.book__title {
+  font-size: 18.5px;
+  font-weight: 600;
+  line-height: 20px;
+  color: black;
+  padding-left: 29px; }
+
+.book__wrapper-img {
+  text-align: center;
+  margin: 6px 0px 2px 0; }
+
+.book__img {
+  display: inline-block; }
+
+.book__text {
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-left: 32px; }
+
+.book__ul {
+  padding-left: 32px;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+
+.book__li {
+  padding-bottom: 1px; }
+
+.book__a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px; }
+
+.book__span {
+  display: inline-block;
+  background: url(../images/pdf.png) no-repeat;
+  width: 21px;
+  height: 22px;
+  vertical-align: middle;
+  margin-left: 3px; }

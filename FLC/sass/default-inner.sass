@@ -1,9 +1,9 @@
 @font-face
 	font-family: "StudioScriptC"
-	src: url('fonts/StudioScriptC.eot')
-	src: url('fonts/StudioScriptC.eot?#iefix') format('embedded-opentype')
-	src: url('fonts/StudioScriptC.woff') format('woff')
-	src: url('fonts/StudioScriptC.ttf') format('truetype')
+	src: url('../fonts/StudioScriptC.eot')
+	src: url('../fonts/StudioScriptC.eot?#iefix') format('embedded-opentype')
+	src: url('../fonts/StudioScriptC.woff') format('woff')
+	src: url('../fonts/StudioScriptC.ttf') format('truetype')
 	font-weight: normal
 	font-style: normal
 
@@ -55,7 +55,7 @@ p
 	margin: 0 auto
 	width: 1350px
 	position: relative
-	padding-bottom: 280px
+	min-height: calc(100vh - 250px)
 
 .header
 	width: 1350px
@@ -412,13 +412,9 @@ p
 
 .footer
 	background: #2e2e2b
+	position: relative
 	width: 1350px
 	margin: 0 auto
-	position: absolute
-	left: 0
-	bottom: 0
-	width: 100%
-	height: 275px
 
 	.footer__wrapper
 		color: #fff
