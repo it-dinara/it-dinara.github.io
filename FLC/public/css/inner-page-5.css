@@ -51,7 +51,7 @@ p {
 .main {
   margin: 0 auto;
   width: 1350px;
-  min-height: 100vh; }
+  min-height: calc(100vh - 250px); }
 
 .header {
   width: 1350px;
@@ -67,7 +67,7 @@ p {
   line-height: 41px; }
 
 .header__contact {
-  padding-right: 43px;
+  padding-right: 48px;
   color: white; }
 
 .header__block1 {
@@ -77,21 +77,21 @@ p {
 .header__block2 {
   text-align: right;
   display: inline-block;
-  width: 43%; }
+  width: 44.5%; }
 
 .header__search {
   font-weight: 400;
   font-size: 12px;
   font-style: italic;
-  border-radius: 2px;
+  border-radius: 3px;
   padding-left: 15px;
-  height: 23px;
-  width: 152px;
-  vertical-align: text-top;
-  line-height: 23px; }
+  height: 25px;
+  width: 150px;
+  line-height: 23px;
+  border: 1px solid rgba(16, 16, 16, 0.29); }
 
 .header__search-img {
-  background: url(images/sprite.png) no-repeat;
+  background: url(../images/sprite.png) no-repeat;
   width: 17px;
   height: 17px;
   background-position: -41px -139px;
@@ -101,8 +101,8 @@ p {
   right: 28px; }
 
 .header__work-time {
-  margin-left: 27px;
-  margin-right: 12px;
+  margin-left: 8px;
+  margin-right: 31px;
   font-size: 13px;
   font-weight: 700; }
 
@@ -120,7 +120,7 @@ p {
 
 .header__logo {
   display: inline-block;
-  background: url(images/sprite.png) no-repeat;
+  background: url(../images/sprite.png) no-repeat;
   width: 70px;
   height: 68px;
   background-position: -205px -61px; }
@@ -155,7 +155,7 @@ p {
 .enroll__item {
   display: inline-block;
   font-size: 15px;
-  padding: 7px 17px 5px 12px;
+  padding: 7px 17px 6px 12px;
   margin-right: 17px; }
   .enroll__item:last-child {
     margin-right: 0; }
@@ -174,7 +174,7 @@ p {
     width: 175px; }
 
 .enroll__item-a-img {
-  background: url(images/sprite.png) no-repeat;
+  background: url(../images/sprite.png) no-repeat;
   width: 26px;
   height: 26px;
   background-position: -5px -139px;
@@ -318,7 +318,7 @@ p {
   color: #444444; }
 
 .nav__triangle {
-  background: url(images/sprite.png) no-repeat;
+  background: url(../images/sprite.png) no-repeat;
   width: 9px;
   height: 8px;
   background-position: -71px -61px;
@@ -331,17 +331,155 @@ p {
   .nav__triangle_position3 {
     left: 118px; }
 
+.a-dot {
+  color: grey;
+  border-bottom: dotted 1px grey; }
+
+.a-green {
+  color: #049404; }
+
+.a-blue {
+  color: #2196F3; }
+
+.page__mini-title {
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 22px;
+  color: grey;
+  padding-left: 90px; }
+
+.news__h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  padding-left: 90px; }
+
 .wrapper__big {
   display: inline-block;
-  width: 69%; }
+  width: 64%; }
 
 .wrapper__small {
   display: inline-block;
-  width: 29%; }
+  width: 27.666%;
+  vertical-align: top;
+  margin-left: 8%; }
 
-.price__table {
+.news__icon {
   display: inline-block;
-  width: 49%; }
+  color: #444;
+  border-bottom: 1px solid rgba(14, 14, 14, 0.12);
+  padding-bottom: 32px;
+  padding-top: 33px;
+  padding-left: 90px; }
+  .news__icon:last-child {
+    border: none; }
+
+.news__img {
+  display: inline-block;
+  vertical-align: top; }
+
+.news__title-orange {
+  color: #f5730b;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 23px;
+  margin-top: -2px;
+  padding-bottom: 1px; }
+
+.news__text-wrapper {
+  display: inline-block;
+  width: 500px;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 11px;
+  line-height: 18px; }
+
+.news__footer {
+  margin-top: 10px;
+  font-size: 11px; }
+
+.news__author,
+.news__date,
+.read__more {
+  display: inline-block;
+  text-transform: uppercase; }
+
+.news__author {
+  padding-right: 18px; }
+
+.read__more {
+  color: #444;
+  border: solid 1px #444;
+  border-radius: 4px;
+  padding: 2px 30px 2px 11px;
+  margin-left: 170px;
+  position: relative; }
+  .read__more:after {
+    position: absolute;
+    content: "";
+    background: url(../images/sprite_5.png) no-repeat;
+    top: 3px;
+    right: 8px;
+    width: 14px;
+    height: 16px;
+    background-position: -25px -5px; }
+
+.h3 {
+  font-size: 24px;
+  font-weight: 300;
+  padding-left: 6px;
+  padding-bottom: 28px;
+  padding-top: 30px; }
+
+.left__text {
+  line-height: 18px;
+  font-size: 14px;
+  padding-left: 16px;
+  color: black;
+  font-weight: 400;
+  padding-top: 11px;
+  padding-bottom: 11px; }
+
+.left__text_green {
+  background: #37aa2a;
+  color: white; }
+
+.pagginator {
+  margin-top: 10px;
+  margin-bottom: 51px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 394px; }
+
+.page__img {
+  background: url(../images/sprite_5.png) no-repeat;
+  display: inline-block; }
+
+.page__img_back {
+  width: 10px;
+  height: 8px;
+  background-position: -5px -23px; }
+
+.page__img_front {
+  width: 10px;
+  height: 8px;
+  background-position: -5px -5px; }
+
+.page {
+  display: inline-block;
+  height: 21px;
+  width: 19px; }
+
+.page_green {
+  background: #37aa2a;
+  color: white; }
+
+.page__a {
+  padding-right: 7px;
+  color: #444; }
 
 .footer {
   background: #2e2e2b;
@@ -382,7 +520,7 @@ p {
     line-height: 23px; }
   .footer .footer__text {
     font-size: 11px;
-    line-height: 18px; }
+    line-height: 18.5px; }
   .footer .footer__address {
     padding-bottom: 8px; }
   .footer .footer-small-wrapper {
@@ -392,9 +530,9 @@ p {
     width: 22%;
     vertical-align: top;
     overflow: hidden;
-    padding-top: 33px; }
+    padding-bottom: 33px; }
   .footer .footer__social-btn {
-    background: url(images/sprite.png) no-repeat;
+    background: url(../images/sprite.png) no-repeat;
     position: absolute;
     transition: right 200ms ease-out; }
   .footer .footer__social-btn_ok {
@@ -414,7 +552,7 @@ p {
     .footer .footer__social-btn_youtube:hover {
       right: -22px; }
   .footer .footer__social-btn_insta {
-    background: url(images/sprite_1.png) no-repeat;
+    background: url(../images/sprite_1.png) no-repeat;
     width: 58px;
     height: 48px;
     background-position: -74px -79px;
@@ -424,7 +562,7 @@ p {
       right: 0px; }
   .footer .footer-bigger-wrapper {
     padding-left: 52px;
-    padding-top: 20px;
+    padding-top: 19px;
     position: relative;
     display: inline-block;
     width: 77%;
@@ -432,5 +570,5 @@ p {
     box-shadow: -6px 0px 6px rgba(0, 0, 0, 0.6);
     padding-bottom: 33px; }
   .footer .enroll-footer {
-    margin-left: 173px;
-    margin-top: -31px; }
+    margin-left: 182px;
+    margin-top: -48px; }

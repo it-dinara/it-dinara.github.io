@@ -1,10 +1,10 @@
 
 @font-face
 	font-family: "StudioScriptC"
-	src: url('fonts/StudioScriptC.eot')
-	src: url('fonts/StudioScriptC.eot?#iefix') format('embedded-opentype')
-	src: url('fonts/StudioScriptC.woff') format('woff')
-	src: url('fonts/StudioScriptC.ttf') format('truetype')
+	src: url('../fonts/StudioScriptC.eot')
+	src: url('../fonts/StudioScriptC.eot?#iefix') format('embedded-opentype')
+	src: url('../fonts/StudioScriptC.woff') format('woff')
+	src: url('../fonts/StudioScriptC.ttf') format('truetype')
 	font-weight: normal
 	font-style: normal
 
@@ -14,7 +14,7 @@ html, body
 body
 	font-family: "Open Sans"
 	color: #444444
-
+	min-height: 100%
 
 *
 	box-sizing: border-box
@@ -48,13 +48,15 @@ p
 
 .container
 	box-shadow: 0px 0px 15px rgba(46, 46, 43, 0.55)
-	width: 1350px
+	max-width: 1350px
+	width: 100%
 	margin: 0 auto
 
 .main
 	margin: 0 auto
 	width: 1350px
 	min-height: 100vh
+	position: relative
 
 .header
 	width: 1350px
@@ -97,7 +99,7 @@ p
 
 
 .header__search-img
-	background: url(images/sprite_1.png) no-repeat
+	background: url(../images/sprite_1.png) no-repeat
 	width: 10px
 	height: 10px
 	background-position: -273px -5px
@@ -125,7 +127,7 @@ p
 
 .header__logo
 	display: inline-block
-	background: url(images/sprite_1.png) no-repeat
+	background: url(../images/sprite_1.png) no-repeat
 	width: 115px
 	height: 114px
 	background-position: -148px -5px
@@ -179,7 +181,7 @@ p
 
 
 .enroll__item-a-img
-	background: url(images/sprite.png) no-repeat
+	background: url(../images/sprite.png) no-repeat
 	width: 26px
 	height: 26px
 	background-position: -5px -139px
@@ -321,6 +323,7 @@ p
 	border-right: 1px solid rgba(255, 255, 255, 0.28)
 	line-height: 27px
 	padding-left: 11.5px
+	height: 35px
 	&-a
 		color: white
 		&:hover
@@ -362,7 +365,7 @@ p
 	color: #444444
 
 .nav__triangle
-	background: url(images/sprite_1.png) no-repeat
+	background: url(../images/sprite_1.png) no-repeat
 	width: 9px
 	height: 8px
 	background-position: -5px -5px
@@ -380,7 +383,7 @@ p
 
 
 .promo
-	background: url("images/slider_1.jpg")
+	background: url("../images/slider_1.jpg")
 	height: 549px
 	position: relative
 
@@ -400,7 +403,7 @@ p
 			position: absolute
 			right: -23px
 			top: -17px
-			background: url(images/sprite_1.png) no-repeat
+			background: url(../images/sprite_1.png) no-repeat
 			width: 52px
 			height: 19px
 			background-position: -86px -5px
@@ -429,7 +432,7 @@ p
 		margin-bottom: 21px
 
 	.promo__text-checked
-		background: url(images/sprite_1.png) no-repeat
+		background: url(../images/sprite_1.png) no-repeat
 		width: 38px
 		height: 35px
 		background-position: -86px -34px
@@ -438,7 +441,7 @@ p
 		left: -52px
 
 	.promo__icon
-		background: url(images/sprite_1.png) no-repeat
+		background: url(../images/sprite_1.png) no-repeat
 		position: absolute
 		top: 24px
 
@@ -459,7 +462,7 @@ p
 // Форма
 
 .form
-	background: url("images/rectangle.png") no-repeat
+	background: url("../images/rectangle.png") no-repeat
 	width: 330px
 	height: 317px
 	display: inline-block
@@ -525,7 +528,7 @@ p
 		display: none
 		&:checked + .form__checkbox-label:after
 			content: ""
-			background-image: url(images/sprite.png)
+			background-image: url(../images/sprite.png)
 			width: 16px
 			height: 13px
 			background-position: -249px -5px
@@ -563,7 +566,7 @@ p
 		vertical-align: -4px
 
 .features__img
-	background-image: url(images/sprite.png)
+	background-image: url(../images/sprite.png)
 	display: inline-block
 	margin-right: 11px
 	margin-bottom: -1px
@@ -640,7 +643,7 @@ p
 
 
 .blurb__img
-	background-image: url(images/sprite.png)
+	background-image: url(../images/sprite.png)
 	text-align: center
 	display: inline-block
 	height: 100px
@@ -699,7 +702,7 @@ p
 .advertising__skype
 	display: inline-block
 	text-align: right
-	background-image: url("images/skype.png")
+	background-image: url("../images/skype.png")
 	width: 591px
 	height: 591px
 	padding-top: 35px
@@ -713,7 +716,7 @@ p
 .advertising__business
 	display: block
 	text-align: right
-	background: url("images/business.png")
+	background: url("../images/business.png")
 	width: 580px
 	height: 296px
 	padding-top: 35px
@@ -727,7 +730,7 @@ p
 
 .advertising__children
 	display: block
-	background: url("images/children.png")
+	background: url("../images/children.png")
 	width: 580px
 	height: 294px
 	padding-top: 19px
@@ -782,6 +785,8 @@ p
 
 .teachers
 	height: 477px
+	user-select: none
+	overflow: hidden
 
 .teachers__button
 	width: 90px
@@ -852,7 +857,7 @@ p
 	left: -20px
 
 .teachers__button-icon
-	background: url(images/sprite.png) no-repeat
+	background: url(../images/sprite.png) no-repeat
 	width: 22px
 	height: 24px
 	background-position: -5px -61px
@@ -865,15 +870,15 @@ p
 
 .teachers__slider
 	white-space: nowrap
-	padding-left: 117px
+	margin-left: 117px
 	display: inline-block
 	vertical-align: top
 	margin-top: 65px
 	width: 100%
-	overflow: hidden
 
 
 .teachers__icon
+	user-select: none
 	white-space: normal
 	width: 163px
 	text-align: center
@@ -947,7 +952,9 @@ p
 		&:nth-of-type(2n)
 			margin-right: 0
 		&:hover
-			border: 1px solid black
+			border: 1px solid rgba(76, 175, 80, 0.61)
+			transition: 500ms ease-out
+			transition-property: all
 
 
 
@@ -1001,7 +1008,7 @@ p
 
 //		блок с ценами
 .price
-	background: url("images/bg.jpg")
+	background: url("../images/bg.jpg")
 	height: 534px
 	padding-top: 51px
 	padding-left: 90px
@@ -1030,7 +1037,7 @@ p
 			position: absolute
 			right: 299px
 			top: 27px
-			background: url(images/sprite.png) no-repeat
+			background: url(../images/sprite.png) no-repeat
 			width: 110px
 			height: 31px
 			background-position: -129px -5px
@@ -1102,7 +1109,7 @@ p
 			background: #b80101
 		&:after
 			content: ''
-			background: url(images/sprite.png) no-repeat
+			background: url(../images/sprite.png) no-repeat
 			width: 17px
 			height: 17px
 			position: absolute
@@ -1235,10 +1242,10 @@ p
 		width: 22%
 		vertical-align: top
 		overflow: hidden
-		padding-top: 33px
+		padding-bottom: 33px
 
 	.footer__social-btn
-		background: url(images/sprite.png) no-repeat
+		background: url(../images/sprite.png) no-repeat
 		position: absolute
 		transition: right 200ms ease-out
 
@@ -1261,7 +1268,7 @@ p
 			right: -22px
 
 	.footer__social-btn_insta
-		background: url(images/sprite_1.png) no-repeat
+		background: url(../images/sprite_1.png) no-repeat
 		width: 58px
 		height: 48px
 		background-position: -74px -79px
@@ -1288,3 +1295,248 @@ p
 	.enroll__item_footer
 		display: inline-block
 		margin-right: 13px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//					Всплывающие окна. Отзывы				//
+
+
+.window-review
+	display: none
+	font-size: 13.5px
+	font-weight: 600
+	line-height: 17px
+	width: 100%
+	max-width: 890px
+	height: 700px
+	position: absolute
+	top: 2025px
+	left: 31%
+	background: white
+	color: black
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.19), 0 0 4px #525050
+	z-index: 1
+
+.w-close
+	position: relative
+	text-align: right
+	padding-top: 25px
+	padding-right: 40px
+
+.w-close-img
+	background: url(../images/sprite_w.png) no-repeat
+	width: 20px
+	height: 19px
+	background-position: -79px -5px
+	position: absolute
+	right: 14px
+	top: 19px
+	display: inline-block
+
+.w-review__wrapper
+	height: 586px
+	width: 84%
+	margin: 0 auto
+	padding-top: 35px
+
+
+.w-review__name
+	padding-bottom: 13px
+	display: inline-block
+
+.w-review__title
+	padding-bottom: 20px
+.w-review__text
+	padding-bottom: 20px
+
+
+
+
+//					Всплывающее окно. Учитель			//
+
+
+.window-teacher
+	display: none
+	background: url(../images/w777.png) no-repeat
+	width: 862px
+	height: 563px
+	position: absolute
+	top: 2025px
+	left: 31%
+
+.close__text
+	position: relative
+	text-align: right
+	padding-top: 19px
+	padding-right: 40px
+	font-size: 12px
+	color: grey
+	padding-bottom: 13px
+
+.close__img
+	background: url(../images/sprite_w.png) no-repeat
+	width: 20px
+	height: 21px
+	background-position: -79px -34px
+	position: absolute
+	right: 14px
+	top: 15px
+	display: inline-block
+
+.w-teacher__wrapper
+	background-color: white
+	height: 529px
+	width: 95%
+	max-width: 825px
+	margin: 0 auto
+	margin-top: 16px
+
+.w-teacher__text-wrapper
+	font-size: 11.5px
+	font-weight: 600
+	line-height: 14px
+	width: 64%
+	max-width: 525px
+	display: inline-block
+
+.w-teacher__text
+	padding-bottom: 14px
+
+.teachers__name_w
+	padding-bottom: 5px
+
+.teachers__subject_w
+	font-size: 12px
+	font-weight: 600
+	line-height: 13px
+
+.w-teacher__diplom-wrapper
+	margin-top: 14px
+
+.w-teacher__diplom
+	margin-left: 39px
+
+.teachers__icon_w
+	border: none
+	margin-left: 45px
+	vertical-align: top
+	filter: none
+	-webkit-filter: none
+	-moz-filter: none
+	-ms-filter: none
+	-o-filter: none
+	filter: none
+	filter: none
+	-webkit-filter: none
+
+
+
+//					Всплывающее окно. Форма - записаться			//
+
+.window-form
+	display: none
+	background-color: rgba(0, 0, 0, 0.38)
+	width: 700px
+	height: 480px
+	position: absolute
+	top: 2025px
+	left: 31%
+	color: white
+
+.window__close
+	position: relative
+	text-align: right
+	padding-top: 17px
+	padding-right: 47px
+	font-size: 12px
+
+.window__close-img
+	background: url(../images/sprite_w.png) no-repeat
+	position: absolute
+	right: 11px
+	top: 8px
+	display: inline-block
+	width: 29px
+	height: 29px
+	background-position: -40px -5px
+
+.window-form__h3
+	text-align: center
+	font-size: 25px
+	font-weight: 200
+	color: white
+	line-height: 23px
+
+.window-form__wrapper
+	margin: 30px 45px
+
+.window-form__label
+	display: inline-block
+	font-size: 19px
+	font-weight: 400
+	color: white
+	width: 185px
+	vertical-align: top
+
+
+.window-form__input
+	height: 32px
+	width: 419px
+	background: white
+	border-radius: 4px
+	display: inline-block
+	margin-bottom: 14px
+	padding-left: 13px
+	font-size: 14px
+
+.window-form__textaria
+	width: 419px
+	height: 175px
+	background: white
+	border-radius: 4px
+	display: inline-block
+	padding-left: 13px
+	font-size: 14px
+	margin-bottom: 14px
+
+
+.window-form__submit
+	width: 193px
+	height: 36px
+	text-align: center
+	color: black
+	font-weight: 600
+	border-radius: 4px
+	display: inline-block
+	background-color: white
+	margin-left: 410px
+	&:hover
+		background-color: #39ac2b
+		color: white
+		border: 1px solid white
+
+
+//					Всплывающее окно. Форма проведённого урока			//
+
+.window-form__p
+	font-size: 14px
+	line-height: 21px
+	font-weight: 400
+	text-align: center
+
+.window-form__h3_uppercase
+	text-transform: uppercase
+
+.window-form__wrapper_margin
+	margin: 14px 45px 30px 45px

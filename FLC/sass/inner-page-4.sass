@@ -52,7 +52,7 @@ p
 .main
 	margin: 0 auto
 	width: 1350px
-	min-height: 100vh
+	min-height: calc(100vh - 250px)
 
 .header
 	width: 1350px
@@ -68,7 +68,7 @@ p
 	line-height: 41px
 
 .header__contact
-	padding-right: 43px
+	padding-right: 48px
 	color: white
 
 .header__block1
@@ -77,22 +77,22 @@ p
 .header__block2
 	text-align: right
 	display: inline-block
-	width: 43%
+	width: 44.5%
 
 .header__search
 	font-weight: 400
 	font-size: 12px
 	font-style: italic
-	border-radius: 2px
+	border-radius: 3px
 	padding-left: 15px
-	height: 23px
-	width: 152px
-	vertical-align: text-top
+	height: 25px
+	width: 150px
 	line-height: 23px
+	border: 1px solid rgba(16, 16, 16, 0.29)
 
 
 .header__search-img
-	background: url(images/sprite.png) no-repeat
+	background: url(../images/sprite.png) no-repeat
 	width: 17px
 	height: 17px
 	background-position: -41px -139px
@@ -102,8 +102,8 @@ p
 	right: 28px
 
 .header__work-time
-	margin-left: 27px
-	margin-right: 12px
+	margin-left: 8px
+	margin-right: 31px
 	font-size: 13px
 	font-weight: 700
 
@@ -121,7 +121,7 @@ p
 
 .header__logo
 	display: inline-block
-	background: url(images/sprite.png) no-repeat
+	background: url(../images/sprite.png) no-repeat
 	width: 70px
 	height: 68px
 	background-position: -205px -61px
@@ -156,7 +156,7 @@ p
 .enroll__item
 	display: inline-block
 	font-size: 15px
-	padding: 7px 17px 5px 12px
+	padding: 7px 17px 6px 12px
 	margin-right: 17px
 	&:last-child
 		margin-right: 0
@@ -177,7 +177,7 @@ p
 
 
 .enroll__item-a-img
-	background: url(images/sprite.png) no-repeat
+	background: url(../images/sprite.png) no-repeat
 	width: 26px
 	height: 26px
 	background-position: -5px -139px
@@ -355,7 +355,7 @@ p
 	color: #444444
 
 .nav__triangle
-	background: url(images/sprite.png) no-repeat
+	background: url(../images/sprite.png) no-repeat
 	width: 9px
 	height: 8px
 	background-position: -71px -61px
@@ -372,17 +372,129 @@ p
 		left: 118px
 
 
-.wrapper__big
-	display: inline-block
-	width: 69%
 
-.wrapper__small
-	display: inline-block
-	width: 29%
+//---main
 
-.price__table
-	display: inline-block
-	width: 49%
+.a-dot
+	color: grey
+	border-bottom: dotted 1px grey
+
+.a-green
+	color: #049404
+
+.a-blue
+	color: #2196F3
+
+.page__mini-title
+	font-size: 12px
+	font-weight: 600
+	padding-top: 24px
+	color: grey
+
+.layout-center-wrapper
+	width: 86.6%
+	margin: 0 auto
+
+//		Отзывы
+
+.review
+	color: black
+	width: 1170px
+	margin: 0 auto
+	height: 653px
+	position: relative
+	margin-top: 33px
+	margin-bottom: 11px
+
+	.review__h2
+		text-transform: uppercase
+		font-size: 30px
+		font-weight: 700
+		margin-bottom: 33px
+
+	.review__icon
+		height: 251px
+		width: 570px
+		display: inline-block
+		color: black
+		border: 1px solid rgba(128, 128, 128, 0.25)
+		padding-top: 15px
+		padding-left: 20px
+		margin-bottom: 29px
+		margin-right: 25px
+		position: relative
+		&:nth-of-type(2n)
+			margin-right: 0
+		&:hover
+			border: 1px solid rgba(76, 175, 80, 0.61)
+			transition: 500ms ease-out
+			transition-property: all
+
+	.review__block
+		display: inline-block
+
+	//		Отзывы фотки
+	.review__img
+		display: inline-block
+		vertical-align: top
+
+
+	//		Отзывы текст
+	.review__text-wrapper
+		width: 372px
+		display: inline-block
+		padding-left: 23px
+
+	.review__name
+		font-size: 14px
+		font-weight: bold
+		padding-bottom: 8px
+
+	.review__title
+		font-size: 13px
+		font-weight: 600
+		padding-bottom: 19px
+
+	.review__text
+		font-size: 13px
+		font-weight: 600
+
+	//		Отзывы кнопочки
+	.review__slide-forward
+		background: url(../images/sprite_4.png)
+		position: absolute
+		top: 318px
+		right: -60px
+		width: 21px
+		height: 39px
+		background-position: -36px -5px
+		&:hover
+			transform: scale(0.666)
+			transition: 300ms ease-out
+			transition-property: all
+
+	.review__slide-back
+		background: url(../images/sprite_4.png)
+		position: absolute
+		top: 318px
+		left: -61px
+		width: 21px
+		height: 39px
+		background-position: -5px -5px
+		&:hover
+			transform: scale(0.666)
+			transition: 300ms ease-out
+			transition-property: all
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -448,7 +560,7 @@ p
 
 	.footer__text
 		font-size: 11px
-		line-height: 18px
+		line-height: 18.5px
 
 	.footer__address
 		padding-bottom: 8px
@@ -460,10 +572,10 @@ p
 		width: 22%
 		vertical-align: top
 		overflow: hidden
-		padding-top: 33px
+		padding-bottom: 33px
 
 	.footer__social-btn
-		background: url(images/sprite.png) no-repeat
+		background: url(../images/sprite.png) no-repeat
 		position: absolute
 		transition: right 200ms ease-out
 
@@ -486,7 +598,7 @@ p
 			right: -22px
 
 	.footer__social-btn_insta
-		background: url(images/sprite_1.png) no-repeat
+		background: url(../images/sprite_1.png) no-repeat
 		width: 58px
 		height: 48px
 		background-position: -74px -79px
@@ -497,7 +609,7 @@ p
 
 	.footer-bigger-wrapper
 		padding-left: 52px
-		padding-top: 20px
+		padding-top: 19px
 		position: relative
 		display: inline-block
 		width: 77%
@@ -506,5 +618,5 @@ p
 		padding-bottom: 33px
 
 	.enroll-footer
-		margin-left: 173px
-		margin-top: -31px
+		margin-left: 182px
+		margin-top: -48px
