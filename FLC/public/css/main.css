@@ -365,7 +365,8 @@ p {
       height: 19px;
       background-position: -86px -5px; }
   .promo .promo__block {
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
   .promo .promo__h1 {
     padding-left: 87px;
     font-size: 36px;
@@ -394,7 +395,8 @@ p {
   .promo .promo__icon {
     background: url(../images/sprite_1.png) no-repeat;
     position: absolute;
-    top: 24px; }
+    top: 167px;
+    cursor: pointer; }
   .promo .promo__icon_before {
     width: 21px;
     height: 39px;
@@ -1336,3 +1338,9 @@ p {
 
 .window-form__wrapper_margin {
   margin: 14px 45px 30px 45px; }
+
+#owl-demo {
+  width: 414px; }
+
+#teachers__slider .owl-item {
+  width: 193px !important; }
