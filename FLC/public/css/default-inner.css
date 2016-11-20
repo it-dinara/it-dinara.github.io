@@ -45,15 +45,16 @@ p {
 
 .container {
   box-shadow: 0px 0px 15px rgba(46, 46, 43, 0.55);
-  width: 100%;
-  max-width: 1350px;
-  margin: 0 auto; }
+  width: 1350px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%; }
 
 .main {
   margin: 0 auto;
   width: 1350px;
-  min-height: calc(100vh - 250px);
-  position: relative; }
+  position: relative;
+  padding-bottom: 280px; }
 
 .header {
   width: 1350px;
@@ -336,9 +337,13 @@ p {
 
 .footer {
   background: #2e2e2b;
-  position: relative;
   width: 1350px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 275px; }
   .footer .footer__wrapper {
     color: #fff;
     width: 94.2%;
