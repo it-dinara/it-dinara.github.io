@@ -1126,7 +1126,6 @@ p {
     margin-right: 13px; }
 
 .window-review {
-  display: none;
   font-size: 13.5px;
   font-weight: 600;
   line-height: 17px;
@@ -1134,8 +1133,6 @@ p {
   max-width: 890px;
   height: 700px;
   position: absolute;
-  top: 2025px;
-  left: 31%;
   background: white;
   color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.19), 0 0 4px #525050;
@@ -1174,13 +1171,9 @@ p {
   padding-bottom: 20px; }
 
 .window-teacher {
-  display: none;
   background: url(../images/w777.png) no-repeat;
   width: 862px;
-  height: 563px;
-  position: absolute;
-  top: 2025px;
-  left: 31%; }
+  height: 563px; }
 
 .close__text {
   position: relative;
@@ -1248,13 +1241,9 @@ p {
   -webkit-filter: none; }
 
 .window-form {
-  display: none;
   background-color: rgba(0, 0, 0, 0.38);
   width: 700px;
   height: 480px;
-  position: absolute;
-  top: 2025px;
-  left: 31%;
   color: white; }
 
 .window__close {
@@ -1344,3 +1333,6 @@ p {
 
 #teachers__slider .owl-item {
   width: 193px !important; }
+
+.fancybox__close {
+  cursor: pointer; }

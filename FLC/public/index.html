@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="./owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="./owl-carousel/owl.theme.css">
 	<link rel="stylesheet" href="./owl-carousel/owl.transitions.css">
+	<link rel="stylesheet" type="text/css" href="./lib/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<link rel="stylesheet" type="text/css" href="./lib/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<link rel="stylesheet" type="text/css" href="./lib/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
 </head>
 <body>
 <div class="container">
@@ -76,7 +79,7 @@
 						<span class="promo__phrase">Запишись<br> на бесплатный<br> урок</span>
 						<ul class="enroll">
 							<li class="enroll__item enroll__item_color1">
-								<a href="#">
+								<a href="#" class="enroll_action">
 									<span class="enroll__item-a-img"></span>
 									<p class="enroll__item-a enroll__item-a_1">Записаться <span class="enroll__item-span">на обучение</p>
 									</span>
@@ -518,10 +521,9 @@
 	</footer>
 </div>
 
-
 <!-- Всплывающее окно. Отзывы -->
-<div class="window-review">
-	<p class="w-close">закрыть<span class="w-close-img"></span></p>
+<div class="window-review" id="popup-review" style="display: none;">
+	<p class="w-close fancybox__close">закрыть<span class="w-close-img"></span></p>
 	<div class="w-review__wrapper">
 		<b class="w-review__name">Козлов Антон</b>
 		<p class="w-review__title">Добрый день, дорогие  товарищи и коллеги по изучению Английского языка!</p>
@@ -533,11 +535,10 @@
 </div>
 
 <!-- Всплывающее окно. Учитель -->
-
-<div class="window-teacher">
+<div class="window-teacher" id="popup-teacher" style="display: none;">
 	
 	<div class="w-teacher__wrapper">
-		<p class="close__text">закрыть<span class="close__img"></span></p>
+		<p class="close__text fancybox__close">закрыть<span class="close__img"></span></p>
 		<div class="teachers__icon teachers__icon_w">
 			<img src="images/foto.png" alt="" class="teachers__img">
 			<div class="teachers__text">
@@ -568,13 +569,9 @@
 	</div>
 </div>
 
-
-
-
 <!-- Всплывающее окно. Форма - записаться -->
-
-<div class="window-form">
-<p class="window__close">закрыть<span class="window__close-img"></span></p>
+<div class="window-form" id="popup-enroll" style="display: none;">
+	<p class="window__close fancybox__close">закрыть<span class="window__close-img"></span></p>
 	<h3 class="window-form__h3">Записаться на обучение</h3>
 	<form action="" class="window-form__wrapper">
 		<label for="id-win_1" class="window-form__label">Имя *</label>
@@ -589,12 +586,9 @@
 	</form>
 </div>
 
-
-
 <!-- Всплывающее окно. Форма проведённого урока -->
-
-<div class="window-form">
-<p class="window__close">закрыть<span class="window__close-img"></span></p>
+<div class="window-form" id="popup-form" style="display: none;">
+	<p class="window__close fancybox__close">закрыть<span class="window__close-img"></span></p>
 	<h3 class="window-form__h3 window-form__h3_uppercase">Форма проведённого урока</h3>
 	<p class="window-form__p">(после урока необходимо заполнить)</p>
 	<form action="" class="window-form__wrapper window-form__wrapper_margin">
@@ -619,8 +613,35 @@
 <script src="./lib/css-filters-polyfill.js"></script>
 <script src="https://yastatic.net/jquery/1.11.2/jquery.min.js"></script>
 <script src="./owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="./lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="./lib/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="./lib/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="./lib/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="./lib/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
 <script>
 	$(document).ready(function() {
+
+		$('.fancybox__close').on('click', function(event){
+			$.fancybox.close();
+		});
+
+		$('.teachers__slider .item').on('click', function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			$.fancybox.open({
+				href: '#popup-teacher',
+				closeBtn  : false,
+				padding: 0
+			});
+		});
+
+		$('.enroll_action').on('click', function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			$.fancybox.open('#popup-enroll');
+		});
 
 		$("#owl-demo").owlCarousel({
 			navigation: false,
