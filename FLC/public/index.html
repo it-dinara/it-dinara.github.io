@@ -38,7 +38,7 @@
 					<li class="nav__hover-item"><a href="#" class="nav__hover-item-a">Итальянский</a></li>
 					<li class="nav__hover-item"><a href="#" class="nav__hover-item-a">Испанский</a></li>
 					<li class="nav__hover-item"><a href="#" class="nav__hover-item-a">Правила проведения</a></li>
-					<li class="nav__hover-item"><a href="#" class="nav__hover-item-a">Пройденный урок</a></li>
+					<li class="nav__hover-item"><a href="#" class="nav__hover-item-a form_action">Пройденный урок</a></li>
 					<li class="nav__hover-item"><a href="#" class="nav__hover-item-a">Оплата</a></li>
 				</ul>
 			</li>
@@ -303,7 +303,7 @@
 		<section class="review">
 			<h2 class="review__h2">Истории успеха наших учеников</h2>
 			<div class="review__block">
-				<a href="#" class="review__icon">
+				<a href="#" class="review__icon review_action">
 					
 						<img src="images/review.png" alt="" class="review__img">
 					
@@ -632,7 +632,7 @@
 			event.stopPropagation();
 			$.fancybox.open({
 				href: '#popup-teacher',
-				closeBtn  : false,
+				closeBtn : false,
 				padding: 0
 			});
 		});
@@ -640,7 +640,31 @@
 		$('.enroll_action').on('click', function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			$.fancybox.open('#popup-enroll');
+			$.fancybox.open({
+				href: '#popup-enroll',
+				closeBtn: false,
+				padding: 0
+			});
+		});
+
+		$('.form_action').on('click', function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			$.fancybox.open({
+				href: '#popup-form',
+				closeBtn: false,
+				padding: 0
+			});
+		});
+
+		$('.review_action').on('click', function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			$.fancybox.open({
+				href: '#popup-review',
+				closeBtn: false,
+				padding: 0
+			});
 		});
 
 		$("#owl-demo").owlCarousel({
