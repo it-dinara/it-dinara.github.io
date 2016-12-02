@@ -1,13 +1,78 @@
-/*	всплывающее окно "Записаться.."	*/
+/*	всплывающее окно "Записаться.."*/
 
 $(function(){
-	$('.enroll_action').click(function(){
-		$('.window-form,.popup-overlay').fadeIn(400); //показываем всплывающее окно
+	
+	// темненькая часть на фоне окна
+	var $popupOverlay = $('.popup-overlay');
+	// Селектор окон
+	var $windowForm = $('.window');
+	
+	// открытие окна записаться на обучение
+	$('.js-openModal').on('click', function(){
+		// тут получаем имя окна с атрибута href без всяких решеток
+		// Нужно для того, что бы имя окна было "чистое" - не имело всяких артефактов
+		
+		var windowName = $(this).attr('href').replace('#', '');
+		
+		openWindow(windowName);
+		
 	});
-	$('.js-close,.popup-overlay').click(function(){
-		$('.window-form,.popup-overlay').fadeOut(400); //скрываем всплывающее окно
+	
+	// глобально для всех окон
+	$('.js-close').click(function(){
+		closeWindow();
 	});
+	
+	/**
+	 * Открыть окно по его имени
+	 * 
+	 * @param name {String} - имя окна, а точнее его id
+	 */
+	function openWindow(name) {
+		if (name) {
+			$('#' + name).fadeIn(400);
+			$popupOverlay.fadeIn(400);
+		}
+	}
+	
+	/**
+	 * Закрыть все окна которые есть на странице
+	 */
+	function closeWindow() {
+		$popupOverlay.fadeOut(400);
+		$windowForm.fadeOut(400);
+	}
+	
+	
+	
+	
+	
+	$('.window-form__submit').on('click', function(){
+		console.log(1);
+		
+		var $form = $(this).closest('form');
+		console.log($form);
+		
+		return false;
+		
+	});
+	
+	
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21,6 +86,65 @@ $('.more__button_action').on('click', function(event){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*$(document).on('ready', function() {
+	
+	openWindow(window.location.hash.replace('#', ''));
+	$(window).on('hashchange', function(e) {
+		var windowName = window.location.hash.replace('#', '');
+		openWindow(windowName);
+	});
+	
+	function openWindow(windowName) {
+		var $modals = $('.js-window');
+
+		$modals.removeClass('js-opened').off('.closeWindow');
+		
+		
+		if (windowName) {
+			var $window = $('#' + windowName);
+			$window.addClass('js-opened');
+			
+			$modals
+				.on('click.closeWindow', function (event) {
+					if ( ! $(event.target).closest('.js-window-content').length) {
+						window.location.hash = "#";
+					}
+				});
+		}
+	}*/
 
 
 

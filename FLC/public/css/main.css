@@ -779,6 +779,7 @@ p {
 .teachers__icon {
   user-select: none;
   white-space: normal;
+  color: #444444;
   width: 163px;
   text-align: center;
   display: inline-block;
@@ -1152,9 +1153,14 @@ p {
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 0; }
+
+.window {
+  display: none; }
 
 .window-review {
+  z-index: 1;
   font-size: 13.5px;
   font-weight: 600;
   line-height: 17px;
@@ -1162,10 +1168,11 @@ p {
   max-width: 890px;
   height: 700px;
   position: absolute;
+  top: 2025px;
+  left: 31%;
   background: white;
   color: black;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19), 0 0 4px #525050;
-  z-index: 1; }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19), 0 0 4px #525050; }
 
 .w-close {
   position: relative;
@@ -1181,7 +1188,8 @@ p {
   position: absolute;
   right: 14px;
   top: 19px;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 .w-review__wrapper {
   height: 586px;
@@ -1200,9 +1208,13 @@ p {
   padding-bottom: 20px; }
 
 .window-teacher {
+  z-index: 1;
   background: url(../images/w777.png) no-repeat;
   width: 862px;
-  height: 563px; }
+  height: 563px;
+  position: absolute;
+  top: 1398px;
+  left: 31%; }
 
 .close__text {
   position: relative;
@@ -1221,7 +1233,8 @@ p {
   position: absolute;
   right: 14px;
   top: 15px;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 .w-teacher__wrapper {
   background-color: white;
@@ -1271,14 +1284,14 @@ p {
 
 .window-form,
 .window-form_lesson {
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.77);
   width: 700px;
   height: 480px;
   position: absolute;
-  top: 2025px;
+  top: 114px;
   left: 31%;
-  color: white;
-  display: none; }
+  color: white; }
 
 .js-opened {
   display: block; }
@@ -1298,7 +1311,8 @@ p {
   display: inline-block;
   width: 29px;
   height: 29px;
-  background-position: -40px -5px; }
+  background-position: -40px -5px;
+  cursor: pointer; }
 
 .window-form__h3 {
   text-align: center;
@@ -1347,13 +1361,14 @@ p {
   border-radius: 4px;
   display: inline-block;
   background-color: white;
-  margin-left: 410px; }
+  float: right; }
   .window-form__submit:hover {
     background-color: #39ac2b;
     color: white;
     border: 1px solid white; }
 
 .window-form__p {
+  z-index: 1;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;

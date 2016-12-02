@@ -38,7 +38,7 @@
 					<li class="nav__hover-item"><a title= "" href="#" class="nav__hover-item-a">Итальянский</a></li>
 					<li class="nav__hover-item"><a title= "" href="#" class="nav__hover-item-a">Испанский</a></li>
 					<li class="nav__hover-item"><a title= "" href="#" class="nav__hover-item-a">Правила проведения</a></li>
-					<li class="nav__hover-item"><a title= "" href="#" class="nav__hover-item-a form_action">Пройденный урок</a></li>
+					<li class="nav__hover-item"><a title= "" href="#popup-form" class="nav__hover-item-a js-openModal">Пройденный урок</a></li>
 					<li class="nav__hover-item"><a title= "" href="#" class="nav__hover-item-a">Оплата</a></li>
 				</ul>
 			</li>
@@ -79,14 +79,14 @@
 						<span class="promo__phrase">Запишись<br> на бесплатный<br> урок</span>
 						<ul class="enroll">
 							<li class="enroll__item enroll__item_color1">
-								<a title= "" href="#popup-enroll" class="enroll_action">
+								<a title="" href="#popup-enroll" class="enroll_action js-openModal">
 									<span class="enroll__item-a-img"></span>
 									<p class="enroll__item-a enroll__item-a_1">Записаться <span class="enroll__item-span">на обучение</span></p>
 								</a>
 							</li>
 
 							<li class="enroll__item enroll__item_color3">
-								<a title= "" href="#">
+								<a title="" href="#">
 									<span class="enroll__item-a-img"></span>
 									<p class="enroll__item-a">Записаться <span class="enroll__item-span"> на устное<br> тестирование</span></p>
 								</a>
@@ -229,70 +229,71 @@
 			</div>
 
 			<div id="teachers__slider" class="teachers__slider">
-				<div class="teachers__icon item">
+
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
-				<div class="teachers__icon item">
+				</a>
+				<a href="#popup-teacher" class="teachers__icon item js-openModal">
 					<img alt="" src="images/foto.png" class="teachers__img">
 					<div class="teachers__text">
 						<p class="teachers__name">Голубева Екатерина Владимировна</p>
 						<p class="teachers__subject">Английский язык</p>
 						<p class="teachers__experience">Стаж 10 лет</p>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 
@@ -300,7 +301,7 @@
 		<section class="review">
 			<h2 class="review__h2">Истории успеха наших учеников</h2>
 			<div class="review__block">
-				<a title= "" href="#" class="review__icon review_action">
+				<a title= "" href="#popup-review" class="review__icon js-openModal">
 					
 						<img alt="" src="images/review.png" class="review__img">
 					
@@ -519,8 +520,8 @@
 </div>
 
 <!-- Всплывающее окно. Отзывы -->
-<div class="window-review" id="popup-review" style="display: none;">
-	<p class="w-close fancybox__close">закрыть<span class="w-close-img"></span></p>
+<div class="window window-review" id="popup-review">
+	<p class="w-close js-close">закрыть<span class="w-close-img"></span></p>
 	<div class="w-review__wrapper">
 		<b class="w-review__name">Козлов Антон</b>
 		<p class="w-review__title">Добрый день, дорогие  товарищи и коллеги по изучению Английского языка!</p>
@@ -532,10 +533,10 @@
 </div>
 
 <!-- Всплывающее окно. Учитель -->
-<div class="window-teacher" id="popup-teacher" style="display: none;">
+<div class="window window-teacher" id="popup-teacher">
 	
 	<div class="w-teacher__wrapper">
-		<p class="close__text fancybox__close">закрыть<span class="close__img"></span></p>
+		<p class="close__text js-close">закрыть<span class="close__img"></span></p>
 		<div class="teachers__icon teachers__icon_w">
 			<img alt="" src="images/foto.png" class="teachers__img">
 			<div class="teachers__text">
@@ -566,10 +567,10 @@
 	</div>
 </div>
 
+<div class="popup-overlay js-close"></div>
 <!-- Всплывающее окно. Форма - записаться -->
-<div class="popup-overlay"></div>
-<div class="window-form js-window" id="popup-enroll">
-	<p class="window__close fancybox__close js-close">закрыть<span class="window__close-img"></span></p>
+<div class="window window-form" id="popup-enroll">
+	<p class="window__close js-close">закрыть<span class="window__close-img"></span></p>
 	<h3 class="window-form__h3">Записаться на обучение</h3>
 	<form action="hello" class="window-form__wrapper">
 		<label for="id-win_1" class="window-form__label">Имя *</label>
@@ -585,8 +586,8 @@
 </div>
 
 <!-- Всплывающее окно. Форма проведённого урока -->
-<div class="window-form_lesson js-window" id="popup-form">
-	<p class="window__close fancybox__close">закрыть<span class="window__close-img"></span></p>
+<div class="window window-form window-form_lesson" id="popup-form">
+	<p class="window__close js-close">закрыть<span class="window__close-img"></span></p>
 	<h3 class="window-form__h3 window-form__h3_uppercase">Форма проведённого урока</h3>
 	<p class="window-form__p">(после урока необходимо заполнить)</p>
 	<form action="hello" class="window-form__wrapper window-form__wrapper_margin">
@@ -602,44 +603,45 @@
 	</form>
 </div>
 
+
 <script src="js/lib/jquery-2.2.4.js"></script>
 <script src="js/index.js"></script>
 <script src="./lib/cssParser.js"></script>
-<script src="https://yastatic.net/jquery/1.11.2/jquery.min.js"></script>
 <script src="./owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="./lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!--<script src="https://yastatic.net/jquery/1.11.2/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="./lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="./lib/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 <script type="text/javascript" src="./lib/jquery.fancybox.js?v=2.1.5"></script>
 <script type="text/javascript" src="./lib/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-<script type="text/javascript" src="./lib/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script type="text/javascript" src="./lib/helpers/jquery.fancybox-media.js?v=1.0.6"></script>-->
 
 
 <script>
 	$(document).ready(function() {
 
-		$('.fancybox__close').on('click', function(event){
+		/*$('.fancybox__close').on('click', function(event){
 			$.fancybox.close();
-		});
+		});*/
 
 		$('.teachers__slider .item').on('click', function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			$.fancybox.open({
+			/*$.fancybox.open({
 				href: '#popup-teacher',
 				closeBtn : false,
 				padding: 0
-			});
+			});*/
 		});
 
-		$('.enroll_action').on('click', function(event){
+		/*$('.enroll_action').on('click', function(event){
 			
 			$('.window-form').addClass('window-form_active');
 				$('.fancybox__close').on('click', function(event){
 			$.fancybox.close();
 			});
-		});
+		});*/
 
-		$('.form_action').on('click', function(event){
+		/*$('.form_action').on('click', function(event){
 			event.preventDefault();
 			event.stopPropagation();
 			$.fancybox.open({
@@ -657,7 +659,7 @@
 				closeBtn: false,
 				padding: 0
 			});
-		});
+		});*/
 
 		$("#owl-demo").owlCarousel({
 			navigation: false,
