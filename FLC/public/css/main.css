@@ -915,7 +915,6 @@ p {
     font-weight: 600; }
 
 .price {
-  background: url("../images/bg.jpg");
   height: 534px;
   padding-top: 51px;
   padding-left: 90px;
@@ -1020,9 +1019,7 @@ p {
   margin: 0 auto;
   position: relative;
   padding-top: 60px;
-  padding-bottom: 31px;
-  transition: 0.5s easy;
-  transition-property: all; }
+  padding-bottom: 31px; }
 
 .more .more__text-wrapper_active {
   display: block; }

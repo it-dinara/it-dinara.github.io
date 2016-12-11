@@ -81,7 +81,10 @@ $(function(){
 $('.more__button_action').on('click', function(event){
 			console.log(event);
 			
-			$('.more__text-wrapper').fadeIn(400)('more__text-wrapper_active')
+			$('.more__text-wrapper').slideToggle(1000);
+			$('html, body').animate({ 
+			scrollTop: $(".more__h3-green").offset().top 
+			}, 1000);
 		});
 
 
