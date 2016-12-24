@@ -864,6 +864,11 @@ p {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 33px; }
+  .review .wrap__icon-review {
+    height: 251px;
+    width: 570px;
+    display: inline-block;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0)); }
   .review .review__icon {
     height: 251px;
     width: 570px;
@@ -1313,7 +1318,7 @@ p {
 .window-form,
 .window-form_lesson {
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.77);
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.73), black);
   width: 700px;
   height: 480px;
   position: absolute;
