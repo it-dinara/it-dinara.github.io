@@ -89,6 +89,57 @@ $('.more__button_action').on('click', function(event){
 
 
 
+/*	мои чудачества	*/
+
+$(function(){
+
+	var one = $('.js-click');
+
+	one.on('click', function(){
+
+		one.css('background', 'red');
+
+	})
+
+	$(".enroll__item-a").on('click', function(){
+		event.preventDefault();
+
+		});
+	
+
+
+	var header__logo = $('.header__logo');
+
+	$(function(){
+		header__logo.hover(onIn, onOut);
+	});
+
+	function onIn() {
+		$('.js-header__title-first').html('Мне не заплатили за эту вёрстку!!!').css({'font-size':'35px',
+			'color':'red'});
+	}
+
+	function onOut() {
+		$('.js-header__title-first').html('Но она в продакшине!').css({'font-size':'35px',
+			'color':'green'});
+	}
+
+	var promo__text = $('.promo__text')
+
+	promo__text.mouseover(function() {
+		promo__text.html('А ведь даже слайдер работает!').css({'color':'#ea6e84'});
+		});
+
+	promo__text.on('click', function(){
+		$(this).html('Прекрати кликать как сумашедший, Вадим!!').css({'font-size':'28px',
+			'color':'red'});
+	});
+
+});
+
+
+
+
 
 
 

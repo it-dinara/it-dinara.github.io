@@ -73,26 +73,26 @@
 					<div class="header__line2">
 						<a title= "" href="index.html" class="header__logo"></a>
 						<div class="header__wrapper-title">
-							<p class="header__title-first">Курсы иностранных языков</p>
+							<p class="header__title-first js-header__title-first">Курсы иностранных языков</p>
 							<p class="header__title-second">подготовка к егэ и огэ</p>
 						</div>
 						<span class="promo__phrase">Запишись<br> на бесплатный<br> урок</span>
 						<ul class="enroll">
 							<li class="enroll__item enroll__item_color1">
-								<a title="" href="#popup-enroll" class="enroll_action js-openModal">
+								<a title="" href="#popup-enroll" class="js-openModal">
 									<span class="enroll__item-a-img"></span>
 									<p class="enroll__item-a enroll__item-a_1">Записаться <span class="enroll__item-span">на обучение</span></p>
 								</a>
 							</li>
 
-							<li class="enroll__item enroll__item_color3">
-								<a title="" href="#">
+							<li class="enroll__item enroll__item_color3 js-openModal" href="#popup-enroll">
+								<a title="" >
 									<span class="enroll__item-a-img"></span>
 									<p class="enroll__item-a">Записаться <span class="enroll__item-span"> на устное<br> тестирование</span></p>
 								</a>
 							</li>
 
-							<li class="enroll__item enroll__item_color2">
+							<li class="enroll__item enroll__item_color2 js-click">
 								<a title= "" href="#">
 									<span class="enroll__item-a-img"></span>
 									<p class="enroll__item-a">Записаться <span class="enroll__item-span">на бесплатный<br> пробный урок</span></p>
@@ -663,12 +663,20 @@
 			});
 		});*/
 
+
+
+
+
+/*		первый слайдер*/
+
+
 		$("#owl-demo").owlCarousel({
 			navigation: false,
 			// autoWidth: true,
 			pagination: false,
 			singleItem: true,
-			loop: true
+			loop: true,
+			autoPlay: true
 		});
 
 		var owl = $('.owl-carousel').owlCarousel();
@@ -680,6 +688,10 @@
 			console.log('promo__icon_after')
 			owl.trigger('owl.next');
 		});
+
+
+
+
 
 		$("#teachers__slider").owlCarousel({
 			navigation: false,

@@ -156,7 +156,8 @@ p {
   font-size: 15px;
   padding: 7px 29px 5px 12px;
   margin-bottom: 13px;
-  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.57); }
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.57);
+  cursor: pointer; }
   .enroll__item:last-child {
     margin-right: 0; }
   .enroll__item a {
