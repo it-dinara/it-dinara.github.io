@@ -87,7 +87,7 @@ $(document).ready(function(){
   	slideWidth: 162,
   	minSlides: 2,
   	maxSlides: 4,
-  	slideMargin: 0,
+  	slideMargin: 6,
   	nextText:'',
   	prevText:'',
   	useCSS: false
