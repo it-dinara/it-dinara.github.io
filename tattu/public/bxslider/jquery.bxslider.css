@@ -84,7 +84,7 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #666;
+	background: rgba(102, 102, 102, 0.5);
 	text-indent: -9999px;
 	display: block;
 	width: 10px;
