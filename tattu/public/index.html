@@ -4,8 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Tattoo Herves</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="./bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -45,7 +48,7 @@
 			<div class="promo__form-block">
 				<form action="hello" class="promo__form clearfix">
 					<input type="text" class="promo__name" placeholder="Имя">
-					<input type="number" class="promo__number" value="">
+					<input type="number" class="promo__number" placeholder="+ _ (_ _ _) _ _ _  _ _ _  _ _">
 					<input type="submit" class="promo__submit" value="записаться">
 				</form>
 			</div>
@@ -254,23 +257,46 @@
 	<div class="idea">
 		<div class="container">
 			<span class="idea__back"></span>
-				<div class="idea__block">
-					<img src="images/foto-min.png" alt="" class="idea__foto">
-					<div class="idea__text-wrap">
-						<h2 class="idea__h2-master orange-title">Олег</h2>
-						<p class="idea__text white-text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском </p>
-						<button class="idea__btn">записаться к этому мастеру</button>
-					</div>
+				<div class="idea__h2-wrap">
+					<h2 class="idea__h2 orange-title clearfix">наши мастера воплотят в жизнь <br>самые смелые идеи</h2>
 				</div>
-				<div class="idea__block-slider">
-					<h2 class="idea__h2 orange-title">наши мастера воплотят в жизнь <br>самые смелые идеи</h2>
-					<div class="idea__slider">
-						<img src="images/slide-1-min.png" alt="" class="idea__img">
-						<img src="images/slide-2-min.png" alt="" class="idea__img">
-						<img src="images/slide-3-min.png" alt="" class="idea__img">
-					</div>
 
-				</div>
+				<ul class="idea-slider-wrap owl-carousel owl-theme">
+
+					<li class="idea-wrap item">
+
+						<div class="idea__block">
+							<div class="idea-img-wrap">
+								<img src="images/foto-min.png" alt="" class="idea__foto">
+							</div>
+							<div class="idea__text-wrap">
+								<h2 class="idea__h2-master orange-title">Олег</h2>
+								<p class="idea__text white-text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском </p>
+								<button class="idea__btn">записаться к этому мастеру</button>
+							</div>
+						</div>
+
+						<div class="idea__block-slider">
+							<div class="idea__slider bxslider">
+								<img src="images/slide-1-min.png" alt="" class="idea__img">
+								<img src="images/slide-2-min.png" alt="" class="idea__img">
+								<img src="images/slide-3-min.png" alt="" class="idea__img">
+								<img src="images/slide-1-min.png" alt="" class="idea__img">
+								<img src="images/slide-2-min.png" alt="" class="idea__img">
+								<img src="images/slide-3-min.png" alt="" class="idea__img">
+								<img src="images/slide-1-min.png" alt="" class="idea__img">
+								<img src="images/slide-2-min.png" alt="" class="idea__img">
+								<img src="images/slide-3-min.png" alt="" class="idea__img">
+							</div>
+						</div>
+
+					</li>
+
+
+
+
+				</ul>
+
 			<span class="idea__front"></span>
 
 			<!-- video -->
@@ -299,7 +325,7 @@
 						<p class="advertise__text white-text">только в этом месяце</p>
 						<button class="advertise__btn">осталось 19 дней</button>
 					</div>
-					<button class="advertise__btn-try">примерить <br>тату</button>
+					<button class="advertise__btn-try js-click" href="#index">примерить <br>тату</button>
 					
 					<p class="advertise__title white-text">Для тех, кто сомневается, можете примерить тату, в <br>нашем салоне абсолютно бесплатно</p>
 				</div>
@@ -338,19 +364,21 @@
 	<!-- popup -->
 	<div class="popup-overlay js-close"></div>
 	<div class="popup">
-		<div class="popup__form-block">
-			<span class="popup__close"></span>
-			<form action="hello" class="popup__form clearfix">
-				<input type="text" class="popup__name" placeholder="Имя">
-				<input type="number" class="popup__number" value="">
-				<input type="submit" class="popup__submit" value="записаться">
+		<div class="popup__form-block js-modal" id="index">
+			<span class="popup__close js-close"></span>
+			<form action="hello" class="popup__form clearfix js-form">
+				<input type="text" class="popup__name js-validate" validate="name" placeholder="Имя">
+				<input type="text" class="popup__number js-validate" validate="phone" placeholder="+ _ (_ _ _) _ _ _  _ _ _  _ _">
+				<input type="submit" class="popup__submit js-submit" value="записаться">
 			</form>
 		</div>
 	</div>
 	<!-- /popup -->
 	
-	
-	<script src="js/lib/jquery-2.2.4.js"></script>
+	<script src="js/lib/jquery-3.1.1.js"></script>
+	<script src="owl-carousel/owl.carousel.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+	<script src="bxslider/jquery.bxslider.min.js"></script>
 	<script src="js/index.js"></script>
 </body>
 </html>
