@@ -27,39 +27,37 @@ $(document).ready(function() {
 
 $(function(){
 	var $inputText = $('.js-validate');
-
+	
 	$inputText.on('keyup', function(e){
-
-//		$('.js-validate').each(function () {
-
-			var value = $(this).val();
-			var validate = $(this).attr('validate');
-
-			if (validate == 'name') {
-				if (/^[a-zа-яё ]+$/i.test(value)) {
-					$(this).removeClass('error')
-				}else{
-					$(this).addClass('error')
-				}
+		var value = $(this).val();
+		var validate = $(this).attr('validate');
+		var validateRegExps = {
+			name: /^[a-zа-я ]+$/i,
+			phone: /^[+\d ]+$/
+		};
+		
+		
+		if (validateRegExps[validate]) {
+			
+			if (validateRegExps[validate].test(value)) {
+				$(this).removeClass('error')
+			}else{
+				$(this).addClass('error')
 			}
-
-			if (validate == 'phone') {
-				if (/^[+0-9 ]+$/.test(value)) {
-					$(this).removeClass('error')
-				}else{
-					$(this).addClass('error')
-				}
-			}
+			
+		}
 	});
 });
 
 
+
+
 //			слайдер
 $(function(){
-	$('.owl-carousel').owlCarousel({
+	var owl = $('.owl-carousel').owlCarousel({
 		loop: true,
-		dots: true,
-		dotsEach: true,
+		dots: false,
+		dotsEach: false,
 		nav: false,
 		margin: 10,
 		responsive: {
@@ -74,55 +72,109 @@ $(function(){
 			}
 		}
 	});
-
-});
-
-
-
-
-//			bxslider
-
-$(document).ready(function(){
-  $('.bxslider').bxSlider({
-  	slideWidth: 162,
-  	minSlides: 2,
-  	maxSlides: 4,
-  	slideMargin: 6,
-  	nextText:'',
-  	prevText:'',
-  	useCSS: false
-  });
-});
-
-
-
-//			всплывающее окно
-
-
-
-$(function(){
-	$(window).on('hashchange', function(e) {
-		var windowName = window.location.hash.replace('#', '');
-		openWindow(windowName);
+	
+	$('.js-idea__slider').owlCarousel({
+		loop: true,
+		dots: true,
+		dotsEach: 2,
+		nav: false,
+		margin: 10,
+		mouseDrag: false,
+		responsive: {
+			0:{
+				items:3
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:3
+			}
+		}
 	});
 	
-	function openWindow(windowName) {
-		var $modals = $('.js-modal');
+	$('.js-prev').on('click', function() {
+		
+		owl.trigger('prev.owl.carousel', [500]);
+		
+		
+	});
+	$('.js-next').on('click', function() {
+		
+		owl.trigger('next.owl.carousel', [500]);
+		
+		
+	});
 	
-
-		$('.js-click').on('click', function(e){
-			var $window = $('#' + windowName);
-			$window.addClass('opened');
-
-			$modals
-				.on('click.closeWindow', function (event) {
-					if ( ! $(event.target).closest('.modal-content').length) {
-						window.location.hash = "#";
-					}
-				});
-
-		});
-	};
+	
+	
 });
+
+
+
+
+/*
+			switch(validate) {
+				case'name': if ('/[а-я]+/'.test(value)) {
+					$(this).removeClass('error')
+				}else{
+					$(this).addClass('error')
+				}
+				[break]
+			}
+			
+			switch(validate) {
+				case'phone': if ('/[0-9]+/'.test(value)) {
+					$(this).removeClass('error')
+				}else{
+					$(this).addClass('error')
+				}
+				[break]
+			}*/
+
+//		});
+//		if (String.fromCharCode(e.charCode) != '0') {
+		
+//		e.preventDefault();
+//		}
+		
+		
+		
+
+
+//регулярные выражения почитать
+//поменять плюсики на минусы
+
+
+/**
+ * Дописать к элементам класс для валидации например js-validate
+ * дописать атрибут для валидации, например validate="email";
+ * 
+ * дописать стили для error состояние
+ * 
+ * JS
+ * 
+ * найти все элементы с классом js-validate пройти по ним циклом и считать их занчения
+ * Если значение не устраивает, то тогда добавляем класс error, если все ок, то удаляем.
+ * 
+ * 
+ * Проверка на длинну строку.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+
+
+
+
+
+
 
 
