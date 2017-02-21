@@ -112,6 +112,14 @@ $(function(){
 
 
 
+//			inputmask
+
+$(document).ready(function(){
+	$('.promo__number').inputmask("+7(999)999-99-99"); //static mask
+});
+
+
+
 
 /*
 			switch(validate) {
