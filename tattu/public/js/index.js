@@ -107,6 +107,39 @@ $(function(){
 	});
 	
 	
+
+	var fashion = $('.js-fashion__slider').owlCarousel({
+		loop: true,
+		dots: false,
+		dotsEach: false,
+		nav: false,
+		margin: 10,
+		mouseDrag: false,
+		responsive: {
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
+
+	$('.js-back').on('click', function() {
+		
+		fashion.trigger('prev.owl.carousel', [500]);
+		
+		
+	});
+	$('.js-front').on('click', function() {
+		
+		fashion.trigger('next.owl.carousel', [500]);
+		
+		
+	});
 	
 });
 
