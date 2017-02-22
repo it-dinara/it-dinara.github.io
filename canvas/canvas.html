@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Canvas</title>
+<script>
+var canvas, ctx, v, h;
+var flag = 0;
+function init () {
+	canvas = document.getElementById("canvas");
+	w =canvas.width;
+	h = canvas.height;
+	ctx = canvas.getContext('2d');
+	ctx.strokeRect(0,0,w,h);
+
+
+canvas.addEventListener('mousedown', function (event){
+	ctx.beginPath();
+	ctx.moveTo(event.offsetX, event.offsetY);
+	flag=0;
+
+	canvas.addEventListener('mousemove', function (event){
+		if(flag==0) {
+			ctx.lineTo(event.offsetX, event.offsetY);
+			ctx.stroke();
+		}
+		canvas.addEventListener('mouseup', function (event){
+			flag=1;
+		}, false);
+	}, false);
+}, false);
+}
+
+	</script>
+</head>
+<body onload="init()">
+	<canvas id = "canvas" width = "300" height = "300" onclick="mouse(event)">not support canvas</canvas>
+</body>
+</html>
