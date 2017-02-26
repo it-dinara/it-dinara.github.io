@@ -26,14 +26,15 @@ a{
 	/*-webkit-background-clip: text;*/
 }
 
-.wrapper:before {
+/*.wrapper:before {
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
 	content: "";
-}
+}*/
 
 ul {
+	margin: 0;
 	display: inline-block;
 	vertical-align: middle;
 }
