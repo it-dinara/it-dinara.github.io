@@ -1,0 +1,64 @@
+html{
+	height: 100%;
+		}
+body{
+	height: 100%;
+	font-size: 40px;
+	background: white
+	background-size: cover;
+	margin: 0;
+	font-family: 'Holtwood One SC', serif;
+}
+ul, li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: pink;
+}
+.wrapper{
+	height: 100%;
+	text-align: center;
+	background: url(../images/Sea-Cliff-Wallpaper-5.jpg) no-repeat center center;
+	background-size: cover;
+	/* -webkit-background-clip clips the background of the element to the text */
+	/*-webkit-text-fill-color: transparent;*/ /* overrides the white text color in webkit browsers */
+	/*-webkit-background-clip: text;*/
+}
+
+.wrapper:before {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	content: "";
+}
+
+ul {
+	display: inline-block;
+	vertical-align: middle;
+}
+li{
+	line-height: 95px;
+	/*text-shadow: 1px 1px 8px rgb(255, 192, 198);*/
+}
+
+li:hover{
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(0, 0, 0)),color-stop(0.09, rgb(0, 0, 0)),color-stop(0.1, rgba(0, 0, 0, 0)),color-stop(0.189, rgba(0, 0, 0, 0)),color-stop(0.2, rgb(0, 0, 0)),color-stop(0.29, rgb(0, 0, 0)),color-stop(0.3, rgba(0, 0, 0, 0)),color-stop(0.39, rgba(0, 0, 0, 0)),color-stop(0.395, rgb(0, 0, 0)),color-stop(0.49, rgb(0, 0, 0)),color-stop(0.5, rgba(0, 0, 0, 0)),color-stop(0.59, rgba(0, 0, 0, 0)),color-stop(0.6, rgb(0, 0, 0)),color-stop(0.69, rgb(0, 0, 0)),color-stop(0.7, rgba(0, 0, 0, 0)),color-stop(0.79, rgba(0, 0, 0, 0)),color-stop(0.8, rgb(0, 0, 0)),color-stop(0.89, rgb(0, 0, 0)),color-stop(0.9, rgba(0, 0, 0, 0)),color-stop(0.976, rgb(0, 0, 0)),color-stop(1, rgba(0, 0, 0, 0)));
+	    /* Android 2.3 */
+	    background-image: -webkit-repeating-linear-gradient(top left,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 9%,rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0) 18.9%,rgb(0, 0, 0) 20%,rgb(0, 0, 0) 29%,rgba(0, 0, 0, 0) 30%,rgba(0, 0, 0, 0) 39%,rgb(0, 0, 0) 39.5%,rgb(0, 0, 0) 49%,rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, 0) 59%,rgb(0, 0, 0) 60%,rgb(0, 0, 0) 69%,rgba(0, 0, 0, 0) 70%,rgba(0, 0, 0, 0) 79%,rgb(0, 0, 0) 80%,rgb(0, 0, 0) 89%,rgba(0, 0, 0, 0) 90%,rgb(0, 0, 0) 97.6%,rgba(0, 0, 0, 0) 100%);
+	    /* IE10+ */
+	    background-image: repeating-linear-gradient(to bottom right,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 9%,rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0) 18.9%,rgb(0, 0, 0) 20%,rgb(0, 0, 0) 29%,rgba(0, 0, 0, 0) 30%,rgba(0, 0, 0, 0) 39%,rgb(0, 0, 0) 39.5%,rgb(0, 0, 0) 49%,rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, 0) 59%,rgb(0, 0, 0) 60%,rgb(0, 0, 0) 69%,rgba(0, 0, 0, 0) 70%,rgba(0, 0, 0, 0) 79%,rgb(0, 0, 0) 80%,rgb(0, 0, 0) 89%,rgba(0, 0, 0, 0) 90%,rgb(0, 0, 0) 97.6%,rgba(0, 0, 0, 0) 100%);
+	    background-image: -ms-repeating-linear-gradient(top left,rgb(0, 0, 0) 0%,rgb(0, 0, 0) 9%,rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0) 18.9%,rgb(0, 0, 0) 20%,rgb(0, 0, 0) 29%,rgba(0, 0, 0, 0) 30%,rgba(0, 0, 0, 0) 39%,rgb(0, 0, 0) 39.5%,rgb(0, 0, 0) 49%,rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, 0) 59%,rgb(0, 0, 0) 60%,rgb(0, 0, 0) 69%,rgba(0, 0, 0, 0) 70%,rgba(0, 0, 0, 0) 79%,rgb(0, 0, 0) 80%,rgb(0, 0, 0) 89%,rgba(0, 0, 0, 0) 90%,rgb(0, 0, 0) 97.6%,rgba(0, 0, 0, 0) 100%);
+	background-size: 300% 100%;
+	animation: text 1s ease-in normal infinite;
+	animation-fill-mode: both;
+}
+
+@keyframes text { 0% { background-position: center left, top left; }
+
+				100% { background-position: center right, top right } }
+
+
+
