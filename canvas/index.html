@@ -29,23 +29,6 @@ canvas.addEventListener('mousedown', function (event){
 		}, false);
 	}, false);
 }, false);
-
-
-canvas.addEventListener('touchstart', function (event){
-	ctx.beginPath();
-	ctx.moveTo(event.offsetX, event.offsetY);
-	flag=0;
-
-	canvas.addEventListener('touchmove', function (event){
-		if(flag==0) {
-			ctx.lineTo(event.offsetX, event.offsetY);
-			ctx.stroke();
-		}
-		canvas.addEventListener('touchend', function (event){
-			flag=1;
-		}, false);
-	}, false);
-}, false);
 }
 
 	</script>
