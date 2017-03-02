@@ -43,6 +43,18 @@ li{
 	/*text-shadow: 1px 1px 8px rgb(255, 192, 198);*/
 }
 
+
+.ready {
+	padding-top: 129px;
+	font-size: 30px;
+	line-height: 17px;
+}
+
+.ready__span{
+
+}
+
+
 li:hover{
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
