@@ -19,12 +19,12 @@
 			<div class="nav-wrap">
 				<nav class="nav">
 					<ul class="nav__ul">
-						<li class="nav__li">Стили тату и услуги</li>
-						<li class="nav__li orange">Стоимость</li>
-						<li class="nav__li">Мастера</li>
-						<li class="nav__li">О Студии</li>
-						<li class="nav__li">Акция месяца</li>
-						<li class="nav__li">Контакты</li>
+						<li class="nav__li"><a class="nav__a" href="#gallery">Стили тату и услуги</a></li>
+						<li class="nav__li"><a href="#calc" class="nav__a orange">Стоимость</a></li>
+						<li class="nav__li"><a href="#idea" class="nav__a">Мастера</a></li>
+						<li class="nav__li"><a href="#video" class="nav__a">О Студии</a></li>
+						<li class="nav__li"><a href="#advertise__block-wrap" class="nav__a">Акция месяца</a></li>
+						<li class="nav__li"><a href="#" class="nav__a">Контакты</a></li>
 					</ul>
 				</nav>
 				
@@ -47,8 +47,8 @@
 
 			<div class="promo__form-block">
 				<form action="hello" class="promo__form clearfix">
-					<input type="text" class="promo__name" placeholder="Имя">
-					<input type="tel" class="promo__number">
+					<input type="text" class="promo__name" placeholder="Имя"><a href="" class="nav__a"></a>
+					<input type="tel" class="promo__number js-num">
 					<input type="submit" class="promo__submit" value="записаться">
 				</form>
 			</div>
@@ -59,7 +59,7 @@
 
 
 	<!-- gallery -->
-	<div class="gallery">
+	<div class="gallery" id="gallery">
 		<div class="container">
 
 			<div class="gallery__block">
@@ -194,7 +194,7 @@
 					</div>
 				</div>
 
-				<button class="fashion__button">хочу в подобном стиле</button>
+				<button class="fashion__button js-click">хочу в подобном стиле</button>
 				<span class="front js-front"></span>
 			</div>
 		</div>
@@ -202,7 +202,7 @@
 	<!-- /fashion -->
 
 	<!-- calc -->
-	<div class="calc">
+	<div class="calc" id="calc">
 		<div class="container">
 			<div class="calc__block">
 				
@@ -263,7 +263,7 @@
 	<!-- /calc -->
 
 	<!-- idea -->
-	<div class="idea">
+	<div class="idea" id="idea">
 		<div class="container">
 			<span class="idea__back js-prev"></span>
 			
@@ -282,7 +282,7 @@
 						<div class="idea__text-wrap">
 							<h2 class="idea__h2-master orange-title">Олег</h2>
 							<p class="idea__text white-text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском </p>
-							<button class="idea__btn">записаться к этому мастеру</button>
+							<button class="idea__btn js-click">записаться к этому мастеру</button>
 						</div>
 					</div>
 
@@ -358,7 +358,7 @@
 			<span class="idea__front js-next"></span>
 
 			<!-- video -->
-			<div class="video clearfix">
+			<div class="video clearfix" id="video">
 				<h2 class="video__h2 orange-title">УЗНАЙТЕ БОЛЬШЕ О НАШЕМ САЛОНЕ</h2>
 				<p class="video__text white-text">лучшая демонстрация это видео:)</p>
 
@@ -376,14 +376,14 @@
 
 			<!-- advertise -->
 			<div class="advertise">
-				<div class="advertise__block-wrap">
+				<div class="advertise__block-wrap" id="advertise__block-wrap">
 					<div class="advertise__h2-wrap">
 						<h2 class="advertise__h2 orange-title">акция! &nbsp;примерьте<br>
 						тату бесплатно!</h2>
 						<p class="advertise__text white-text">только в этом месяце</p>
 						<button class="advertise__btn">осталось 19 дней</button>
 					</div>
-					<button class="advertise__btn-try js-click" href="#index" data-modal="#index">примерить <br>тату</button>
+					<button class="advertise__btn-try js-click" href="#index">примерить <br>тату</button>
 					
 					<p class="advertise__title white-text">Для тех, кто сомневается, можете примерить тату, в <br>нашем салоне абсолютно бесплатно</p>
 				</div>
@@ -396,7 +396,7 @@
 					</div>
 
 				</div>
-					<button class="address__btn"><img src="images/phone.svg" alt="" class="address__icon"></button>
+					<a href="tel:+78007007877" class="address__btn"><img src="images/phone.svg" alt="" class="address__icon"></a>
 			</div>
 			<!-- /advertise -->
 
@@ -410,7 +410,7 @@
 
 	<!-- footer -->
 	<div class="footer clearfix">
-		<div class="container">
+		<div class="container cl-text">
 			<p class="footer__copyright">Copyright © | Taty | 2016 <span class="copyright-span">Политика конфедециальности</span></p>
 			<address class="footer__address">Разработка: Rublev.pro  Дизайн: Третьяков Сергей</address>
 		</div>
@@ -423,10 +423,10 @@
 	<div class="popup-overlay js-close"></div>
 	<div class="popup">
 		<div class="popup__form-block js-modal" id="index">
-			<span class="popup__close js-close"></span>
+			<span class="popup__close js-close">&times;</span>
 			<form action="hello" class="popup__form clearfix js-form">
 				<input type="text" class="popup__name js-validate" validate="name" placeholder="Имя">
-				<input type="text" class="popup__number js-validate" validate="phone" placeholder="">
+				<input type="text" class="popup__number js-validate js-num" validate="phone" placeholder="">
 				<input type="submit" class="popup__submit js-submit" value="записаться">
 			</form>
 		</div>

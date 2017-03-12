@@ -19,13 +19,13 @@ $(document).ready(function() {
 			.attr('data-total', result)
 			.html(' ' + result + 'р.');
 	});
-})
+
 
 
 
 //			всплывающее окно, валидация
 
-$(function(){
+
 	var $inputText = $('.js-validate');
 	
 	$inputText.on('keyup', function(e){
@@ -47,13 +47,13 @@ $(function(){
 			
 		}
 	});
-});
+
 
 
 
 
 //			слайдер
-$(function(){
+
 	var owl = $('.owl-carousel').owlCarousel({
 		loop: true,
 		dots: false,
@@ -105,14 +105,13 @@ $(function(){
 		
 		
 	});
-	
-	
+
 
 	var fashion = $('.js-fashion__slider').owlCarousel({
 		loop: true,
 		dots: false,
 		dotsEach: false,
-		nav: false,
+		nav: true,
 		margin: 10,
 		mouseDrag: false,
 		responsive: {
@@ -130,60 +129,44 @@ $(function(){
 
 	$('.js-back').on('click', function() {
 		
-		fashion.trigger('prev.owl.carousel', [500]);
+		fashion.trigger('prev.carousel', [500]);
 		
 		
 	});
 	$('.js-front').on('click', function() {
 		
-		fashion.trigger('next.owl.carousel', [500]);
+		fashion.trigger('next.carousel', [500]);
 		
 		
 	});
 	
-});
+
 
 
 
 //			inputmask
 
-$(document).ready(function(){
-	$('.promo__number').inputmask("+7(999)999-99-99"); //static mask
+
+	$('.js-num').inputmask("+7(999)999-99-99"); //static mask
+
+
+
+//			popup
+
+	$('.js-click').on('click', function(){
+		$('.js-modal, .popup-overlay').addClass('js-active');
+	});
+
+
+
+	$('.js-close').on('click', function(){
+		$('.js-modal, .popup-overlay').removeClass('js-active');
+	});
 });
 
 
 
-
-/*
-			switch(validate) {
-				case'name': if ('/[а-я]+/'.test(value)) {
-					$(this).removeClass('error')
-				}else{
-					$(this).addClass('error')
-				}
-				[break]
-			}
-			
-			switch(validate) {
-				case'phone': if ('/[0-9]+/'.test(value)) {
-					$(this).removeClass('error')
-				}else{
-					$(this).addClass('error')
-				}
-				[break]
-			}*/
-
-//		});
-//		if (String.fromCharCode(e.charCode) != '0') {
-		
-//		e.preventDefault();
-//		}
-		
-		
-		
-
-
-//регулярные выражения почитать
+//регулярные выражения
 //поменять плюсики на минусы
 
 
@@ -200,11 +183,6 @@ $(document).ready(function(){
  * 
  * 
  * Проверка на длинну строку.
- * 
- * 
- * 
- * 
- * 
  * 
  * 
  */
