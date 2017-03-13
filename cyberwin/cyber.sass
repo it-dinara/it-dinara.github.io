@@ -15,6 +15,9 @@ body
 	background-color: black
 	background-attachment: inherit
 
+input
+	border: none
+	background-color: transparent
 
 .logo
 	margin: 12px 24px
@@ -174,7 +177,8 @@ header
 	margin: 24px 14px 0px 53px
 
 .line
-	width: 222px
+	width: 100%
+	max-width: 222px
 	height: 1px
 	color: rgb(105,105,105)
 	background-color: rgb(19,19,19)
@@ -184,22 +188,36 @@ header
 	position: relative
 	vertical-align: top
 	margin-top: 36px
-	&:before
-		background-image: url(images/2.png)
-		content: ""
-		width: 20px
-		height: 39px
-		position: absolute
-		left: 15%
-		top: -16px
-	&:after
-		background-image: url(images/2.png)
-		content: ""
-		width: 20px
-		height: 39px
-		position: absolute
-		left: 47%
-		top: -16px
+
+.line__range
+	position: absolute
+	top: 0px
+	background: red
+	height: 100%
+	display: block
+	z-index: 1000
+	width: 100%
+
+.line__btn
+
+
+.line__btn_left
+	background-image: url(images/2.png)
+	width: 20px
+	height: 39px
+	position: absolute
+	top: -16px
+	// left: 15%
+
+.line__btn_right
+	background-image: url(images/2.png)
+	width: 20px
+	height: 39px
+	position: absolute
+	top: -16px
+	// left: 47%
+
+
 
 .tin-tack
 	display: inline-block
@@ -210,6 +228,9 @@ header
 	display: inline-block
 	vertical-align: top
 	margin: 30px 16px
+	margin: 9px 3px
+	width: 111px
+
 
 .tugric
 	font-size: 24px
@@ -218,6 +239,7 @@ header
 	line-height: 0
 	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.004)
 	display: block
+
 .tugricOf
 	font-size: 12px
 	font-family: "Benguiat"
@@ -416,8 +438,6 @@ header
 	z-index: 142
 	border: none
 
-
-
 .CyWin
 	font-size: 14px
 	font-family: "Benguiat"
@@ -431,3 +451,7 @@ header
 	text-decoration: underline
 	margin-left: 623px
 	display: inline-block
+
+.ui-widget-header
+	background: #f6a828 50% 50% repeat-x
+	height: 4px

@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Cyberwin</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="stylesheet" href="custom-jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="cyber.css">
 </head>
 <body>
@@ -24,10 +26,7 @@
 			<div class="container3">
 				<div class="username">Привет, username!</div>
 				<div class="money">У тебя 1 200 тугриков</div>
-			</div>
-		</div>
-	</header>
-
+			</div>line
 	<div class="HearthStone">
 		<img alt="Лого" src="images/HS-logo.png">
 	</div>
@@ -49,11 +48,20 @@
 
 
 			<div class="cost">Стоимость</div>
-			<div class="line"></div>
-			<div class="tin-tack"></div>
+
+
+			<div class="line js-line" id="slider-range">
+				<div class="line__btn line__btn_left ui-slider-handle"></div>
+				<div class="line__btn line__btn_right ui-slider-handle"></div>
+			</div>
+
+
+			<!-- <div class="tin-tack"></div> -->
 			<div class="filterCont">
-				<div class="tugric">30-100</div>
-				<div class="tugricOf">тугриков</div>
+				<input id="amount" type="text" class="tugric">
+				<label for="amount" class="tugricOf">тугриков</label>
+				<!-- <div class="tugric">30-100</div>
+				<div class="tugricOf">тугриков</div> -->
 			</div>
 		</div>
 
@@ -237,5 +245,9 @@
 		<div class="use">Условия использования</div>
 	</div>
 
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/code.js"></script>
 </body>
 </html>

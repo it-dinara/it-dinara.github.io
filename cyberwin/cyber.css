@@ -14,6 +14,10 @@ body {
   background-color: black;
   background-attachment: inherit; }
 
+input {
+  border: none;
+  background-color: transparent; }
+
 .logo {
   margin: 12px 24px;
   display: inline-block;
@@ -162,7 +166,8 @@ header {
   margin: 24px 14px 0px 53px; }
 
 .line {
-  width: 222px;
+  width: 100%;
+  max-width: 222px;
   height: 1px;
   color: dimgray;
   background-color: #131313;
@@ -172,22 +177,29 @@ header {
   position: relative;
   vertical-align: top;
   margin-top: 36px; }
-  .line:before {
-    background-image: url(images/2.png);
-    content: "";
-    width: 20px;
-    height: 39px;
-    position: absolute;
-    left: 15%;
-    top: -16px; }
-  .line:after {
-    background-image: url(images/2.png);
-    content: "";
-    width: 20px;
-    height: 39px;
-    position: absolute;
-    left: 47%;
-    top: -16px; }
+
+.line__range {
+  position: absolute;
+  top: 0px;
+  background: red;
+  height: 100%;
+  display: block;
+  z-index: 1000;
+  width: 100%; }
+
+.line__btn_left {
+  background-image: url(images/2.png);
+  width: 20px;
+  height: 39px;
+  position: absolute;
+  top: -16px; }
+
+.line__btn_right {
+  background-image: url(images/2.png);
+  width: 20px;
+  height: 39px;
+  position: absolute;
+  top: -16px; }
 
 .tin-tack {
   display: inline-block;
@@ -197,7 +209,9 @@ header {
 .filterCont {
   display: inline-block;
   vertical-align: top;
-  margin: 30px 16px; }
+  margin: 30px 16px;
+  margin: 9px 3px;
+  width: 111px; }
 
 .tugric {
   font-size: 24px;
@@ -405,3 +419,7 @@ header {
   text-decoration: underline;
   margin-left: 623px;
   display: inline-block; }
+
+.ui-widget-header {
+  background: #f6a828 50% 50% repeat-x;
+  height: 4px; }
