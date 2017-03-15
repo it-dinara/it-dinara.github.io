@@ -13,19 +13,20 @@ $(function() {
 
 		var range = $(".js-line").slider( "option", "range" );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+
+var a = {
+	prop: 1,
+	f: function() {
+		console.log(this.prop);
+	}
+},
+b = {
+	prop: 2,
+	f: function() {
+		console.log(this.prop);
+	}
+};
+
+a.f();
+b.f();
