@@ -66,7 +66,7 @@ li:hover{
 	    background-image: linear-gradient(315deg,rgba(0, 0, 0, 0.98) 0%,rgb(242, 0, 0) 9%,rgba(255, 76, 8, 0.81) 10%,rgba(255, 76, 8, 0.81) 19%,rgb(242, 0, 0) 19.8%,rgb(242, 0, 0) 29%,rgba(255, 76, 8, 0.81) 30%,rgba(255, 76, 8, 0.81) 39%,rgb(242, 0, 0) 40%,rgb(242, 0, 0) 48.7%,rgba(255, 76, 8, 0.81) 50%,rgba(255, 76, 8, 0.81) 59%,rgb(242, 0, 0) 60%,rgb(242, 0, 0) 69%,rgba(255, 76, 8, 0.81) 70%,rgba(255, 76, 8, 0.81) 79%,rgb(242, 0, 0) 80%,rgb(242, 0, 0) 89%,rgba(255, 76, 8, 0.81) 90.1%,rgba(255, 76, 8, 0.81) 99%);
 	    background-image: -ms-linear-gradient(135deg,rgba(0, 0, 0, 0.98) 0%,rgb(242, 0, 0) 9%,rgba(255, 76, 8, 0.81) 10%,rgba(255, 76, 8, 0.81) 19%,rgb(242, 0, 0) 19.8%,rgb(242, 0, 0) 29%,rgba(255, 76, 8, 0.81) 30%,rgba(255, 76, 8, 0.81) 39%,rgb(242, 0, 0) 40%,rgb(242, 0, 0) 48.7%,rgba(255, 76, 8, 0.81) 50%,rgba(255, 76, 8, 0.81) 59%,rgb(242, 0, 0) 60%,rgb(242, 0, 0) 69%,rgba(255, 76, 8, 0.81) 70%,rgba(255, 76, 8, 0.81) 79%,rgb(242, 0, 0) 80%,rgb(242, 0, 0) 89%,rgba(255, 76, 8, 0.81) 90.1%,rgba(255, 76, 8, 0.81) 99%);
 	background-size: 2% 1000%;
-	animation: text 1s linear normal infinite;
+	animation: text 9s linear normal infinite;
 	animation-fill-mode: both;
 }
 
