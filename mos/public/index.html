@@ -16,7 +16,7 @@
 			<section class="your">
 				<h3 class="your__title">Ваши данные</h3>
 				<form action="hello" class="your__form">
-					<input placeholder="Введите Ф.И.О." type="text" class="your__input your__name error">
+					<input placeholder="Введите Ф.И.О." type="text" class="your__input your__name js-validate" validate="name">
 					<i class="error-i">&#10033;</i>
 					<input placeholder="Пароль" type="password" class="your__input your__password">
 					<i class="error-i">&#10033;</i>
@@ -30,7 +30,7 @@
 							<option class="city__option" value="">Гатчина</option>
 						</select>
 
-					<input placeholder="Телефон" type="number" class="your__input your__number">
+					<input placeholder="Телефон" type="text" class="your__input your__number js-num">
 			
 					<p class="wrap-gender">
 						<input class="input-radio input-radio_male" id="male" type="radio" name="gender" value="male">
@@ -71,6 +71,7 @@
 		<div class="block-lay"></div>
 
 	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.inputmask.bundle.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/code.js"></script>
 </body>
