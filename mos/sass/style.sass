@@ -34,6 +34,7 @@ body
 		font-size: 14px
 		min-width: 320px
 		overflow-x: hidden
+		width: 90%
 	*
 		box-sizing: border-box
 
@@ -300,6 +301,8 @@ a
 
 .file-wrap
 	position: relative
+	@include adaptive(mobile)
+		text-align: center
 
 .file
 	width: 0.1px
@@ -408,3 +411,5 @@ a
 	@include adaptive(mobile)
 		width: 88%
 		line-height: 42px
+		display: block
+		margin: 22px auto 0
