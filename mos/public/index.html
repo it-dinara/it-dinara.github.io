@@ -6,6 +6,8 @@
 	<title>test</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/custom-jquery-ui.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,10 +23,11 @@
 					<input placeholder="Email" type="text" class="your__input your__email">
 					<i class="error-i">&#10033;</i>
 
-						<select name="" id="city" class="your__city">
+						<select name="city" id="city" class="your__city">
 							<option class="city__option" value="">Москва</option>
-							<option class="city__option" value="">Москва-1</option>
-							<option class="city__option" value="Москва-2"></option>
+							<option class="city__option" value="">Петушки</option>
+							<option class="city__option" value="">Санкт-Петербург</option>
+							<option class="city__option" value="">Гатчина</option>
 						</select>
 
 					<input placeholder="Телефон" type="number" class="your__input your__number">
@@ -59,12 +62,16 @@
 			
 				<div class="rules">
 					<input type="checkbox" id="yes" class="rules__checkbox">
-					<label for="yes" class="rules__label">Я прочитал и соглашаюсь с <a href="#" class="know__rules-a">правилами</a> участия в акции </label>
+					<label for="yes" class="rules__label">Я прочитал и соглашаюсь<br> с <a href="#" class="know__rules-a">правилами</a> участия в акции </label>
 				</div>
 				<input type="submit" class="input__submit" value="Учавствовать">
 			
 			</section>
 		</div>
 		<div class="block-lay"></div>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/code.js"></script>
 </body>
 </html>

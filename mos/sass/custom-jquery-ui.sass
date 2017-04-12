@@ -1,0 +1,49 @@
+$purple: #5b50c6
+$mobile : 320px
+$pad : 428px
+$desktop : 1240px
+
+@mixin adaptive($media) 
+	@if $media == mobile 
+		@media only screen and (max-width: $pad) 
+			@content
+		
+	
+	@else if $media == pad 
+		@media only screen and (min-width: $pad) and (max-width: $desktop)
+			@content
+		
+	
+	@else if $media == desktop 
+		@media only screen and (min-width: $desktop )
+			@content
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+	border: 2px solid #b0b7be
+	background: white
+	// font-weight: 500
+	color: rgb(117, 117, 117)
+	border-radius: 5px
+	font-family: 'Open Sans', sans-serif
+	@include adaptive(mobile)
+		margin-bottom: 15px
+
+.ui-selectmenu-button.ui-button
+	@include adaptive(mobile)
+		width: 92%
+		height: 42px
+		line-height: 29px
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
+	border: 2px solid  #b0b7be
+	background: white
+	font-weight: normal
+	color: rgb(117, 117, 117)
+	font-family: 'Open Sans', sans-serif
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover 
+	border: 1px solid $purple
+	background: $purple
+	font-weight: normal
+	color: #ffffff
+	font-family: 'Open Sans', sans-serif

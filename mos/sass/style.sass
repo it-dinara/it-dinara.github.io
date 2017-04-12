@@ -34,7 +34,6 @@ body
 		font-size: 14px
 		min-width: 320px
 		overflow-x: hidden
-		width: 90%
 	*
 		box-sizing: border-box
 
@@ -82,7 +81,7 @@ a
 	text-align: left
 	@include adaptive(mobile)
 		width: 320px
-		padding-left: 22px
+		padding-left: 0
 
 
 //	your
@@ -94,6 +93,7 @@ a
 		display: block
 		width: 100%
 		padding-bottom: 30px
+		text-align: center
 
 .your__form
 
@@ -103,7 +103,7 @@ a
 	letter-spacing: 1px
 	line-height: 1.5
 	@include adaptive(mobile)
-		padding-left: 17px
+		padding-left: 0
 
 // .your__name,
 // .your__password,
@@ -192,11 +192,16 @@ a
 	position: relative
 	padding-top: 13px
 	text-align: left
+	@include adaptive(mobile)
+		text-align: center
 .gender
 	cursor: pointer
 	&:nth-of-type(1)
 		padding-right: 36px
 		margin-left: -6px
+		@include adaptive(mobile)
+			padding-right: 43px
+			margin-left: -41px
 	&:before
 		content: ''
 		cursor: pointer
@@ -212,7 +217,7 @@ a
 		border-radius: 15px 
 		z-index: -1
 		@include adaptive(mobile)
-			left: 36%
+			left: 38%
 
 .gender_female
 	margin-left: 23px
@@ -230,17 +235,17 @@ a
 		box-shadow: 0 0.1429em 0.2143em rgba(43,43,43,.1), 0 0.3572em 0.3572em rgba(43,43,43,.1)
 		transition: left .2s ease-in-out, background .2s ease-in-out
 		@include adaptive(mobile)
-			left: 41%
+			left: 43%
 
 .input-radio_male:checked ~ .gender_female:after
 	left: 33%
 	@include adaptive(mobile)
-		left: 37%
+		left: 39%
 
 .input-radio_female:checked ~ .gender_female:after
 	left: 40%
 	@include adaptive(mobile)
-		left: 45%
+		left: 46%
 
 .input-radio_male:checked ~ .gender_male,
 .input-radio_female:checked ~ .gender_female
@@ -266,11 +271,14 @@ a
 		display: block
 		width: 100%
 		padding-bottom: 30px
+		text-align: center
 
 .know__title
 	font-size: 1.5rem
 	padding-left: 17px
 	letter-spacing: 1px
+	@include adaptive(mobile)
+		padding-left: 0
 
 .know__text-wrap
 	display: inline-block
@@ -370,7 +378,10 @@ a
 .rules__label
 	display: inline-block
 	position: relative
-	padding-left: 68px
+	padding-left: 72px
+	@include adaptive(mobile)
+		padding-left: 25px
+		text-align: left
 	&:before
 		content: ''
 		position: absolute
@@ -380,6 +391,8 @@ a
 		border-radius: 5px
 		left: 37px
 		top: 0
+		@include adaptive(mobile)
+			left: -12px
 	&:after
 		content: 'V'
 		position: absolute
@@ -390,6 +403,8 @@ a
 		font-size: 1.125rem
 		font-family: 'Architects Daughter', cursive
 		opacity: 0
+		@include adaptive(mobile)
+			left: -5px
 
 .rules__checkbox:checked ~ .rules__label:after
 	opacity: 1
@@ -413,3 +428,30 @@ a
 		line-height: 42px
 		display: block
 		margin: 22px auto 0
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+	border: 2px solid #b0b7be
+	background: white
+	color: rgb(117, 117, 117)
+	border-radius: 5px
+	@include adaptive(mobile)
+		margin-bottom: 15px
+
+.ui-selectmenu-button.ui-button
+	@include adaptive(mobile)
+		width: 92%
+		height: 42px
+		line-height: 29px
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
+	border: 2px solid  #b0b7be
+	background: white
+	font-weight: normal
+	color: rgb(117, 117, 117)
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover 
+	border: 1px solid $purple
+	background: $purple
+	font-weight: normal
+	color: #ffffff
