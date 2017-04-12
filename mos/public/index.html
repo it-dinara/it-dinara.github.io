@@ -13,17 +13,19 @@
 			<section class="your">
 				<h3 class="your__title">Ваши данные</h3>
 				<form action="hello" class="your__form">
-					<input placeholder="Введите Ф.И.О." type="text" class="your__input your__name">
-					<i class="error"></i>
+					<input placeholder="Введите Ф.И.О." type="text" class="your__input your__name error">
+					<i class="error-i">&#10033;</i>
 					<input placeholder="Пароль" type="password" class="your__input your__password">
-					<i class="error"></i>
+					<i class="error-i">&#10033;</i>
 					<input placeholder="Email" type="text" class="your__input your__email">
-					<i class="error"></i>
-					<select name="" id="city" class="your__city">
-						<option value="">Москва</option>
-						<option value="">Москва-1</option>
-						<option value="Москва-2"></option>
-					</select>
+					<i class="error-i">&#10033;</i>
+					<div class="city" >
+						<select name="" id="city" class="your__city">
+							<option class="city__option" value="">Москва</option>
+							<option class="city__option" value="">Москва-1</option>
+							<option class="city__option" value="Москва-2"></option>
+						</select>
+					</div>
 					<input placeholder="Телефон" type="number" class="your__input your__number">
 			
 					<p class="wrap-gender">

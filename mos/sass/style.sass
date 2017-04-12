@@ -1,5 +1,23 @@
 $purple: #5b50c6
+$grey: #636f7b
+$mobile : 320px
+$pad : 428px
+$desktop : 1240px
 
+@mixin adaptive($media) 
+	@if $media == mobile 
+		@media only screen and (max-width: $pad) 
+			@content
+		
+	
+	@else if $media == pad 
+		@media only screen and (min-width: $pad) and (max-width: $desktop) 
+			@content
+		
+	
+	@else if $media == desktop 
+		@media only screen and (min-width: $desktop )
+			@content
 
 
 @font-face
@@ -11,6 +29,7 @@ body
 	position: relative
 	margin: 0
 	text-align: center
+	min-width: 320px
 	*
 		box-sizing: border-box
 
@@ -55,6 +74,8 @@ a
 	display: inline-block
 	vertical-align: baseline
 	text-align: left
+	@include adaptive(mobile)
+		width: 320px
 
 
 //	your
@@ -62,6 +83,9 @@ a
 .your
 	display: inline-block
 	width: 49%
+	@include adaptive(mobile)
+		display: block
+		width: 100%
 
 .your__form
 
@@ -75,24 +99,68 @@ a
 // .your__password,
 // .your__email,
 // .your__number
-.your__input,
-.your__city
-	display: block
-	width: 88%
+.your__input
+	display: inline-block
+	width: 300px
 	margin-bottom: 22px
 	border-radius: 5px
-	height: 58px
 	border: 2px solid #b0b7be
+	height: 58px
 	padding-left: 16px
 	font-weight: 600
 	&:hover
 		border-color: #636f7b
 
+
+.your__city
+	width: 320px
+	height: 58px
+	display: inline-block
+	margin-bottom: 22px
+	border-radius: 5px
+	font-weight: 600
+	border: none
+	-webkit-appearance: none
+	&:hover
+		border-color: #636f7b
+
+.city
+	height: 58px
+	border: 2px solid #b0b7be
+	overflow: hidden
+	width: 300px
+	display: inline-block
+	margin-bottom: 22px
+	border-radius: 5px
+	padding-left: 16px
+	font-weight: 600
+	position: relative
+	&:after
+		content: '▼'
+		position: absolute
+		top: 20px
+		right: 8px
+		color: $grey
+		z-index: -1
+
+.your__city
+	background: transparent
+
+.city__option
+	margin-left: -20px
+
+
 .error
-	&
-	display: block
-	content: '*'
-	font-size: 1.5rem
+	display: inline-block
+	border: 2px solid red
+	position: relative
+
+.error-i
+	display: inline-block
+	line-height: 55px
+	color: red
+	padding-left: 6px
+
 
 .input-radio
 	visibility: hidden
@@ -164,6 +232,10 @@ a
 	display: inline-block
 	vertical-align: top
 	width: 49%
+	@include adaptive(mobile)
+		display: block
+		width: 100%
+
 
 .know__title
 	font-size: 1.5rem
