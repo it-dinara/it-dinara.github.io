@@ -30,6 +30,10 @@ body
 	margin: 0
 	text-align: center
 	min-width: 320px
+	@include adaptive(mobile)
+		font-size: 14px
+		min-width: 320px
+		overflow-x: hidden
 	*
 		box-sizing: border-box
 
@@ -57,7 +61,8 @@ a
 	position: fixed
 	top: 0
 	left: 0
-
+	@include adaptive(mobile)
+		display: none
 
 .block-lay
 	display: inline-block
@@ -76,6 +81,7 @@ a
 	text-align: left
 	@include adaptive(mobile)
 		width: 320px
+		padding-left: 22px
 
 
 //	your
@@ -86,6 +92,7 @@ a
 	@include adaptive(mobile)
 		display: block
 		width: 100%
+		padding-bottom: 30px
 
 .your__form
 
@@ -94,12 +101,15 @@ a
 	padding-left: 22px
 	letter-spacing: 1px
 	line-height: 1.5
+	@include adaptive(mobile)
+		padding-left: 17px
 
 // .your__name,
 // .your__password,
 // .your__email,
 // .your__number
-.your__input
+.your__input,
+.your__city
 	display: inline-block
 	width: 300px
 	margin-bottom: 22px
@@ -110,44 +120,51 @@ a
 	font-weight: 600
 	&:hover
 		border-color: #636f7b
+	@include adaptive(mobile)
+		width: 92%
+		height: 42px
+		margin-bottom: 15px
 
 
-.your__city
-	width: 320px
-	height: 58px
-	display: inline-block
-	margin-bottom: 22px
-	border-radius: 5px
-	font-weight: 600
-	border: none
-	-webkit-appearance: none
-	&:hover
-		border-color: #636f7b
+// .your__city
+// 	width: 320px
+// 	height: 58px
+// 	display: inline-block
+// 	margin-bottom: 22px
+// 	border-radius: 5px
+// 	font-weight: 600
+// 	border: none
+// 	-webkit-appearance: none
+// 	&:hover
+// 		border-color: #636f7b
 
-.city
-	height: 58px
-	border: 2px solid #b0b7be
-	overflow: hidden
-	width: 300px
-	display: inline-block
-	margin-bottom: 22px
-	border-radius: 5px
-	padding-left: 16px
-	font-weight: 600
-	position: relative
-	&:after
-		content: '▼'
-		position: absolute
-		top: 20px
-		right: 8px
-		color: $grey
-		z-index: -1
+// .city
+// 	height: 58px
+// 	border: 2px solid #b0b7be
+// 	overflow: hidden
+// 	width: 300px
+// 	display: inline-block
+// 	margin-bottom: 22px
+// 	border-radius: 5px
+// 	padding-left: 16px
+// 	font-weight: 600
+// 	position: relative
+// 	&:after
+// 		content: '▼'
+// 		position: absolute
+// 		top: 20px
+// 		right: 8px
+// 		color: $grey
+// 		z-index: -1
+// 	@include adaptive(mobile)
+// 		width: 89%
 
-.your__city
-	background: transparent
 
-.city__option
-	margin-left: -20px
+// .your__city
+// 	background: transparent
+
+// .city__option
+// 	margin-left: -20px
 
 
 .error
@@ -160,6 +177,11 @@ a
 	line-height: 55px
 	color: red
 	padding-left: 6px
+	@include adaptive(mobile)
+		line-height: inherit
+		font-size: 0.75rem
+		padding-left: 2px
+		display: none
 
 
 .input-radio
@@ -188,6 +210,8 @@ a
 		border: 1px solid #b0b7be
 		border-radius: 15px 
 		z-index: -1
+		@include adaptive(mobile)
+			left: 36%
 
 .gender_female
 	margin-left: 23px
@@ -204,13 +228,18 @@ a
 		pointer-events: none
 		box-shadow: 0 0.1429em 0.2143em rgba(43,43,43,.1), 0 0.3572em 0.3572em rgba(43,43,43,.1)
 		transition: left .2s ease-in-out, background .2s ease-in-out
-		// z-index: 200
+		@include adaptive(mobile)
+			left: 41%
 
 .input-radio_male:checked ~ .gender_female:after
 	left: 33%
+	@include adaptive(mobile)
+		left: 37%
 
 .input-radio_female:checked ~ .gender_female:after
 	left: 40%
+	@include adaptive(mobile)
+		left: 45%
 
 .input-radio_male:checked ~ .gender_male,
 .input-radio_female:checked ~ .gender_female
@@ -235,7 +264,7 @@ a
 	@include adaptive(mobile)
 		display: block
 		width: 100%
-
+		padding-bottom: 30px
 
 .know__title
 	font-size: 1.5rem
@@ -290,11 +319,13 @@ a
 	margin-left: 18px
 	margin-top: 22px
 	text-align: center
-	// display: flex
-	// justify-content: center
-	// align-items: center
 	border-radius: 5px
 	position: relative
+	@include adaptive(mobile)
+		width: 280px
+		height: 130px
+		line-height: 130px
+		margin-left: 0
 	&:before
 		content: ' '
 		position: absolute
@@ -305,6 +336,8 @@ a
 		top: 98%
 		border-radius: 0px 0px 15px 0px
 		z-index: -1
+		@include adaptive(mobile)
+			display: none
 	&:after
 		content: ''
 		position: absolute
@@ -314,6 +347,11 @@ a
 		height: 114px
 		border: dashed 2px white
 		border-radius: 5px
+		@include adaptive(mobile)
+			top: 17px
+			left: 17px
+			width: 240px
+			height: 94px
 
 .file__span
 	color: white
@@ -367,3 +405,6 @@ a
 	text-transform: uppercase
 	margin-top: 22px
 	margin-left: 17px
+	@include adaptive(mobile)
+		width: 88%
+		line-height: 42px
