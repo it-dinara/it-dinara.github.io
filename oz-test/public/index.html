@@ -5,8 +5,11 @@
 	<meta name="viewport" content="width=device-width"/>
 	<title>ozon-test</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+<!-- 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
+	<link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/custom-owl-carusel.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,7 +26,7 @@
 			<a href="#" class="nav__a">Контакты</a>
 		</nav>
 		<div class="promo-video">
-			<video controls="controls" autoplay="" loop="" class="video-width">
+			<video controls="controls" loop="" class="video-width">
 				<source src="video/video.mp4" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
 				Тег video не поддерживается вашим браузером.
 			</video>
@@ -100,52 +103,51 @@
 					<img src="img/arrow.png" alt="" class="news__arrow">
 				</a>
 			</div>
+
+
+
+<!-- 													slider														 -->
 			<div class="about-us-wrap">
 				<h3 class="main-h3">вы знаете</h3>
-				<a href="#" class="js-slide">
+				<a href="#" >
 
-					<div class="about-us__block">
-						<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
-						<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
-						<div class="rub-wrap">
-							<img src="img/p.png" alt="" class="rub-img">
-							<p class="rub">5 млн.</p>
+					<div class="js-slide owl-carousel owl-theme">
+
+						<div class="about-us__block">
+							<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
+							<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
+							<div class="rub-wrap">
+								<span><img src="img/p.png" alt="" class="rub-img"></span>
+								<p class="rub">5 млн.</p>
+							</div>
+							<span><img src="img/arrow.png" alt="" class="news__arrow"></span>
 						</div>
-						<img src="img/arrow.png" alt="" class="news__arrow">
+
+
+						<div class="about-us__block">
+							<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
+							<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
+							<div class="rub-wrap">
+								<span><img src="img/p.png" alt="" class="rub-img"></span>
+								<p class="rub">6 млн.</p>
+							</div>
+							<span><img src="img/arrow.png" alt="" class="news__arrow"></span>
+						</div>
+
+
+						<div class="about-us__block">
+							<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
+							<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
+							<div class="rub-wrap">
+								<span><img src="img/p.png" alt="" class="rub-img"></span>
+								<p class="rub">7 млн.</p>
+							</div>
+							<img src="img/arrow.png" alt="" class="news__arrow">
+						</div>
+
 					</div>
 
 
-					<div class="about-us__block">
-						<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
-						<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
-						<div class="rub-wrap">
-							<img src="img/p.png" alt="" class="rub-img">
-							<p class="rub">6 млн.</p>
-						</div>
-						<img src="img/arrow.png" alt="" class="news__arrow">
-					</div>
-
-
-					<div class="about-us__block">
-						<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
-						<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
-						<div class="rub-wrap">
-							<img src="img/p.png" alt="" class="rub-img">
-							<p class="rub">7 млн.</p>
-						</div>
-						<img src="img/arrow.png" alt="" class="news__arrow">
-					</div>
-
-
-					<div class="about-us__block">
-						<span class="slide-span"><img src="img/rub.png" alt="" class="know__img"></span>
-						<p class="know__p">Самый дорогой заказ<br /> сделанный на&nbsp;OZON.ru<br> был на&nbsp;сумму</p>
-						<div class="rub-wrap">
-							<img src="img/p.png" alt="" class="rub-img">
-							<p class="rub">8 млн.</p>
-						</div>
-						<img src="img/arrow.png" alt="" class="news__arrow">
-					</div>
 
 				</a>
 			</div>
@@ -217,11 +219,14 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"
-	  integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI="
-	  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
+<!-- 	// <script src="https://code.jquery.com/jquery-1.11.0.min.js"
+	//   integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI="
+	//   crossorigin="anonymous"></script>
+	// <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script> -->
+	<!-- // <script type="text/javascript" src="js/slick.min.js"></script> -->
+	<script src="js/lib/jquery-3.1.1.js"></script>
+	<script src="owl-carousel/owl.carousel.js"></script>
+	<script src="js/lib/jquery.inputmask.bundle.js"></script>
 	<script type="text/javascript" src="js/code.js"></script>
 	
 </body>
