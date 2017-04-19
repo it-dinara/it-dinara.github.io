@@ -1383,12 +1383,13 @@ body.outlook p {
   padding-bottom: 0; }
 
 .price {
-  background: #2e5ba9; }
+  background: #2e5ba9;
+  padding-top: 20px; }
 
 .bg-white {
   background: #ffffff;
-  padding-bottom: 7px;
-  padding-top: 7px; }
+  height: 32px;
+  line-height: 32px; }
 
 .a-black {
   color: #000; }
@@ -1400,9 +1401,13 @@ body.outlook p {
 .price__num {
   font-size: 40px;
   font-weight: bold;
-  color: white; }
+  color: white;
+  display: block;
+  height: 35px; }
 
 .price__text {
+  display: block;
+  height: 20px;
   color: white; }
 
 .oz-link {
