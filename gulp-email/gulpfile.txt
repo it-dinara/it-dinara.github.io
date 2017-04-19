@@ -10,7 +10,7 @@ var runSequence = require('run-sequence');
 var path = require('path');
 var colors = require('colors');
 var autoprefixer = require('gulp-autoprefixer');
-var inlineCss = require('gulp-inline-css');
+									var inlineCss = require('gulp-inline-css');
 
 
 function exceptionLog (error) {
@@ -18,12 +18,12 @@ function exceptionLog (error) {
 	this.emit('end');
 }
 
-// Inline css
-gulp.task('styles', function () {
-	return gulp.src('./dev/**/*.html')
-		.pipe(inlineCss())
-		.pipe(gulp.dest('./client'));
-});
+									// Inline css
+										gulp.task('styles', function () {
+											return gulp.src('./public/**/*.html')
+												.pipe(inlineCss())
+												.pipe(gulp.dest('./public'));
+										});
 
 // Сборка js
 gulp.task('webpack', function() {
@@ -76,6 +76,5 @@ gulp.task('default', function () {
 	runSequence('del-build', ['webpack', 'sass'])
 	gulp.watch(['./js/**/*.js','./js/*.js', './js/**/*.jsx', './js/*.jsx', './webpack.config.js'], ['webpack']);
 	gulp.watch('./sass/**/*.sass', ['sass']);
-	gulp.watch('./public/landing/sass/*.sass', ['landing']);
-	gulp.watch(['./dev/**/*.html']);
+	gulp.watch('./public/landing/sass/*.sass', ['landing'])
 });

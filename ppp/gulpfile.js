@@ -20,9 +20,11 @@ function exceptionLog (error) {
 
 // Inline css
 gulp.task('styles', function () {
-	return gulp.src('./dev/**/*.html')
+	console.log('---------- Start inlineCss ----------'.bold.pink.bgBlack);
+	return gulp.src('./public/**/*.html')
 		.pipe(inlineCss())
 		.pipe(gulp.dest('./client'));
+		console.log('---------- Finished inlineCss ----------'.bold.pink.bgBlack);
 });
 
 // Сборка js
@@ -77,5 +79,5 @@ gulp.task('default', function () {
 	gulp.watch(['./js/**/*.js','./js/*.js', './js/**/*.jsx', './js/*.jsx', './webpack.config.js'], ['webpack']);
 	gulp.watch('./sass/**/*.sass', ['sass']);
 	gulp.watch('./public/landing/sass/*.sass', ['landing']);
-	gulp.watch(['./dev/**/*.html']);
+	gulp.watch('./public/**/*.html', ['styles']);
 });
