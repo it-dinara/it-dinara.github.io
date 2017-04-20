@@ -18,7 +18,8 @@
 					<spacer size="15"></spacer>
 					<table>
 						<tbody>
-							<img src="img/gift.jpg" alt="Gift" /></tbody>
+							<img src="img/gift.jpg" alt="Gift" />
+						</tbody>
 					</table>
 
 					<spacer size="30"></spacer>
@@ -32,7 +33,7 @@
 					<spacer size="15"></spacer>
 					<container>
 						<row>
-							<columns>
+							<columns class="mb">
 								<p>It’s a good tradition in P&G to congratulate employees and their families with the New Year and prepare special New Year gift for them.</p>
 							</columns>
 						</row>
@@ -40,7 +41,7 @@
 					<spacer size="5"></spacer>
 					<container>
 						<row>
-							<columns>
+							<columns class="mb">
 								<p>Here is the nice surprise from P&G for you and your children up to 14 years old</p>
 							</columns>
 						</row>
@@ -50,21 +51,43 @@
 					<container>
 						<row>
 
-							<columns class="price">
-								<columns large="6" small="6">
-									<spacer size="20"></spacer>
-									<p class="price__num">750 P</p>
-									<p class="price__text">eGift Certificate</p>
+							<columns class="price" style="padding-top: 15px; padding-bottom: 15px;">
+								<columns large="6" small="6" style="padding-top: 7px;">
+									<!-- <spacer size="20"></spacer> -->
+									<!-- <p class="price__num">750 P</p>
+									<spacer size="5"></spacer>
+									<p class="price__text">eGift Certificate</p> -->
+									<container>
+										<row>
+											<columns large="12" small="12" style="padding-bottom: 10px"><p class="price__num">750 P</p></columns>
+										</row>
+									</container>
+									<container>
+										<row>
+											<columns large="12" small="12"><p class="price__text">eGift Certificate</p></columns>
+										</row>
+									</container>
 								</columns>
 
 								<columns large="6" small="4" class="large-offset-2 small-offset-2">
-								<spacer size="15"></spacer>
-									<p class="text-center bg-white">
-										<a href="#" class="a-black">Х Х Х Х</a>
-									</p>
-									<p class="text-center">
-										<a href="#" class="text-underline">Activate</a>
-									</p>
+								<!-- <spacer size="15"></spacer> -->
+
+									<container>
+										<row>
+											<columns large="12" small="12" class="bg-white text-right">
+												<a href="#" style="text-decoration: none !important;"><p class="text-center">Х Х Х Х</p></a>
+											</columns>
+										</row>
+									</container>
+									<container>
+										<row>
+											<columns large="12" small="12" class="text-underline" style="padding-top: 3px;">
+												<p class="text-center">
+													<a href="#" class="text-underline text-center">Activate</a>
+												</p>
+											</columns>
+										</row>
+									</container>
 								</columns>
 							</columns>
 
@@ -99,7 +122,7 @@
 									<container>
 										<row>
 											<columns large="2" small="2" class=""><img src="img/2.png" alt="num"/></columns>
-											<columns large="10" small="9" class="small-offset-1" valign="bottom">
+											<columns large="10" small="9" class="small-offset-1 mb" valign="bottom">
 												<p>Enter the code and then Activate, the certificate amount will be credited to your customer account (if you don’t have OZON user account, please, register before activation)</p>
 											</columns>
 										</row>
@@ -109,7 +132,7 @@
 									<container>
 										<row>
 											<columns large="2" small="2" class=""><img src="img/3.png" alt="num"/></columns>
-											<columns large="10" small="9" class="small-offset-1" valign="bottom">
+											<columns large="10" small="9" class="small-offset-1 mb" valign="bottom">
 												<p>For full or partly order payment choose Customer account </p>
 											</columns>
 										</row>
@@ -117,7 +140,7 @@
 									<spacer size="15"></spacer>
 									<container>
 										<row>
-											<columns>
+											<columns class="mb">
 												<p>We wish you and your families all the best in the upcoming 2017 year and great winter holidays!</p>
 											</columns>
 										</row>

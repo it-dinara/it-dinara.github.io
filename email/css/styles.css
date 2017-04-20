@@ -47,8 +47,8 @@ a img {
   border: none; }
 
 p {
-  margin: 0 0 0 10px;
-  Margin: 0 0 0 10px; }
+  margin: 0 0 0 0px;
+  Margin: 0 0 0 0px; }
 
 table {
   border-spacing: 0;
@@ -76,7 +76,7 @@ table.body {
   width: 100%; }
 
 table.container {
-  background: #ffffff;
+  background: transparent;
   width: 580px;
   margin: 0 auto;
   Margin: 0 auto;
@@ -829,8 +829,8 @@ th {
   line-height: 19px; }
 
 p {
-  margin-bottom: 10px;
-  Margin-bottom: 10px; }
+  margin-bottom: 0px;
+  Margin-bottom: 0px; }
   p.lead {
     font-size: 17.5px;
     line-height: 1.6; }
@@ -1326,10 +1326,10 @@ body.outlook p {
     display: none !important; }
   table.body .right-text-pad,
   table.body .text-pad-right {
-    padding-left: 10px !important; }
+    padding-left: 0px !important; }
   table.body .left-text-pad,
   table.body .text-pad-left {
-    padding-right: 10px !important; }
+    padding-right: 0px !important; }
   table.menu {
     width: 100% !important; }
     table.menu td,
@@ -1387,23 +1387,30 @@ body.outlook p {
 
 .bg-white {
   background: #ffffff;
-  padding-bottom: 7px;
+  padding-bottom: 7px !important;
   padding-top: 7px; }
 
 .a-black {
-  color: #000; }
+  color: #000000; }
 
 .text-underline {
+  background: #2e5ba9;
   text-decoration: underline;
-  color: white; }
+  color: #ffffff; }
 
 .price__num {
   font-size: 40px;
   font-weight: bold;
-  color: white; }
+  color: #ffffff; }
 
 .price__text {
-  color: white; }
+  color: #ffffff; }
 
 .oz-link {
   text-decoration: underline; }
+
+.mb {
+  padding-bottom: 10px !important; }
+
+.price__num-wrap {
+  padding-bottom: 5px; }

@@ -20,13 +20,12 @@ function exceptionLog (error) {
 
 // Inline css
 gulp.task('styles', function () {
-	console.log('---------- Start inlineCss ----------'.bold.pink.bgBlack);
 	return gulp.src('./public/**/*.html')
 		.pipe(inlineCss())
-		.pipe(gulp.dest('./client'));
-		console.log('---------- Finished inlineCss ----------'.bold.pink.bgBlack);
+		.pipe(gulp.dest('./client'))
 });
 
+		
 // Сборка js
 gulp.task('webpack', function() {
 	var webpackTime = new Date();
@@ -75,7 +74,7 @@ gulp.task('del-build', function() {
 
 // watcher
 gulp.task('default', function () {
-	runSequence('del-build', ['webpack', 'sass'])
+	runSequence('del-build', ['webpack', 'sass', 'styles'])
 	gulp.watch(['./js/**/*.js','./js/*.js', './js/**/*.jsx', './js/*.jsx', './webpack.config.js'], ['webpack']);
 	gulp.watch('./sass/**/*.sass', ['sass']);
 	gulp.watch('./public/landing/sass/*.sass', ['landing']);
