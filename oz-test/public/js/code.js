@@ -15,7 +15,7 @@ $(document).ready(function(){
 		nav: false,
 		margin: 10,
 		autoplay:true,
-		autoplayTimeout:1000,
+		autoplayTimeout:3000,
 		autoplayHoverPause:false,
 		responsive: {
 			0:{
