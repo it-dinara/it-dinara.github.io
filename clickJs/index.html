@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrap{width: 705px; margin: 0 auto; text-align: center;}
+		.mainImg{display: block;}
+		.img{display: inline-block; width: 100px; vertical-align: top; margin: 20px 40px;}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="https://pp.userapi.com/c7003/v7003057/33250/h5uLnpX4pho.jpg" alt="" class="mainImg js-img">
+
+		<img src="https://pp.userapi.com/c7003/v7003152/3358d/2KvP3KVUI1w.jpg" alt="" class="img js-img">
+		<img src="https://pp.userapi.com/c7003/v7003670/33694/WjrXBTF8Mh8.jpg" alt="" class="img js-img">
+		<img src="https://pp.userapi.com/c7003/v7003131/3382f/3oBHyyDu9eM.jpg" alt="" class="img js-img">
+	</div>
+
+	<div class="wrap">
+		<img src="https://pp.userapi.com/c7003/v7003057/33250/h5uLnpX4pho.jpg" alt="" class="mainImg js-img">
+
+		<img src="https://pp.userapi.com/c7003/v7003152/3358d/2KvP3KVUI1w.jpg" alt="" class="img js-img">
+		<img src="https://pp.userapi.com/c7003/v7003670/33694/WjrXBTF8Mh8.jpg" alt="" class="img js-img">
+		<img src="https://pp.userapi.com/c7003/v7003131/3382f/3oBHyyDu9eM.jpg" alt="" class="img js-img">
+	</div>
+
+	<script>
+		var wrap = document.querySelectorAll(".wrap");
+
+		wrap.forEach(function(item){
+			item.addEventListener("click", beMain);
+		});
+
+		function beMain(event){
+			var target = event.target;
+			var currentTarget = event.currentTarget;
+
+			if ( target.classList.contains('img') ){
+				var bigImg = currentTarget.querySelector(".mainImg");
+
+				bigImg.src = target.src
+			}
+		}
+		
+	</script>
+</body>
+</html>
+target - куда кликнули
+currentTarget - там где висит клик
