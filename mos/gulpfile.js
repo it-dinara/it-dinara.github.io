@@ -7,6 +7,7 @@ var runSequence = require('run-sequence');
 var path = require('path');
 var colors = require('colors');
 var autoprefixer = require('gulp-autoprefixer');
+var gcmq = require('gulp-group-css-media-queries');
 
 function exceptionLog (error) {
 	console.log(error.toString());
@@ -34,9 +35,10 @@ gulp.task('webpack', function() {
 gulp.task('sass', function() {
 	console.log('----------- Start SASSS -----------'.bold.green.bgBlack);
 	gulp.src('./sass/*.sass')
-		.pipe( sass({outputStyle: 'compressed'})
+		.pipe( sass(/*{outputStyle: 'compressed'}*/)
 		.on('error', sass.logError) )
 		.pipe(autoprefixer())
+		.pipe(gcmq())
 		.pipe(gulp.dest('./public/css'))
 		.on('error', exceptionLog)
 		.on('end', function() {
@@ -44,6 +46,8 @@ gulp.task('sass', function() {
 		});
 	
 });
+
+//media-queries
 
 // del
 gulp.task('del-build', function() {

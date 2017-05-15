@@ -47,8 +47,8 @@ a img {
   border: none; }
 
 p {
-  margin: 0 0 0 0px;
-  Margin: 0 0 0 0px; }
+  margin: 0 0 0 10px;
+  Margin: 0 0 0 10px; }
 
 table {
   border-spacing: 0;
@@ -829,8 +829,8 @@ th {
   line-height: 19px; }
 
 p {
-  margin-bottom: 0px;
-  Margin-bottom: 0px; }
+  margin-bottom: 10px;
+  Margin-bottom: 10px; }
   p.lead {
     font-size: 17.5px;
     line-height: 1.6; }
@@ -1391,12 +1391,13 @@ body.outlook p {
   padding-top: 7px; }
 
 .a-black {
-  color: #000000; }
+  color: #000000 !important;
+  text-decoration: none !important; }
 
 .text-underline {
   background: #2e5ba9;
   text-decoration: underline;
-  color: #ffffff; }
+  color: #ffffff !important; }
 
 .price__num {
   font-size: 40px;
@@ -1408,9 +1409,3 @@ body.outlook p {
 
 .oz-link {
   text-decoration: underline; }
-
-.mb {
-  padding-bottom: 10px !important; }
-
-.price__num-wrap {
-  padding-bottom: 5px; }

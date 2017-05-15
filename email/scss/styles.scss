@@ -9,12 +9,13 @@
 	padding-top: 7px; 
 }
 .a-black {
-	color: #000000;
+	color: #000000 !important;
+	text-decoration: none !important;
 }
 .text-underline {
 	background: #2e5ba9;
 	text-decoration: underline;
-	color: #ffffff;
+	color: #ffffff !important;
 }
 .price__num {
 	font-size: 40px;
@@ -27,12 +28,12 @@
 .oz-link {
 	text-decoration: underline;
 }
-.mb {
-	padding-bottom: 10px !important;
-}
-.price__num-wrap {
-	padding-bottom: 5px;
-}
+// .mb {
+// 	padding-bottom: 10px !important;
+// }
+// .price__num-wrap {
+// 	padding-bottom: 5px;
+// }
 
 
 
