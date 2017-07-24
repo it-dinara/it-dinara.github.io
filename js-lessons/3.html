@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New title</title>
+	<style>
+		button,a {display: block;margin: 0 auto;}
+		input {margin: 0 auto;display: block;}
+		p{display: block; padding: 20px 0; text-align: center;}
+		.www{color: red;}
+		.new-class{color: blue;}
+	</style>
+</head>
+
+	<img src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/1.png" alt="">
+
+<body>
+	
+
+
+<script>
+
+	var image = document.querySelector('img');
+	image.addEventListener('mouseover', go);
+		var num = 1;
+
+	function go(){
+		window.setInterval(slide,1000);
+	};
+	function slide(){
+		if (num<7) {
+			num = num + 1;
+			var imageSrc = "http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/" + num + ".png";
+			console.log(num)
+			return image.src=imageSrc;
+		};
+	};
+
+
+
+
+</script>
+</body>
+</html>
+

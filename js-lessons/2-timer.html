@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New title</title>
+	<style>
+		button,a {display: block;margin: 0 auto;}
+				input {margin:0 auto 10px;display: block; width: 150px}
+				p{display: block; padding: 5px 0; text-align: center;}
+				.www{color: red;}
+				.new-class{color: blue;}
+	</style>
+</head>
+
+	<p>1</p>
+	<input type="submit" value="Start" class="start">
+	<input type="submit" value="Stop" class="stop">
+
+<body>
+	
+
+
+<script>
+
+	function timer(){
+			window.timerId = window.setTimeout(timer, 1000);
+			document.querySelector('p').innerHTML = window.timerId;
+			start.disabled = true;
+		};
+
+		function timerStop(){
+			window.clearInterval(window.timerId);
+			start.disabled = false;
+		};
+
+		var start = document.querySelector(".start");
+		start.addEventListener('click', timer);
+
+		var stop = document.querySelector(".stop");
+		stop.addEventListener('click', timerStop);
+
+
+
+
+</script>
+</body>
+</html>
+
