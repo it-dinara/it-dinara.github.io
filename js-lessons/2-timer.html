@@ -20,10 +20,11 @@
 
 
 <script>
+	var item = 0;
 
 	function timer(){
 			window.timerId = window.setTimeout(timer, 1000);
-			document.querySelector('p').innerHTML = window.timerId;
+			document.querySelector('p').innerHTML = ++item;
 			start.disabled = true;
 		};
 
