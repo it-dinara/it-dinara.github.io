@@ -14,21 +14,22 @@
 
 	<img src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/1.png" alt="">
 
-<body>
+<body onload="go()">
 	
 
 
 <script>
 
 	var image = document.querySelector('img');
-	image.addEventListener('mouseover', go);
-		var num = 1;
+	var num = 1;
 
 	function go(){
 		window.setInterval(slide,1000);
 	};
 	function slide(){
-		if (num<7) {
+		if (num == undefined || num==6) {
+			num = 1;
+		}else{
 			num = num + 1;
 			var imageSrc = "http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/" + num + ".png";
 			console.log(num)
