@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<title>New title</title>
 	<style>
-		button,a, img {display: block;margin: 0 auto;}
+		div{text-align: center;}
+		img {display: inline-block;text-align: center;}
 		input {margin: 0 auto;display: block;}
 		p{display: block; padding: 20px 0; text-align: center;}
 		.www{color: red;}
@@ -12,33 +13,29 @@
 	</style>
 </head>
 
-	<img src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/1.png" alt="">
-
-<body onload="go()">
-	
+<body>
+	<div>
+		<img data-index="1" src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/1.png" alt="">
+		<img data-index="2" src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/2.png" alt="">
+		<img data-index="3" src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/3.png" alt="">
+		<img data-index="4" src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/4.png" alt="">
+		<img data-index="5" src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/5.png" alt="">
+		<img data-index="6" src="http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/6.png" alt="">
+	</div>
 
 
 <script>
 
-	var image = document.querySelector('img');
-	var num = 1;
+	var images = document.querySelectorAll('img');
 
-	function go(){
-		window.setInterval(slide,1000);
-	};
 	function slide(){
-		if (num == undefined || num==6) {
-			num = 1;
-		}else{
-			num = num + 1;
-			var imageSrc = "http://theory.phphtml.net/exercises/javascript/dom/rabota-s-tajmerami-v-javascript/smiles/" + num + ".png";
-			console.log(num)
-			return image.src=imageSrc;
-		};
+		var firstImg = images[0].src;
+		for (var i = 0; i < images.length - 1; i++) images[i].src = images[i+1].src;
+		images[images.length - 1].src = firstImg;
 	};
 
 
-
+window.setInterval(slide,1000);
 
 </script>
 </body>
