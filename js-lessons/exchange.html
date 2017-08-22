@@ -52,17 +52,12 @@
 			var bye = byeCurrency.options[byeCurrency.selectedIndex].value;
 			var sell = sellCurrency.options[sellCurrency.selectedIndex].value;
 			var result = arrBye[bye] / arrSell[sell] * sum.value;
-
 			message.innerHTML = message.innerHTML + result;
-
-		};
+		}else{
+			alert("Некорректно заполнены поля, попробуйте ещё раз!");
+		}
 	};
-
-
-
-	// arrBye[byeCurrency.option[byeCurrency.selectedIndex.value]] / arrSell[] * Number(sum.value)
 	</script>
 </body>
 
 </html>
-<!-- alert("Некорректно заполнены поля, попробуйте ещё раз!"); -->
