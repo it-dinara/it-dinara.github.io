@@ -55,6 +55,7 @@
 	year();
 
 	function getSelectDay(n) {
+			selectDate.innerHTML = "";
 		for (var i = 1; i <= n; i++) {
 			var selectDays = document.createElement("option");
 			selectDays.innerHTML = i;
@@ -67,11 +68,11 @@
 		var month = selectMonth.options[selectMonth.selectedIndex].value;
 		var n = 01 - 1;
 		var resultDate = new Date(year, Number(month) + 1, n);
-		console.log(resultDate)
+		console.log(resultDate);
 		var resultMonthDays = resultDate.getDate();
-		console.log(resultMonthDays)
+		console.log(resultMonthDays);
 		getSelectDay(resultMonthDays);
-	}
+	};
 	</script>
 </body>
 
