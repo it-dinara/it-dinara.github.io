@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	p {
+		display: none;
+	}
+	</style>
+</head>
+
+<body>
+	<div>
+		<input type="text" name="raz" class="js" value="">
+		<input type="text" name="raz" class="outinput" value="">
+	</div>
+	<script>
+	var input = document.querySelector("input")
+	var outinput = document.querySelector(".outinput");
+	input.addEventListener("keyup", func);
+
+	var obj = {};
+
+	function func() {
+		var arr = input.value.split("");
+		for (var i = 0; i < arr.length; i++) obj[arr[i]] = arr[i];
+
+		outinput.value = Object.keys(obj).join("");
+		obj = {}
+	};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div id="calendar">
+		<select id="year"></select>
+		<select id="month">
+			<option value="0">Январь</option>
+			<option value="1">Февраль</option>
+			<option value="2">Март</option>
+			<option value="3">Апрель</option>
+			<option value="4">Май</option>
+			<option value="5">Июнь</option>
+			<option value="6">Июль</option>
+			<option value="7">Август</option>
+			<option value="8">Сентябрь</option>
+			<option value="9">Октябрь</option>
+			<option value="10">Ноябрь</option>
+			<option value="11">Декабрь</option>
+		</select>
+		<select id="date"></select>
+	</div>
+	<script>
+	var date = new Date(1970);
+	var selectYear = document.querySelector("#year");
+	selectYear.addEventListener("change", func);
+
+	var selectMonth = document.querySelector("#month");
+	selectMonth.addEventListener("change", func);
+
+	var selectDate = document.querySelector("#date");
+
+
+	function year() {
+		var date = new Date(1970);
+		var now = new Date();
+		var optionYear;
+		var result = now.getFullYear() - date.getFullYear();
+		var dateYear = date.getFullYear();
+		for (var i = 0; i < result; i++) {
+			dateYear += 1
+			optionYear = document.createElement("option");
+			selectYear.appendChild(optionYear);
+			optionYear.innerHTML = dateYear;
+		};
+	};
+	year();
+
+	function getSelectDay(n) {
+		for (var i = 1; i <= n; i++) {
+			var selectDays = document.createElement("option");
+			selectDays.innerHTML = i;
+			selectDate.appendChild(selectDays);
+		};
+	};
+
+	function func(event) {
+		var year = selectYear.options[selectYear.selectedIndex].innerHTML;
+		var month = selectMonth.options[selectMonth.selectedIndex].value;
+		var n = 01 - 1;
+		var resultDate = new Date(year, Number(month) + 1, n);
+		console.log(resultDate)
+		var resultMonthDays = resultDate.getDate();
+		console.log(resultMonthDays)
+		getSelectDay(resultMonthDays);
+	}
+	</script>
+</body>
+
+</html>

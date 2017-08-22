@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body>
+	<input type="text" value="31.12.2016">
+
+
+<script>
+	var input = document.querySelector("input");
+	input.addEventListener("blur", getNewFormat);
+
+	function getNewFormat(){
+		var arr = input.value.split(".");
+		console.log(arr)
+		var date = "";
+		for (var i = arr.length-1; i >= 0 ; i--) {
+			date = date + arr[i] + "-";
+			console.log(date);
+
+		};
+		return input.value = date.substring(0, date.length-1);
+	}
+</script>
+</body>
+</html>
