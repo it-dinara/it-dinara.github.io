@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	table,
+	td {
+		border: solid 1px black;
+	}
+
+	table {
+		margin-top: 30px;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	td {
+		padding: 21px;
+	}
+	</style>
+</head>
+
+<body>
+	<input class="row" type="text" value="5">
+	<input class="cell" type="text" value="6">
+	<input type="button" class="btn" value="create">
+	<table>
+	</table>
+	<script>
+	var btn = document.querySelector(".btn");
+	btn.addEventListener("click", func);
+
+	function func() {
+		var row = document.querySelector(".row");
+		var cell = document.querySelector(".cell");
+		var table = document.querySelector("table");
+		var createTr = "";
+		var createTd = "";
+		table.innerHTML = "";
+		for (var i = 0; i < row.value; i++) {
+			createTr = document.createElement("tr");
+			for (var j = 0; j < cell.value; j++) {
+				createTd = document.createElement("td");
+				createTr.appendChild(createTd);
+			};
+			table.appendChild(createTr);
+		};
+	};
+	</script>
+</body>
+
+</html>

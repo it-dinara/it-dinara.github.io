@@ -44,7 +44,6 @@
 	btn.addEventListener("click", func);
 
 	function func() {
-
 		var message = document.querySelector(".message");
 		message.innerHTML = "Вы купили: ";
 		var sum = document.querySelector("#summa");
@@ -53,7 +52,7 @@
 			var sell = sellCurrency.options[sellCurrency.selectedIndex].value;
 			var result = arrBye[bye] / arrSell[sell] * sum.value;
 			message.innerHTML = message.innerHTML + result;
-		}else{
+		} else {
 			alert("Некорректно заполнены поля, попробуйте ещё раз!");
 		}
 	};
