@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<a href="#">первая ссылка</a>
+		<a href="#">вторая ссылка</a>
+		<a href="#">третья ссылка</a>
+		<a href="#">четвёртая ссылка</a>
+		<a href="#">пятая ссылка</a>
+	</div>
+	<p></p>
+	<script>
+	var div = document.querySelector("div");
+	var a = document.querySelectorAll("a");
+	var p = document.querySelector("p");
+
+	div.addEventListener("click", func);
+
+		function func(event) {
+			var target = event.target;
+
+			for (var i = 0; i < a.length; i++) a[i].style.background = "none";
+
+			if(target.parentNode.tagName === "DIV"){
+				target.style.background = "red";
+				p.innerHTML = target.innerHTML;
+			}
+		};
+
+
+	// var div = document.querySelector("div");
+	// div.addEventListener("click", func);
+
+	// function func() {
+	// 	var target = event.target;
+	// 	var a = document.querySelectorAll("a");
+	// 	var p = document.querySelector("p");
+	// 	for (var i = 0; i < a.length; i++) {
+	// 		a[i].style.background = "none";
+	// 	};
+	// 	if(target.parentNode == div){
+	// 		target.style.background = "red";
+	// 		p.innerHTML = target.innerHTML;
+	// 	}
+	// };
+
+	</script>
+</body>
+
+</html>
