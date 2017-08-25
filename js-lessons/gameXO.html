@@ -84,61 +84,34 @@
 
 	var game = document.querySelector("#game");
 	game.addEventListener("click", func);
-	game.addEventListener("click", funcWin);
+	// game.addEventListener("click", funcWin);
 
 	var flag;
-	var winX;
-	var win0;
-	var wonDraw;
+	var arr = ["012", "345", "678", "036", "147", "258", "048", "246"];
+	var strX = "";
+	var strY = "";
+	var wonX = document.querySelector("#win_x");
+	var won0 = document.querySelector("#win_0");
+	var wonDraw = document.querySelector("#win_draw");
 
-	// function winnerCount(item){
-
-	// }
-
-	function funcWin(event) {
-		var arr = document.querySelectorAll(".js-cell");
-		var n = 0;
-		var roof = 3;
-		var localFlag = "";
-		var str = "";
-		for (var i = n; i < roof; i++) {
-			localFlag = arr[n].innerHTML;
-			console.log('-----------')
-			console.log(arr[n])
-			n++
-			roof++
-			if (localFlag == arr[i].innerHTML) {
-				localFlag = arr[i].innerHTML;
-				str = str + localFlag;
-				// winnerCount(localFlag);
-				if (str == "XXX" || str == "000") {
-					game.removeEventListener("click", func);
-				}
-			} else {
-				n = n + 1; //3,6
-				roof = roof + 1; //6,9
+	function funcX(event) {
+		strX += event.target.getAttribute('data-id');
+		console.log(strX);
+		for (var i = 0; i < arr.length; i++) {
+			if(arr[i] == strX){
+				game.removeEventListener("click", func);
 			};
 		};
-		console.log(n, roof, localFlag, str);
+	};
 
-
-		// var roof2 = 7;
-		// var n2 = 0;
-		// for(var i = n2; i < roof2; i+=3){
-
-		// }else{
-		// 	roof2 += 1;
-		// 	n2 += 1;
-		// }
-
-		// var roof3 = 7;
-		// var n3 = 0;
-		// for (var i = 0; i <= 8; i+4) {
-
-		// };
-		// for (var i = 2; i <= 6; i+2) {
-
-		// };
+		function funcY(event) {
+		strY += event.target.getAttribute('data-id');
+		console.log(strY);
+		for (var i = 0; i < arr.length; i++) {
+			if(arr[i] == strY){
+				game.removeEventListener("click", func);
+			};
+		};
 	};
 
 	function func(event) {
@@ -147,10 +120,12 @@
 		if (target.innerHTML == "") {
 			if (flag == "0") {
 				target.innerHTML = "0"
-				flag = "x"
+				flag = "x";
+				funcY(event);
 			} else {
 				target.innerHTML = "X";
 				flag = "0";
+				funcX(event);
 			}
 		}
 	};
