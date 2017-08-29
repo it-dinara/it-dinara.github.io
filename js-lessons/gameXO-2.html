@@ -84,6 +84,7 @@
 
 	var game = document.querySelector("#game");
 	game.addEventListener("click", func);
+
 	// game.addEventListener("click", funcWin);
 
 	var flag;
@@ -92,48 +93,62 @@
 	var strX = "";
 	var strY = "";
 	var wonX = document.querySelector("#win_x");
-	var won0 = document.querySelector("#win_0");
-	var wonDraw = document.querySelector("#win_draw");
 	var countX = 0;
+
+	var won0 = document.querySelector("#win_0");
 	var countY = 0;
+
+	var wonDraw = document.querySelector("#win_draw");
 	var countDraw = 0;
+	var flagDraw;
+
+	var cells = document.querySelectorAll('.js-cell');
+
+	function draw() {
+		var flag = true;
+
+		for (var i = 0; i < cells.length; i++) {
+			console.log(flag, cells[i].innerHTML)
+			if (cells[i].innerHTML !== "") {
+				flag = false;
+				// return false;
+			};
+		};
+
+		if (flag) { console.log("НИЧЬЯ"); };
+
+	}
+	draw()
 
 	function funcX(event) {
 		var cell = document.querySelectorAll('.js-cell[data-id]');
-		var test = "";
-		strX = event.target.innerHTML;
-		console.log("strX " + strX);
+
 		for (var i = 0; i < arr.length; i++) {
 			var miniArr = arr[i];
 			var x_1 = document.querySelector('.js-cell[data-id="' + miniArr[0] + '"]').innerHTML;
 			var x_2 = document.querySelector('.js-cell[data-id="' + miniArr[1] + '"]').innerHTML;
 			var x_3 = document.querySelector('.js-cell[data-id="' + miniArr[2] + '"]').innerHTML;
+
 			if (x_1 !== "" && x_2 !== "" && x_3 !== "") {
 				if (x_1 == x_2 && x_2 == x_3) {
 					game.removeEventListener("click", func);
+					flagDraw = "1";
 					if (x_1 == "X") {
 						countX += 1;
 						console.log(countX);
 						wonX.innerHTML = countX;
-						test = "1";
-						console.log(test);
 					}
 					if (x_1 == "0") {
 						countY += 1;
 						console.log(countY);
 						won0.innerHTML = countY;
-						test = "2"
-						console.log(test);
 					}
-					if (test != "1" && test != "2") {
-						console.log("ничья");
-						console.log(countDraw);
-						countDraw += 1;
-						wonDraw.innerHTML = countDraw;
-					}
+					return true;
 				}
 			}
 		};
+
+		return false;
 	};
 
 
@@ -156,10 +171,10 @@
 	};
 
 	function funcRestart() {
-		var cell = document.querySelectorAll('.js-cell');
 		game.addEventListener("click", func);
-		for (var i = 0; i < cell.length; i++) {
-			cell[i].innerHTML = "";
+		flagDraw = "0";
+		for (var i = 0; i < cells.length; i++) {
+			cells[i].innerHTML = "";
 		};
 		if (message.innerHTML !== "Ходит: 0") {
 			message.innerHTML = "Ходит: 0";
