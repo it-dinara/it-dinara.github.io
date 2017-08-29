@@ -93,43 +93,48 @@
 	var wonX = document.querySelector("#win_x");
 	var won0 = document.querySelector("#win_0");
 	var wonDraw = document.querySelector("#win_draw");
+	var countX = 0;
+	var countY = 0;
+	var countDraw = 0;
 
 	function funcX(event) {
-		var countX = 0;
 		var cell = document.querySelectorAll('.js-cell[data-id]');
+		var flag;
 		strX = event.target.innerHTML;
 		console.log("strX " + strX);
 		for (var i = 0; i < arr.length; i++) {
 			var miniArr = arr[i];
-			var x_1 = document.querySelector('.js-cell[data-id="'+miniArr[0]+'"]').innerHTML;
-			var x_2 = document.querySelector('.js-cell[data-id="'+miniArr[1]+'"]').innerHTML;
-			var x_3 = document.querySelector('.js-cell[data-id="'+miniArr[2]+'"]').innerHTML;
-			if (x_1 !== "" && x_2  !== "" && x_3  !== ""){
-				if (x_1 === x_2 && x_2 == x_3){
+			var x_1 = document.querySelector('.js-cell[data-id="' + miniArr[0] + '"]').innerHTML;
+			var x_2 = document.querySelector('.js-cell[data-id="' + miniArr[1] + '"]').innerHTML;
+			var x_3 = document.querySelector('.js-cell[data-id="' + miniArr[2] + '"]').innerHTML;
+			if (x_1 !== "" && x_2 !== "" && x_3 !== "") {
+				if (x_1 == x_2 && x_2 == x_3) {
 					game.removeEventListener("click", func);
-					countX += 1;
-					console.log(countX);
+					if (x_1 == "X") {
+						countX += 1;
+						console.log(countX);
+						wonX.innerHTML = countX;
+						flag = "1";
+						console.log(flag);
+					}
+					if (x_1 == "0") {
+						countY += 1;
+						console.log(countY);
+						won0.innerHTML = countY;
+						flag = "2"
+						console.log(flag);
+					}
+					if (x_1 != "X" && x_1 != "0") {
+						console.log("ничья");
+						console.log(countDraw);
+						countDraw += 1;
+						wonDraw.innerHTML = countDraw;
+					}
 				}
 			}
 		};
 	};
 
-	function funcY(event) {
-		strY += event.target.getAttribute('data-id');
-		console.log("strY " + strY);
-		for (var i = 0; i < arr.length; i++) {
-			var miniArr = arr[i];
-			var x_1 = miniArr[0];
-			var x_2 = miniArr[1];
-			var x_3 = miniArr[2];
-			console.log(x_1, x_2, x_3);
-			if (x_1 == x_2 && x_2 == x_3) {
-				game.removeEventListener("click", func);
-				countY += 1;
-				console.log("countY" + countY);
-			};
-		};
-	};
 
 	function func(event) {
 		var target = event.target;
@@ -138,7 +143,7 @@
 			if (flag == "0") {
 				target.innerHTML = "0"
 				flag = "x";
-				funcY(event);
+				funcX(event);
 			} else {
 				target.innerHTML = "X";
 				flag = "0";
