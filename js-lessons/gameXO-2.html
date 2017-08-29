@@ -88,6 +88,7 @@
 
 	var flag;
 	var arr = ["012", "345", "678", "036", "147", "258", "048", "246"];
+	var message = document.querySelector("#message");
 	var strX = "";
 	var strY = "";
 	var wonX = document.querySelector("#win_x");
@@ -99,7 +100,7 @@
 
 	function funcX(event) {
 		var cell = document.querySelectorAll('.js-cell[data-id]');
-		var flag;
+		var test = "";
 		strX = event.target.innerHTML;
 		console.log("strX " + strX);
 		for (var i = 0; i < arr.length; i++) {
@@ -114,17 +115,17 @@
 						countX += 1;
 						console.log(countX);
 						wonX.innerHTML = countX;
-						flag = "1";
-						console.log(flag);
+						test = "1";
+						console.log(test);
 					}
 					if (x_1 == "0") {
 						countY += 1;
 						console.log(countY);
 						won0.innerHTML = countY;
-						flag = "2"
-						console.log(flag);
+						test = "2"
+						console.log(test);
 					}
-					if (x_1 != "X" && x_1 != "0") {
+					if (test != "1" && test != "2") {
 						console.log("ничья");
 						console.log(countDraw);
 						countDraw += 1;
@@ -142,10 +143,12 @@
 		if (target.innerHTML == "") {
 			if (flag == "0") {
 				target.innerHTML = "0"
+				message.innerHTML = "Ходит: x";
 				flag = "x";
 				funcX(event);
 			} else {
 				target.innerHTML = "X";
+				message.innerHTML = "Ходит: 0";
 				flag = "0";
 				funcX(event);
 			}
@@ -153,7 +156,6 @@
 	};
 
 	function funcRestart() {
-		var message = document.querySelector("#message");
 		var cell = document.querySelectorAll('.js-cell');
 		game.addEventListener("click", func);
 		for (var i = 0; i < cell.length; i++) {
@@ -167,8 +169,6 @@
 			flag = "x"
 		};
 	};
-
-
 	</script>
 </body>
 
