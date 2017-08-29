@@ -80,18 +80,15 @@
 	<!-- здесь вёрстка не моя, а всё что в теге script моё :) -->
 	<script>
 	var restart = document.querySelector("#restart");
-	restart.addEventListener("click", funcRestart);
+	restart.addEventListener("click", restart_game);
 
 	var game = document.querySelector("#game");
-	game.addEventListener("click", func);
+	game.addEventListener("click", set_symbol);
 
-	// game.addEventListener("click", funcWin);
-
-	var flag;
+	var current_symbol = true;
 	var arr = ["012", "345", "678", "036", "147", "258", "048", "246"];
 	var message = document.querySelector("#message");
-	var strX = "";
-	var strY = "";
+
 	var wonX = document.querySelector("#win_x");
 	var countX = 0;
 
@@ -100,90 +97,102 @@
 
 	var wonDraw = document.querySelector("#win_draw");
 	var countDraw = 0;
-	var flagDraw;
 
 	var cells = document.querySelectorAll('.js-cell');
 
-	function draw() {
+	/**
+	 * [check_draw Проверка НИЧЬИ]
+	 */
+	function check_draw() {
 		var flag = true;
 
 		for (var i = 0; i < cells.length; i++) {
-			console.log(flag, cells[i].innerHTML)
-			if (cells[i].innerHTML !== "") {
-				flag = false;
-				// return false;
-			};
+			if (cells[i].innerHTML === "") flag = false;
 		};
 
-		if (flag) { console.log("НИЧЬЯ"); };
-
+		if (flag) {
+			console.log("НИЧЬЯ");
+			countDraw++;
+			wonDraw.innerHTML = countDraw;
+		};
 	}
-	draw()
 
-	function funcX(event) {
-		var cell = document.querySelectorAll('.js-cell[data-id]');
-
+	/**
+	 * [win_check Проверка на ВЫИГРЫШЬ]
+	 */
+	function win_check(event) {
 		for (var i = 0; i < arr.length; i++) {
 			var miniArr = arr[i];
 			var x_1 = document.querySelector('.js-cell[data-id="' + miniArr[0] + '"]').innerHTML;
 			var x_2 = document.querySelector('.js-cell[data-id="' + miniArr[1] + '"]').innerHTML;
 			var x_3 = document.querySelector('.js-cell[data-id="' + miniArr[2] + '"]').innerHTML;
 
-			if (x_1 !== "" && x_2 !== "" && x_3 !== "") {
-				if (x_1 == x_2 && x_2 == x_3) {
-					game.removeEventListener("click", func);
-					flagDraw = "1";
-					if (x_1 == "X") {
-						countX += 1;
-						console.log(countX);
-						wonX.innerHTML = countX;
-					}
-					if (x_1 == "0") {
-						countY += 1;
-						console.log(countY);
-						won0.innerHTML = countY;
-					}
-					return true;
+			if (x_1 && x_2 && x_3 && x_1 == x_2 && x_2 == x_3) {
+				game.removeEventListener("click", set_symbol);
+
+				if (current_symbol) {
+					countX++;
+					console.log('Выиграл X');
+					wonX.innerHTML = countX;
+				} else {
+					countY++;
+					console.log('Выиграл O');
+					won0.innerHTML = countY;
 				}
+				return;
 			}
-		};
+		}
 
-		return false;
-	};
+		check_draw();
+	}
 
+	/**
+	 * [reverse_symbol Смена хода]
+	 */
+	function reverse_symbol(event) {
+		current_symbol = !current_symbol;
+		print_button_label();
+	}
 
-	function func(event) {
+	/**
+	 * [set_symbol Отрисовка хода]
+	 */
+	function set_symbol(event) {
 		var target = event.target;
 		var item = "";
+
 		if (target.innerHTML == "") {
-			if (flag == "0") {
+			if (!current_symbol) {
 				target.innerHTML = "0"
 				message.innerHTML = "Ходит: x";
-				flag = "x";
-				funcX(event);
+				win_check(event);
+				reverse_symbol();
 			} else {
 				target.innerHTML = "X";
 				message.innerHTML = "Ходит: 0";
-				flag = "0";
-				funcX(event);
+				win_check(event);
+				reverse_symbol();
 			}
 		}
 	};
 
-	function funcRestart() {
-		game.addEventListener("click", func);
-		flagDraw = "0";
-		for (var i = 0; i < cells.length; i++) {
-			cells[i].innerHTML = "";
-		};
-		if (message.innerHTML !== "Ходит: 0") {
-			message.innerHTML = "Ходит: 0";
-			flag = "0"
-		} else {
-			message.innerHTML = "Ходит: x";
-			flag = "x"
-		};
-	};
+	/**
+	 * [print_button_label Отрисовка текста в кнопке]
+	 */
+	function print_button_label() {
+		message.innerHTML = (current_symbol) ? "Ходит: x" : "Ходит: 0";
+	}
+
+	/**
+	 * [restart_game Перезапуск игры и смена хода]
+	 */
+	function restart_game() {
+		game.addEventListener("click", set_symbol);
+
+		for (var i = 0; i < cells.length; i++) cells[i].innerHTML = "";
+
+		reverse_symbol();
+	}
 	</script>
 </body>
 
