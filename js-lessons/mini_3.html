@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<ul id="test">
+		<li class="question">
+			JavaScript это тоже самое что и Java?
+			<ul>
+				<li>
+					<label>
+						<input type="radio" name="question1" data-true>Нет.</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="question1">Да.</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="question1">Когда как</label>
+				</li>
+			</ul>
+		</li>
+		<li class="question">
+			Сколько параментров можно передавать в фукнцию?
+			<ul>
+				<li>
+					<label>
+						<input type="radio" name="question2">Только столько, сколько указано при ее созданиию</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="question2">Минимум 1.</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="question2" data-true>Сколько угодно.</label>
+				</li>
+			</ul>
+		</li>
+		<li class="question">
+			Что такое: "use strict"?
+			<ul>
+				<li>
+					<label>
+						<input type="radio" name="question3">Просто строка</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="question3">Фукцния</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="question3" data-true>Строгий режим</label>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<input type="button" id="check" value="Проверить">
+	<script>
+	var button = document.querySelector('#check');
+	button.addEventListener("click", alertResult);
+
+	function alertResult(){
+		alert(get_true_or_false(), not_answered())
+	}
+
+	function not_answered() {
+		var result;
+		var num = 0;
+		var question = document.querySelectorAll('.question');
+		for (var i = 0; i < question.length; i++) {
+			var inputArr = question[i].querySelectorAll('input')
+			console.log(inputArr);
+			for (var j = 0; j < inputArr.length; j++) {
+				if (inputArr[j].checked) {
+					num++;
+				}
+			}
+		}
+		return result = "Неотвеченные вопросы: " + (question.length - num);
+	}
+
+	function get_true_or_false() {
+		var input = document.querySelectorAll('input');
+		var result;
+		var numTrue = 0;
+		var resultTrue = 0;
+
+		var numMistake = 0;
+		var resultMistake = 0;
+		for (var i = 0; i < input.length; i++) {
+			if (input[i].checked && input[i].getAttribute("data-true")) {
+				numTrue++;
+				console.log(numTrue);
+			}
+			if (input[i].checked && input[i].getAttribute("data-true") == false) {
+				numMistake++;
+				console.log(numMistake);
+			}
+		}
+		return result = "Правильные ответы: " + numTrue + "</br>" + "Неправильные ответы: " + numMistake + "</br>";
+		
+	}
+	</script>
+</body>
+
+</html>
