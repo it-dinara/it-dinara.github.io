@@ -1,0 +1,65 @@
+.red,
+.green,
+.blue {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background: red;
+    z-index: 1;
+}
+
+.green {
+    background: green;
+    top: 50px;
+    left: 50px;
+}
+
+.blue {
+    background: blue;
+    left: 100px;
+    top: 100px;
+}
+
+.task_3:first-child {
+    opacity: .99;
+}
+
+//task 1
+.task_1 {}
+
+.el {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+$b: 10px;
+$c: 1;
+@for $i from 0 through 5 {
+  .el_#{$i} {
+  	$b: $b + 5px;
+  	$c: $c + 10%;
+  	padding: 10px + $b;
+  	$color_1: darken(red, $c);
+  	$color_2: darken(pink, $c);
+	background: mix($color_1, $color_2, $c);
+  }
+}
+
+.el_1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.el_2 {}
+
+.el_3 {}
+
+.el_4 {}
+
+.el_5 {}
