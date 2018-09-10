@@ -14,11 +14,11 @@ function flash() {
 
 setInterval(flash, 1000);
 
-var num = 0;
+var num = ;
 beaver.addEventListener("click", function(){
 	var result = num++;
 	console.log(result);
-	if (result == 3) {
+	if (result == 2) {
 		alert("Ты выиграл!");
 		num = 0;
 	}
