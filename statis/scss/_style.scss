@@ -23,8 +23,32 @@ $text: #4e5d60;
 	}
 }
 
+@font-face {
+	font-family: "Segoe UI";
+	src: url("../font/SegoeUI.eot");
+	src: url("../font/SegoeUI.eot?#iefix") format("embedded-opentype");
+	src: url("../font/SegoeUI.woff") format("woff");
+	src: url("../font/SegoeUI.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-family: "Segoe UI SemiBold";
+	src: url("../font/SegoeUISemiBold.eot");
+	src: url("../font/SegoeUISemiBold.eot?#iefix") format("embedded-opentype");
+	src: url("../font/SegoeUISemiBold.woff") format("woff");
+	src: url("../font/SegoeUISemiBold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-family: "Segoe UI Light";
+	src: url("../font/SegoeUILight.eot");
+	src: url("../font/SegoeUILight.eot?#iefix") format("embedded-opentype");
+	src: url("../font/SegoeUILight.woff") format("woff");
+	src: url("../font/SegoeUILight.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
-	font-family: "Open Sans"
+	font-family: "Segoe UI", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 
@@ -217,7 +241,7 @@ body {
 .features-btn-wrap {
 	margin: 20px 0 0;
 	@include adaptive(pad) {
-		margin: 20px 0 0 -40px;
+		margin: 50px 0 25px -40px;
 	}
 }
 
@@ -252,7 +276,8 @@ body {
 .features__item {
 	padding: 5px 0 0;
 	@include adaptive(pad) {
-		margin: 23px 0 30px;
+		padding: 0px 40px 0 0px;
+		margin: 23px 0 50px;
 	}
 }
 
@@ -311,8 +336,7 @@ body {
 	bottom: 0;
 	left: -310px;
 	transition: left .5s ease;
-	@include adaptive(pad) {
-	}
+	@include adaptive(pad) {}
 }
 
 .menu._move {
@@ -328,6 +352,7 @@ body {
 		width: 100%;
 	}
 }
+
 .container {
 	transition: ease .7s all;
 	left: 0;
