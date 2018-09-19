@@ -1,28 +1,3 @@
-$mobile: 320px;
-$pad: 760px;
-$desktop: 1200px;
-$blue: #08caff;
-$dark-blue: #345972;
-$text: #4e5d60;
-
-@mixin adaptive($media) {
-	@if $media==mobile {
-		@media only screen and (max-width: $pad) {
-			@content
-		}
-	}
-	@else if $media==pad {
-		@media only screen and (min-width: $pad) {
-			@content
-		}
-	}
-	@else if $media==desktop {
-		@media only screen and (min-width: $desktop) {
-			@content
-		}
-	}
-}
-
 @font-face {
 	font-family: "Segoe UI";
 	src: url("../font/SegoeUI.eot");
@@ -408,3 +383,11 @@ body {
 		}
 	}
 }
+
+.small {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+
+.sign {}
