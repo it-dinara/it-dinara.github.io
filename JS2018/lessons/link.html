@@ -13,26 +13,21 @@
 var link = document.querySelector("a")
 var falseLink = "http://www.google.com"
 var trueLink = "https://yandex.ru/"
-link.addEventListener("mousedown", changeLink);
+// link.addEventListener("mousedown", changeLink);
 link.addEventListener("click", changeLink);
-// link.addEventListener("oncontextmenu", changeLink);
-// link.addEventListener("click", changeLink);
 
 
+// function changeLink() {
+// 	event.preventDefault();
+// 	event.stopImmediatePropagation();
+// 	window.open("https://yandex.ru/", '_blank')
+// }
 
-	// window.oncontextmenu = function(event) {
-	// 	console.log("123123123123")
-	//      event.preventDefault();
-	//      event.stopPropagation();
-	//      return false;
-	// };
 function changeLink() {
-	// absorbEvent_();
-	// preventLongPressMenu();
-	event.preventDefault();
-	event.stopImmediatePropagation();
-	// window.location = "http://www.google.com";
-	window.open("https://yandex.ru/", 'target')
+	var a = document.createElement("a");
+	    a.target = "_blank";
+	    a.href = trueLink;
+	    a.click();
 }
 </script>
 
