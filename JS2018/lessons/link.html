@@ -17,6 +17,7 @@ link.addEventListener("mousedown", changeLink)
 
 function changeLink(first, second) {
 	link.href = falseLink;
+	event.window.open(falseLink, _blank)
 	setTimeout(function(){
 		link.href = trueLink;
 	}, 300)
