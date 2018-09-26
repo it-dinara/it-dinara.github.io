@@ -7,50 +7,32 @@
 </head>
 
 <body>
-	<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);">11111111111111111111111111111111111111111</a>
+	<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);" oncontextmenu="return false;">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</a>
 </body>
 <script>
 var link = document.querySelector("a")
-var falseLink = "https://www.baby.ru/"
-var trueLink = "https://www.babyblog.ru/"
+var falseLink = "http://www.google.com"
+var trueLink = "https://yandex.ru/"
 link.addEventListener("mousedown", changeLink);
 link.addEventListener("click", changeLink);
-link.addEventListener("oncontextmenu", changeLink);
+// link.addEventListener("oncontextmenu", changeLink);
 // link.addEventListener("click", changeLink);
 
-// function changeLink(first, second) {
-// 	link.href = falseLink;
-// 	// window.oncontextmenu = (function(e){
-// 	//     //действия
-// 	//     return false;
-// 	// });
-// 	setTimeout(function(){
-// 		link.href = trueLink;
-// 	}, 300)
-// }
-// function absorbEvent_(event) {
-// 	var e = event;
-// 	e.preventDefault();
-// 	e.stopPropagation();
-// 	e.cancelBubble = true;
-// 	e.returnValue = false;
-// 	return false;
-// }
 
-function preventLongPressMenu(node) {
-	node.ontouchstart = absorbEvent_;
-	node.ontouchmove = absorbEvent_;
-	node.ontouchend = absorbEvent_;
-	node.ontouchcancel = absorbEvent_;
-}
 
+	// window.oncontextmenu = function(event) {
+	// 	console.log("123123123123")
+	//      event.preventDefault();
+	//      event.stopPropagation();
+	//      return false;
+	// };
 function changeLink() {
 	// absorbEvent_();
 	// preventLongPressMenu();
 	event.preventDefault();
-	// event.stopImmediatePropagation();
+	event.stopImmediatePropagation();
 	// window.location = "http://www.google.com";
-	window.open("http://www.google.com", 'target')
+	window.open("https://yandex.ru/", 'target')
 }
 </script>
 
