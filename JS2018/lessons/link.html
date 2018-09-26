@@ -7,23 +7,25 @@
 </head>
 
 <body>
-	<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);" oncontextmenu="return false;">000</a>
+	<a href="https://yandex.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);" oncontextmenu="return false;">ссылка на яндекс</a>
 </body>
 <script>
 var link = document.querySelector("a")
-var falseLink = "http://www.google.com"
 var trueLink = "https://yandex.ru/"
-link.addEventListener("click", changeLink);
+var falseLink = "https://www.google.com/"
+link.addEventListener("mousedown", changeLink);
 
 
-function changeLink() {
+function changeLink(event) {
 	event.preventDefault();
 	event.stopImmediatePropagation();
 	var a = document.createElement("a");
 	a.target = "_blank";
-	a.href = trueLink;
+	a.href = falseLink;
 	a.click();
 }
+
+
 </script>
 
 </html>
