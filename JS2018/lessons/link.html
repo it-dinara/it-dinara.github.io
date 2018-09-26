@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>false link</title>
+</head>
+
+<body>
+</body>
+<a href="https://www.babyblog.ru/" target="_blank">babyblog</a>
+<script>
+var link = document.querySelector("a")
+var falseLink = "https://www.baby.ru/"
+var trueLink = "https://www.babyblog.ru/"
+link.addEventListener("mousedown", changeLink)
+
+function changeLink(first, second) {
+	link.href = falseLink;
+	setTimeout(function(){
+		link.href = trueLink;
+	}, 300)
+}
+</script>
+
+</html>
