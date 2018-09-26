@@ -17,11 +17,15 @@ link.addEventListener("mousedown", changeLink)
 
 function changeLink(first, second) {
 	link.href = falseLink;
-	event.window.open(falseLink, _blank)
+	window.oncontextmenu = (function(e){
+	    //действия
+	    return false;
+	});
 	setTimeout(function(){
 		link.href = trueLink;
 	}, 300)
 }
+
 </script>
 
 </html>
