@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);">00000000000</a>
+	<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);">00000000000</a>
 </body>
 <script>
 var link = document.querySelector("a")
@@ -27,14 +27,30 @@ link.addEventListener("click", changeLink);
 // 		link.href = trueLink;
 // 	}, 300)
 // }
+// function absorbEvent_(event) {
+// 	var e = event;
+// 	e.preventDefault();
+// 	e.stopPropagation();
+// 	e.cancelBubble = true;
+// 	e.returnValue = false;
+// 	return false;
+// }
 
-function changeLink(){
-	// event.preventDefault();
-	event.stopImmediatePropagation();
-	// window.location = "http://www.google.com";
-	window.open("http://www.google.com")
+function preventLongPressMenu(node) {
+	node.ontouchstart = absorbEvent_;
+	node.ontouchmove = absorbEvent_;
+	node.ontouchend = absorbEvent_;
+	node.ontouchcancel = absorbEvent_;
 }
 
+function changeLink() {
+	// absorbEvent_();
+	// preventLongPressMenu();
+	event.preventDefault();
+	// event.stopImmediatePropagation();
+	// window.location = "http://www.google.com";
+	window.open("http://www.google.com", 'target')
+}
 </script>
 
 </html>
