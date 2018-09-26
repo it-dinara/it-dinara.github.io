@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);">098</a>
+<a href="https://www.babyblog.ru/" target="_blank" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);">123</a>
 </body>
 <script>
 var link = document.querySelector("a")
@@ -30,7 +30,9 @@ link.addEventListener("click", changeLink);
 
 function changeLink(){
 	event.preventDefault();
-	window.location = "http://www.google.com";
+	event.stopPropagation();
+	// window.location = "http://www.google.com";
+	window.open("http://www.google.com")
 }
 
 </script>
