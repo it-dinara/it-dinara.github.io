@@ -21,19 +21,20 @@
 <script>
 
 	function go(){
-		window.timerId = window.setInterval(time, 500);
+		window.timerId = window.setInterval(time, 1000);
 	}
 
 	function time(){
 		var clock = document.querySelector('p');
 		var date = new Date();
-		var result = addZero(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+		var result = addZero(date.getHours()) + ':' + addZero(date.getMinutes()) + ':' + addZero(date.getSeconds());
 		clock.innerHTML = result;
 	}
 
 	function addZero(num){
 		if (num <= 9) {
-			num = "0"+ num;
+			num = "0" + num;
+			console.log(num)
 		};
 	return num;
 	};

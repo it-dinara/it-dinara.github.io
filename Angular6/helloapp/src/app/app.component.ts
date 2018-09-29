@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-     
+      
 @Component({
     selector: 'my-app',
-    templateUrl: `./app.component.html`,
-    styleUrls: [`./app.component.css`]
+    template: `<div textContent="text"></div>`
 })
-export class xyi { 
-    name= '';
+export class AppComponent { 
+    text = "<h1>Срочно в номер!</h1><p>Марсиане атакуют людей!</p>"
 }
