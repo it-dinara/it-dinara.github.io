@@ -55,8 +55,8 @@
         var yearRange = date.getFullYear() - 1970;
         for (var i = 0; i <= yearRange; i++) {
             var option = document.createElement("option");
-            option.innerHTML = 2018 - i;
-            option.value = 2018 - i;
+            option.innerHTML = date.getFullYear() - i;
+            option.value = date.getFullYear() - i;
             years.appendChild(option);
         }
     }
@@ -82,12 +82,10 @@
         }
         var selectedDate = dates.options[dates.options.selectedIndex].value;
         date = new Date(year, month, selectedDate)
-        console.log(selectedDate)
         p.innerHTML = days[date.getDay()]
         dates.addEventListener("click", function(event) {
             selectedDate = event.target.value;
             date = new Date(year, month, selectedDate);
-            console.log(selectedDate)
             p.innerHTML = days[date.getDay()];
         })
     }
