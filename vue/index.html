@@ -48,20 +48,19 @@
     var year = 0;
     var month = 0;
     var day = 0;
+    var save = 0;
     var days = ['воскресолнышко', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'субботенька'];
     renderYears()
 
     function renderYears() {
         var yearRange = date.getFullYear() - 1970;
         for (var i = 0; i <= yearRange; i++) {
-            var option = document.createElement("option");
-            option.innerHTML = 2018 - i;
-            option.value = 2018 - i;
-            years.appendChild(option);
+            var yearOption = date.getFullYear() - i;
+            dates.add(new Option(yearOption, yearOption))
         }
     }
 
-    years.addEventListener("click", function(event) {
+    years.addEventListener("change", function(event) {
         year = event.target.value;
         renderDates();
 
@@ -73,25 +72,25 @@
 
     function renderDates() {
         var date = new Date(year, +month + 1, 0);
-        dates.innerHTML = "";
+        dates.value = save;
+
         for (var i = 0; i < date.getDate(); i++) {
-            var option = document.createElement("option");
-            option.innerHTML = 1 + i;
-            option.value = 1 + i;
-            dates.appendChild(option);
+            var dateOption = 1 + i;
+            dates.add(new Option(dateOption, dateOption))
         }
-        var selectedDate = dates.options[dates.options.selectedIndex].value;
+
+        var selectedDate = dates[dates.selectedIndex].value;
         date = new Date(year, month, selectedDate)
-        console.log(selectedDate)
         p.innerHTML = days[date.getDay()]
-        dates.addEventListener("click", function(event) {
+
+        dates.addEventListener("change", function(event) {
             selectedDate = event.target.value;
+            save = event.target.value;
             date = new Date(year, month, selectedDate);
-            console.log(selectedDate)
             p.innerHTML = days[date.getDay()];
         })
-    }
 
+    }
     </script>
 </body>
 
