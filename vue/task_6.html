@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .m0 {
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    writeNumber(121111);
+
+    function writeNumber(num) {
+        var str = getFullNumber(num);
+        var thousands = str[0] + str[1] + str[2];
+        var hundreds = str[3] + str[4] + str[5];
+        var result = removeSpaces(writePart(thousands, "female") + " " + thausandForm(thousands) + " " + writePart(hundreds, "male"));
+        console.log(result);
+    }
+
+    function thausandForm(str) {
+        var form = "";
+        if (str[1] != 1) {
+            if (str[2] == 1) {
+                form = "тысяча";
+            } else if (str[2] == 2 || str[2] == 3 || str[2] == 4) {
+                form = "тысячи";
+            } else {
+                form = "тысяч";
+            }
+        } else {
+            form = "тысяч";
+        }
+        if (str[0] == 0 && str[1] == 0 && str[2] == 0) {
+            form = "";
+        }
+        return form;
+    }
+
+    function writePart(str, gender) {
+        var part = ""
+        if (str[1] == 1) {
+            part = writeHundreds(str[0]) + " " + writeSecondUnits(str[1] + str[2]);
+        } else {
+            part = writeHundreds(str[0]) + " " + writeDecades(str[1]) + " " + writeUnits(str[2], gender);
+        }
+        return part;
+    }
+
+    function writeUnits(num, gender) {
+        if (num == 0) return "";
+        var firstUnitsMale = ["один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"];
+        var firstUnitsFemale = ["одна", "две", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"];
+        if (gender === "male") {
+            return firstUnitsMale[num - 1];
+        } else if (gender === "female") {
+            return firstUnitsFemale[num - 1];
+        }
+    }
+
+    function writeSecondUnits(num) {
+        var secondUnits = ["десять", "одинадцать", "двенадцать", "тринадцать", "четырнадцать", "пятьнадцать", "шестьнадцать", "семьнадцать", "восемьнадцать", "девятьнадцать"];
+        return secondUnits[num - 10];
+    }
+
+    function writeDecades(num) {
+        if (num == 0) return "";
+        var decades = ["двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"];
+        return decades[num - 2];
+    }
+
+    function writeHundreds(num) {
+        if (num == 0) return "";
+        var hundreds = ["сто", "двести", "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот"];
+        return hundreds[num - 1];
+    }
+
+    function getFullNumber(num) {
+        var str = num.toString();
+        var zeroes = new Array(6 - str.length + 1).join("0");
+        return zeroes + str;
+    }
+
+    function removeSpaces(str) {
+        var clearStr = str.split(" ").filter(function(v) {
+            return v !== "";
+        }).join(" ");
+        return clearStr;
+    }
+    </script>
+</body>
+
+</html>

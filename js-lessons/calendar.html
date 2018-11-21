@@ -76,7 +76,7 @@
                 var dateOption = 1 + i;
                 dates.add(new Option(dateOption, dateOption))
             }
-            var selectedDate = dates.options[dates.options.selectedIndex].value;
+            var selectedDate = dates[dates.selectedIndex].value;
             date = new Date(year, month, selectedDate)
             p.innerHTML = days[date.getDay()]
             dates.addEventListener("change", function(event) {
