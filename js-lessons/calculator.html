@@ -83,23 +83,22 @@
 	<!-- здесь вёрстка не моя, а всё что в теге script моё :) -->
 	<script>
 	var calc = document.querySelector("#calc");
-	calc.addEventListener("click", func);
+	calc.addEventListener("click", calculate);
 
-	function func(event) {
+	function calculate(event) {
 		var target = event.target;
 		if (target.parentNode.getAttribute("id") == "calc") {
 			var input = document.querySelector("#display");
 			var display = input.value;
-			if (target.getAttribute('data-type') != "=" || target.getAttribute('data-type') !== "C") {
-				input.value = display + target.getAttribute('data-type');
+			if(target.getAttribute("data-type") != "=" || target.getAttribute("data-type") !== "C") {
+				input.value = display + target.getAttribute("data-type");
 			}
-			if (target.getAttribute('data-type') == "=") {
-				console.log(target.getAttribute('data-type'))
+			if(target.getAttribute("data-type") == "=") {
 				input.value = eval(display);
-			};
-			if (event.target.getAttribute('data-type') == "C") {
+			}
+			if(target.getAttribute("data-type") === "C") {
 				input.value = "";
-			};
+			}
 		};
 	};
 	</script>
