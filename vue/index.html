@@ -5,22 +5,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        table {
-        border-collapse: collapse;
-    }
-
-    td, th {
-        border: 1px black solid;
-        padding: 10px
-    }
-
-    input {
-        display: block;
-        margin-bottom: 10px;
-    }
+        table {border-collapse: collapse;}
+    td, th {border: 1px black solid;padding: 10px}
+    input {display: block;margin-bottom: 10px;}
     </style>
 </head>
-
 <body>
     <table id="table">
         <tr>
@@ -39,16 +28,12 @@
     <button>add product</button>
     <script>
     "use strict";
-
     const table = document.getElementById("table");
     const total = document.getElementById("total");
-
     const nameField = document.getElementById("name");
     const priceField = document.getElementById("price");
     const quantityField = document.getElementById("quantity");
-
     const button = document.querySelector("button");
-
     initProductAddition(table, total, nameField, priceField, quantityField, button);
 
     function initProductAddition(table, total, nameField, priceField, quantityField, button) {
@@ -58,20 +43,17 @@
                 price: Number(priceField.value),
                 quantity: Number(quantityField.value),
             });
-
             showTotalSum(total, table);
         });
     }
 
     function addProduct(table, product) {
         const tr = table.insertRow();
-
         createTd(product.name, tr, true, "js_name");
         createTd(product.price, tr, true, "js_price");
         createTd(product.quantity, tr, true, "js_quantity");
         createTd(product.price * product.quantity, tr, false, "js_cost");
         createDeleteProduct(tr, table, total);
-
     }
 
     function showTotalSum(elem, table) {
@@ -91,7 +73,6 @@
         elem.innerHTML = text;
     }
 
-
     function makeTd(text, tr) {
         const td = tr.insertCell();
         td.innerHTML = text;
@@ -108,9 +89,7 @@
         const tr = td.parentElement;
         const price = tr.querySelector(".js_price").innerHTML;
         const quantity = tr.querySelector(".js_quantity").innerHTML;
-
         tr.querySelector(".js_cost").innerHTML = price * quantity;
-
         showTotalSum(total, table)
     }
 
@@ -118,26 +97,21 @@
         elem.addEventListener("click", function edit() {
             let text = this.innerHTML;
             this.innerHTML = '';
-
             let input = document.createElement("input");
             input.value = text;
             this.appendChild(input);
-
             let self = this;
             input.addEventListener("blur", function() {
                 self.innerHTML = this.value;
                 self.addEventListener("click", edit);
-
                 recalculate(self, table, total)
             });
-
             this.removeEventListener("click", edit);
         });
     }
 
     function createDeleteProduct(tr, table, total) {
         const td = tr.insertCell();
-
         const del = document.createElement('a');
         del.innerHTML = "delete";
         del.href = "#";
@@ -146,7 +120,6 @@
             tr.parentNode.removeChild(tr);
             showTotalSum(total, table)
         })
-
     }
     </script>
 </body>
