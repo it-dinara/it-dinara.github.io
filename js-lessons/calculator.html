@@ -82,14 +82,14 @@
 	</div>
 	<!-- здесь вёрстка не моя, а всё что в теге script моё :) -->
 	<script>
-	var calc = document.querySelector("#calc");
+	const calc = document.querySelector("#calc");
 	calc.addEventListener("click", calculate);
 
 	function calculate(event) {
-		var target = event.target;
+		const target = event.target;
 		if (target.parentNode.getAttribute("id") == "calc") {
-			var input = document.querySelector("#display");
-			var display = input.value;
+			const input = document.querySelector("#display");
+			const display = input.value;
 			if(target.getAttribute("data-type") != "=" || target.getAttribute("data-type") !== "C") {
 				input.value = display + target.getAttribute("data-type");
 			}
