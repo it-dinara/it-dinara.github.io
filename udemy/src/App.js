@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import s from './App.css';
+import Person from './Person/Person';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  state = {
+    persons: [
+      { id: '0', name: 'Max', age: '28'},
+      { id: '1', name: 'Manu', age: '29'},
+      { id: '2', name: 'Stephanie', age: '26'}
+    ],
+    otherstate: 'some other value',
+    showPersons: false
+  }
+
+  // nameChangeHandler = ( event, id ) => {
+  //   const personindex = this.state.persons.findIndex( p => {
+  //     return p.id === id;
+  //   })
+  // }
+
+  // if ( this.state.showPersons ) {
+  //   persons = ()
+  // }
 }
 
 export default App;
