@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import ArticleList from "./ArticleList"
+import ArticleList from "./ArticleList/index.js"
 import articles from "../fixtures.js"
 
 class App extends Component {

@@ -4,19 +4,29 @@ class Article extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isOpen: props.defaultOpen
+            isOpen: props.defaultOpen,
+            count: 0
         }
     }
 
-    ComponentWillMount() {
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.state.isOpen !== nextState.isOpen
+    }
+
+    componentWillMount() {
         console.log('---', 'mounting')
     }
     
 
-    ComponentWillRecieveProps(nextProps) {
+    componentWillReceiveProps(nextProps) {
+        // console.log('---', 'Component Will Recieve Props')
         if(nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
             isOpen: nextProps.defaultOpen
         })
+    }
+
+    componentWillUpdate() {
+        console.log('---', 'Will Update')
     }
 
 
@@ -25,7 +35,7 @@ class Article extends Component {
         const body = this.state.isOpen && <section>{article.text}</section>
         return (
             <div>
-                <h2 >
+                <h2 onClick = {this.incrementCounter}>
                     {article.title}
                     <button onClick={this.handleClick}>
                     {this.state.isOpen ? 'close' : 'open'}

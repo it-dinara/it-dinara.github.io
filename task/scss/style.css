@@ -1,0 +1,73 @@
+.red,
+.green,
+.blue {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background: red;
+  z-index: 1;
+}
+
+.green {
+  background: green;
+  top: 50px;
+  left: 50px;
+}
+
+.blue {
+  background: blue;
+  left: 100px;
+  top: 100px;
+}
+
+.task_3:first-child {
+  opacity: .99;
+}
+
+.el {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.el_0 {
+  padding: 25px;
+  background: #f9798b;
+}
+
+.el_1 {
+  padding: 30px;
+  background: #e9435b;
+}
+
+.el_2 {
+  padding: 35px;
+  background: #ce1732;
+}
+
+.el_3 {
+  padding: 40px;
+  background: #9f0019;
+}
+
+.el_4 {
+  padding: 45px;
+  background: #5c0010;
+}
+
+.el_5 {
+  padding: 50px;
+  background: #350009;
+}
+
+.el_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */
