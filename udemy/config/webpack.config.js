@@ -419,6 +419,7 @@ module.exports = function(webpackEnv) {
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
                 modules: true,
+                localIdentName: '[hash:base64:5]',
                 getLocalIdent: getCSSModuleLocalIdent,
               }),
             },
