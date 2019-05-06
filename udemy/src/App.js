@@ -19,13 +19,16 @@ class App extends Component {
         return p.id === id;
       })
 
-      this.setState({
-        persons: [
-          { id: '0', name: 'Maximalian', age: '28'},
-          { id: '1', name: event.target.value, age: '31'},
-          { id: '2', name: 'Stephanie', age: '26'}
-        ]
-      })
+      const person = { 
+        ...this.state.persons[personIndex]
+      };
+
+      person.name = event.target.value;
+
+      const persons = [...this.state.persons];
+      persons[personIndex] = person;
+
+      this.setState({persons: persons})
     }
 
     deletePersonHandler = (personIndex) => {
@@ -54,7 +57,8 @@ class App extends Component {
           {this.state.showPersons && (
             <div>
               {this.state.persons.map((person, index) => {
-                return <Person changed={(event) => this.nameChangedHandler(event, person.id)}
+                return <Person 
+                  changed={(event) => this.nameChangedHandler(event, person.id)}
                   qwe={() => this.deletePersonHandler(index)}
                   key={person.id}
                   name={person.name}
