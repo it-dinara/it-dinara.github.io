@@ -13,9 +13,11 @@ class ErrorBoundary extends Component {
 
 
 
+
 	render () {
+		console.log(this.state)
 		if(this.state.hasError) {
-			return <h1>qwe</h1>;
+			return <h1>{this.state.errorMessage.toString()}</h1>;
 		} else {
 			return this.props.children;
 		}
