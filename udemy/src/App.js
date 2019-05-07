@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import s from './App.css';
 import Person from './Person/Person';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 
 class App extends Component {
@@ -53,26 +54,27 @@ class App extends Component {
 
       const classes = [];
       if (this.state.persons.length <= 2) {
-        classes.push('red');
+        classes.push(s.red);
       }
       if (this.state.persons.length <= 1) {
-        classes.push('bold');
+        classes.push(s.bold);
       }
 
       return (
-        <div className="App">
+        <div className={s.App}>
           <h1>Hi, I'm React App</h1>
           <p className={classes.join(" ")}>This is really working!</p>
           <button style={style} onClick={this.togglePersonHandler}>Switch Name</button>
           {this.state.showPersons && (
             <div>
               {this.state.persons.map((person, index) => {
-                return <Person 
-                  changed={(event) => this.nameChangedHandler(event, person.id)}
-                  qwe={() => this.deletePersonHandler(index)}
-                  key={person.id}
-                  name={person.name}
-                  age={person.age}/>
+                return <ErrorBoundary key={person.id}>
+                  <Person 
+                    changed={(event) => this.nameChangedHandler(event, person.id)}
+                    qwe={() => this.deletePersonHandler(index)}
+                    name={person.name}
+                    age={person.age}/>
+                </ErrorBoundary>
               })}
             </div>
           )}
