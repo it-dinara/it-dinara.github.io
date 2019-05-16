@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import s from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
+import WithClass from '../hoc/WithClass';
 
 class App extends Component {
   state = {
@@ -42,7 +43,7 @@ class App extends Component {
 
     render() {
       return (
-        <div className={s.App}>
+        <WithClass classes={s.App}>
           <Cockpit
             title={this.props.appTitle}
             showPersons={this.state.showPersons}
@@ -56,7 +57,7 @@ class App extends Component {
                 changed={this.nameChangedHandler}/>
             </div>
           )}
-        </div>
+        </WithClass>
       )
     }
 }
