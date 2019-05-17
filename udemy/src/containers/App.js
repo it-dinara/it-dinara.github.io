@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import s from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
-import WithClass from '../hoc/WithClass';
+import withClass from '../hoc/withClass';
+import Auxiliary from '../hoc/Auxiliary';
+
 
 class App extends Component {
   state = {
     persons: [
-      { id: '0-0', name: 'Max', age: '28'},
-      { id: '1-1', name: 'Manu', age: '29'},
-      { id: '2-2', name: 'Stephanie', age: '26'}
+      { id: '0-0', name: 'Max', age: 28},
+      { id: '1-1', name: 'Manu', age: 29},
+      { id: '2-2', name: 'Stephanie', age: 26}
     ],
     otherstate: 'some other value',
-    showPersons: false
+    showPersons: false, 
+    chageCounter: 0
   }
 
     nameChangedHandler = (event, id) => {
@@ -25,7 +28,12 @@ class App extends Component {
       person.name = event.target.value;
       const persons = [...this.state.persons];
       persons[personIndex] = person;
-      this.setState({persons: persons})
+      this.setState((prevState, props) => {
+        return {
+          persons: persons,
+          chageCounter: prevState.chageCounter + 1
+        }
+      })
     }
 
     deletePersonHandler = (personIndex) => {
@@ -43,7 +51,7 @@ class App extends Component {
 
     render() {
       return (
-        <WithClass classes={s.App}>
+        <Auxiliary>
           <Cockpit
             title={this.props.appTitle}
             showPersons={this.state.showPersons}
@@ -57,9 +65,9 @@ class App extends Component {
                 changed={this.nameChangedHandler}/>
             </div>
           )}
-        </WithClass>
+        </Auxiliary>
       )
     }
 }
 
-export default App;
+export default withClass(App, s.App);

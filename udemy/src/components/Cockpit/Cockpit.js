@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import s from './Cockpit.css'
 
-const cockpit = (props) => {
+const Cockpit = (props) => {
+		const toggleBtnRef =useRef(null);
+
+	useEffect(()=>{
+		toggleBtnRef.current.click();
+	}, [])
+
 	const style = {
 	  cursor: 'pointer',
 	  background: 'red'
@@ -17,9 +23,14 @@ const cockpit = (props) => {
 		<div>
 			<h1>{props.title}</h1>
 			<p className={classes.join(" ")}>This is really working!</p>
-			<button style={style} onClick={props.toggled}>Switch Name</button>
+			<button 
+			ref={toggleBtnRef}
+			style={style} 
+			onClick={props.toggled}>
+				Switch Name
+			</button>
 		</div>
 	);
 };
 
-export default cockpit;
+export default Cockpit;
