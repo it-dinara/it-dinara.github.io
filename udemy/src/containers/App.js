@@ -4,6 +4,7 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import withClass from '../hoc/withClass';
 import Auxiliary from '../hoc/Auxiliary';
+import AuthContext from '../context/auth-context'
 
 
 class App extends Component {
@@ -15,7 +16,9 @@ class App extends Component {
     ],
     otherstate: 'some other value',
     showPersons: false, 
-    chageCounter: 0
+    chageCounter: 0,
+    showCockpit: true,
+    authenticated: false
   }
 
     nameChangedHandler = (event, id) => {
@@ -49,22 +52,47 @@ class App extends Component {
       })
     }
 
+    loginHandler = () => {
+      this.setState({authenticated: true})
+    }
+
+
     render() {
+      let persons = null;
+
+      if (this.state.showPersons) {
+        persons = (
+          <Persons 
+            persons={this.state.persons}
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangedHandler}
+            isAuthenticated={this.state.authenticated}
+          />
+        );
+      }
       return (
         <Auxiliary>
-          <Cockpit
-            title={this.props.appTitle}
-            showPersons={this.state.showPersons}
-            persons={this.state.persons}
-            toggled={this.togglePersonHandler}/>
-          {this.state.showPersons && (
-            <div>
-              <Persons 
+          <button
+            onClick={() => {
+              this.setState({ showCockpit: false })
+            }}
+          >
+            Remove Cockpit
+          </button>
+          <AuthContext.Provider value={{
+            authenticated: this.state.authenticated,
+            login: this.loginHandler
+          }}>
+            {this.state.showCockpit ? (
+            <Cockpit
+                title={this.props.appTitle}
+                showPersons={this.state.showPersons}
                 persons={this.state.persons}
-                clicked={this.deletePersonHandler}
-                changed={this.nameChangedHandler}/>
-            </div>
-          )}
+                toggled={this.togglePersonHandler}
+                login={this.loginHandler}/>
+              ) : null}
+              {persons}
+          </AuthContext.Provider>
         </Auxiliary>
       )
     }
