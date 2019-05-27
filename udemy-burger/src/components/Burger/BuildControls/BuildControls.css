@@ -8,3 +8,21 @@
 	margin: auto;
 	padding: 10px 0;
 }
+
+.OrderButton {
+	background: green;
+	color: #fff;
+	width: 16%;
+	height: 50px;
+	outline: none;
+	border: none;
+	font-weight: bold;
+	font-family: inherit;
+	margin-top: 10px;
+}
+
+.OrderButton:disabled {
+	background: grey;
+	width: 10%;
+	height: 35px;
+}
