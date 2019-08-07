@@ -24,7 +24,8 @@ class BurgerBuilder extends Component {
 		},
 		totalPrice: 4,
 		purchasable: false,
-		purchasing: false
+		purchasing: false,
+		loading: false
 	}
 
 	updatePurchaseState (ingredients) {
@@ -90,7 +91,25 @@ class BurgerBuilder extends Component {
 
 	purchaseContinueHandler = () => {
 		// alert("You continue!")
+		const order = {
+			ingredeients: this.state.ingredeients,
+			price: this.state.totalPrice,
+			customer: {
+				name: 'Di',
+				address: {
+					street: 'Teststreet blbl',
+					zipCode: '123',
+					country: 'Denmmark'
+				},
+				email: 'test@qwe.com'
+			},
+			deliveryMetod: 'fastest'
+		}
+		axios.post('/orders.json', order)
+			.then(response => console.log(response))
+			.catch(error => console.log(error));
 	}
+
 
 	render () {
 		const disabledInfo = {
