@@ -4,13 +4,13 @@ import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../Auxiliary/Auxiliary';
 
 
-const withOrderHandler = (WrappedComponent, axios) => {
+const withErrorHandler = (WrappedComponent, axios) => {
     return class extends Component {
         state = {
             error: null
         }
 
-        componentDidMount () {
+        componentWillMount () {
             axios.interceptors.response.use(req => {
                 this.setState({error: null});
                 return req;
@@ -39,4 +39,4 @@ const withOrderHandler = (WrappedComponent, axios) => {
     }
 }
 
-export default withOrderHandler
+export default withErrorHandler
