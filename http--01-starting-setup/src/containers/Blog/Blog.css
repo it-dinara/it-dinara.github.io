@@ -17,6 +17,7 @@
 }
 
 .Blog a:active, 
-.Blog a:focus {
+.Blog a:focus,
+.Blog a.active {
 	color: #fa923f;
 } 
