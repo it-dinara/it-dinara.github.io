@@ -9,18 +9,28 @@ class FullPost extends Component {
     }
 
     componentDidMount () {
-		console.log(this.props)
-        if(this.props.match.params.id) {
-            // console.log('this.state.loadedPost ' + !this.state.loadedPost)
-            if( !this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.id) ) {
-                axios.get('/posts/' + this.props.match.params.id)
-                .then(response => {
-                    // console.log(response);
-                    this.setState({loadedPost: response.data});
-                });
-            }
+		console.log(this.props);
+		this.loadData();
+	}
+	
+	componentDidUpdate() {
+		this.loadData();
+	}
+
+	loadData () {
+        if (this.props.match.params.id) {
+        	// console.log('this.state.loadedPost ' + !this.state.loadedPost)
+        	if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== +this.props.match.params.id)) {
+        		axios.get('/posts/' + this.props.match.params.id)
+        			.then(response => {
+        				// console.log(response);
+        				this.setState({
+        					loadedPost: response.data
+        				});
+        			});
+        	}
         }
-    }
+	}
 
     deletePostHandler = () => {
         axios.delete('/posts/' + this.props.id)
@@ -31,7 +41,7 @@ class FullPost extends Component {
 
     render () {
         let post = <p style={{textAlign: 'center'}}>Please select a Post!</p>;
-        if (this.props.id) {
+        if (this.props.match.params.id) {
             post = <p style={{textAlign: 'center'}}>Loading...!</p>;
         }
         if(this.state.loadedPost) {
