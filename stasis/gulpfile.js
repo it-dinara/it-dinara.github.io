@@ -16,7 +16,13 @@ var svgmin = require('gulp-svgmin');
 var path = require('path');
 var rename = require('gulp-rename');
 var cheerio = require('gulp-cheerio');
+var	pagebuilder = require('gulp-pagebuilder');
 
+gulp.task('default', function () {
+	gulp.src('src/*.html')
+		.pipe(pagebuilder('src'))
+		.pipe(gulp.dest('build/'));
+});
 
 gulp.task('sass', function() {
     gulp.src(['scss/*.scss'])
