@@ -29,7 +29,7 @@ class BurgerBuilder extends Component {
 		axios.get('https://react-my-burger-di.firebaseio.com/ingredients.json')
 			.then(response => {
 				this.setState({ingredients: response.data});
-				// console.log('response.data', response.data)
+				console.log('response.data', response.data)
 			})
 			.catch(error => {})
 	}
@@ -53,9 +53,11 @@ class BurgerBuilder extends Component {
 			...this.state.ingredients
 		};
 		updatedIngredients[type] = updatedCount;
+
 		const priceAddition = INGREDIENT_PRICES[type];
 		const oldPrice = this.state.totalPrice;
 		const newPrice = oldPrice + priceAddition;
+
 		this.setState({
 			totalPrice: newPrice,
 			ingredients: updatedIngredients
