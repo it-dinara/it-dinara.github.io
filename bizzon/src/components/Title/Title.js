@@ -3,7 +3,7 @@ import Box from '@material-ui/core/Box';
 
 
 const Title = (props) => (
-	<Box fontSize='40px' p='20px' fontWeight='800'>
+	<Box fontSize='40px' p='25px 0 15px' fontWeight='800' lineHeight='1' textTransform='uppercase'>
 		{props.title}
 	</Box>
 )

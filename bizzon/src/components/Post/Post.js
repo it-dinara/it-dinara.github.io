@@ -5,7 +5,7 @@ import Text from '../Text/Text';
 
 const Post = (props) => {
 	return (
-		<Box bgcolor='#e0e0e0' m='10px'>
+		<Box m='10px'>
 			<Title title={props.title}/>
 			<Text text={props.text}/>
 		</Box>

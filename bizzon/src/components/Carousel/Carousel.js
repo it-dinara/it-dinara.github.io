@@ -6,17 +6,25 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Post from '../Post/Post';
+import Picture from '../Picture/Picture';
 
 
 class Carousel extends Component {
 	state = {
-		posts: []
+		posts: [],
+		photos: [],
 	}
 
 	componentDidMount () {
 		axios.get('https://jsonplaceholder.typicode.com/posts')
 			.then(response => {
-				this.setState({posts: response.data})
+				const posts = response.data.slice(0, 10);
+				this.setState({posts: posts})
+			});
+		axios.get('https://jsonplaceholder.typicode.com/photos')
+			.then(response => {
+				const photos = response.data.slice(0, 10);
+				this.setState({photos: photos})
 			});
 	}
 
@@ -24,13 +32,14 @@ class Carousel extends Component {
 		const settings = {
 		  dots: false,
 		  infinite: true,
-		  speed: 500,
+		  speed: 300,
 		  slidesToShow: 1,
 		  slidesToScroll: 1,
-		  autoplay: false,
+		  autoplay: true,
 		  arrows: true,
 		  height: 'auto'
 		};
+
 		const posts = this.state.posts.map((item, i) => {
 			return (
 				<Post 
@@ -41,13 +50,25 @@ class Carousel extends Component {
 			)
 		});
 
+		const photos = this.state.photos.map((item, i) => {
+			return (
+				<Picture
+					key={i}
+					url={item.url}
+				/>
+			)
+		});
+
 
 		return (
 			<Box width='500px' m='10px auto'>
 				<Slider {...settings}>
-					{posts.map((elem, i) => (
-						<Box key={elem.title}>
-							{elem}
+					{photos.map((elem, i) => (
+						<Box key={i}>
+							<Box bgcolor='#e0e0e0' p='20px'>
+								{elem}
+								{posts[i]}
+							</Box>
 						</Box>
 					))}
 				</Slider>
