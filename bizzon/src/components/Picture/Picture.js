@@ -4,9 +4,9 @@ import Box from '@material-ui/core/Box';
 import Image from 'material-ui-image'
 
 
-const Picture = (props) => (
+const Picture = ({url}) => (
 	<Box width='200px' m='0 auto'>
-		<Image src={props.url}/>
+		<Image src={url}/>
 	</Box>
 )
 
