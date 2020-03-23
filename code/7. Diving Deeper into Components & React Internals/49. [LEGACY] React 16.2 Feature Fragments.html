@@ -1,0 +1,55 @@
+<p>If your project uses <strong>React 16.2</strong>, you can now use a built-in "Aux"&nbsp;component - a so called <strong>fragment</strong>.</p>
+
+<p>It's actually not called <code>Aux</code>&nbsp; but you simply use <code>&lt;&gt;</code>&nbsp; - an empty JSX tag.</p>
+
+
+
+
+
+
+
+<p>So the following code</p>
+
+
+
+
+
+
+
+<pre class="prettyprint linenums">&lt;Aux&gt;
+    &lt;h1&gt;First Element&lt;/h1&gt;
+    &lt;h1&gt;Second Element&lt;/h1&gt;
+&lt;/Aux&gt;</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p>becomes</p>
+
+
+
+
+
+<pre class="prettyprint linenums">&lt;&gt;
+    &lt;h1&gt;First Element&lt;/h1&gt;
+    &lt;h1&gt;Second Element&lt;/h1&gt;
+&lt;/&gt;</pre>
+
+
+
+
+
+
+
+
+
+
+
+<p>Behind the scenes, it does the same our <code>Aux</code>&nbsp; component did.</p>
