@@ -89,7 +89,7 @@ class ContactData extends Component {
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
                 },
-                value: '',
+                value: 'fastest',
                 validation: {},
                 valid: true
             }
@@ -104,9 +104,9 @@ class ContactData extends Component {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
         }
         const order = {
-            ingredients: this.props.ings,
-            price: this.props.price,
-            orderData: formData
+			price: this.props.price,
+            orderData: formData,
+			ingredients: this.props.ings,
 		}
 		
 		this.props.onOrderBurger(order)
@@ -201,9 +201,9 @@ class ContactData extends Component {
 
 const mapStateToProps = state => {
     return {
-        ings: state.ingredients,
-		price: state.totalPrice,
-		loading: state.loading
+        ings: state.burgerReducer.ingredients,
+		price: state.burgerReducer.totalPrice,
+		loading: state.order.loading
     }
 }
 
