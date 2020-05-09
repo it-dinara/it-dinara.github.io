@@ -150,7 +150,8 @@ class ContactData extends Component {
         };
         const updatedFormElement = { 
             ...updatedOrderForm[inputIdentifier]
-        };
+		};
+		console.log('event', event)
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched = true;
@@ -168,8 +169,9 @@ class ContactData extends Component {
         for (let key in this.state.orderForm) {
             formElementsArray.push({
                 id: key,
-                config: this.state.orderForm[key]
+				config: this.state.orderForm[key]
             });
+			console.log('formElementsArray', key)
         }
         let form = (
             <form onSubmit={this.orderHandler}>
