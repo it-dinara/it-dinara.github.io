@@ -33,7 +33,7 @@ export const auth = (email, password, isSignup) => {
         };
         let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAzZGwkEXQliS3UKdr46ZdMGz0__Zjd5Gw';
         if (!isSignup) {
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAzZGwkEXQliS3UKdr46ZdMGz0__Zjd5Gw';
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAzZGwkEXQliS3UKdr46ZdMGz0__Zjd5Gw';
         }
         axios.post(url, authData)
             .then(response => {
