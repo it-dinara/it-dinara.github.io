@@ -13,5 +13,5 @@ export {
 from './order';
 
 export {
-	auth
+	auth,
 } from './auth.js'
