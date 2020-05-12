@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import Button from '../../components/UI/Button/Button'
 import Input from '../../components/UI/Input/Input'
 import Spinner from '../../components/UI/Spinner/Spinner'
-import Modal from '../../components/UI/Modal/Modal'
+
 import classes from './Auth.css'
 import * as actions from '../../store/actions/index'
 
@@ -158,7 +158,9 @@ class Auth extends Component {
 					<Button btnType='Success' >SUBMIT</Button>
 				</form>
 				<Button btnType='Danger' clicked={this.switchAuthModeHandler}>
-					SWITCH TO {this.state.isSignup ? ' SIGNUP' : ' SIGNIN'}
+					SWITCH TO {
+						this.state.isSignup ? ' SIGNIN' : ' SIGNUP'
+					}
 				</Button>
 			</div>
 		)
