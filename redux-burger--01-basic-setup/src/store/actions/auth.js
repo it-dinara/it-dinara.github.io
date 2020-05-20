@@ -23,7 +23,7 @@ export const authFail = (error) => {
     };
 };
 
-export const authLogout = () => {
+export const logout = () => {
 	return {
 		type: actionTypes.AUTH_LOGOUT,
 	}
@@ -32,7 +32,7 @@ export const authLogout = () => {
 export const checkAuthTimeout = (expirationTime) => {
 	return dispatch => {
 		setTimeout(() => {
-			return dispatch(authLogout())
+			return dispatch(logout())
 		}
 		, expirationTime * 1000)
 	}
@@ -63,3 +63,10 @@ export const auth = (email, password, isSignup) => {
             });
     };
 };
+
+export const setAuthRedirectPath = (path) => {
+	return {
+		type: actionTypes.SET_AUTH_REDIRECT_PATH,
+		path: path
+	}
+}
