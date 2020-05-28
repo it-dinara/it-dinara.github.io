@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Redirect} from 'react-router-dom';
 
 import Order from '../../components/Order/Order';
 import axios from '../../axios-orders';
@@ -14,6 +15,11 @@ class Orders extends Component {
     }
 
     render () {
+		let redirect = null;
+		if(!this.props.isAuthenticated) {
+			redirect = <Redirect to='/'/>
+		}
+
 		let orders = <Spinner/>;
 		if (!this.props.loading) {
 			orders = this.props.orders.map(order => {
@@ -24,7 +30,10 @@ class Orders extends Component {
 					price={order.price} />
 			})
 		}
-        return orders;
+        return <React.Fragment>
+			{redirect}
+			{orders}
+		</React.Fragment>;
     }
 }
 
@@ -32,7 +41,8 @@ const mapStateToProps = state => {
 	return {
 		loading: state.order.loading,
 		orders: state.order.fetchedOrdersRes,
-		token: state.auth.token
+		token: state.auth.token,
+		isAuthenticated: state.auth.token !== null
 	}
 }
 
