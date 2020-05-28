@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
 
 import Order from '../../components/Order/Order';
 import axios from '../../axios-orders';
@@ -11,14 +10,10 @@ import Spinner from '../../components/UI/Spinner/Spinner'
 class Orders extends Component {
 
     componentDidMount() {
-		this.props.onFetchOrders(this.props.token)
+		this.props.onFetchOrders(this.props.token, this.props.userId)
     }
 
     render () {
-		let redirect = null;
-		if(!this.props.isAuthenticated) {
-			redirect = <Redirect to='/'/>
-		}
 
 		let orders = <Spinner/>;
 		if (!this.props.loading) {
@@ -30,10 +25,7 @@ class Orders extends Component {
 					price={order.price} />
 			})
 		}
-        return <React.Fragment>
-			{redirect}
-			{orders}
-		</React.Fragment>;
+        return orders;
     }
 }
 
@@ -42,13 +34,13 @@ const mapStateToProps = state => {
 		loading: state.order.loading,
 		orders: state.order.fetchedOrdersRes,
 		token: state.auth.token,
-		isAuthenticated: state.auth.token !== null
+		userId: state.auth.userId
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onFetchOrders: (token) => dispatch(actions.fetchOrders(token))
+		onFetchOrders: (token, userId) => dispatch(actions.fetchOrders(token, userId))
 	}
 }
 
