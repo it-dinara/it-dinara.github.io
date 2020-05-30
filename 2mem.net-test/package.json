@@ -1,13 +1,13 @@
 {
-  "name": "qwe",
+  "name": "2mem",
   "version": "0.1.0",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.9.4",
     "gulp-connect": "^5.5.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.2",
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
@@ -17,5 +17,12 @@
     "natives": "^1.1.6",
     "ruby": "^0.6.1",
     "sass": "^1.3.2"
-  }
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
