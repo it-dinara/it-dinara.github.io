@@ -4,28 +4,31 @@
 
 html {
 	height: 100%;
+	width: 100%;
 }
 
 
 body {
 	background: #fff;
 	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-	height: 1000px;
+	height: calc(100vh - 20px);
+	margin: 10px;
 	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-columns: 1fr 1fr;
 	gap: 2vw;
 	grid-template-areas: 
-		'a b'
-		'c e'
-		'd e'
-		'f f'
-		'g h';
-	grid-template-rows: 50% repeat(4, 1fr);
-	grid-template-columns: 30% 1fr;
+	'a b b'
+	'c c e'
+	'd d e'
+	'f f f'
+	'g g h';
+	grid-template-rows: 30% repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .el {
@@ -67,5 +70,31 @@ body {
 
 .el_8 {
 	grid-area: h;
+}
 
+
+@media all and (min-width: 1110px) {
+	.container {
+		height: 600px;
+		grid-template-areas:
+			'a b b f g'
+			'c c e f g'
+			'd d e f h';
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(5, 1fr);
+		gap: 10px;
+	}
+
+	.el {
+		background: #634a8f;
+	}
+
+	.el_7 {
+		height: 111%;
+	}
+
+	.el_8 {
+		height: 150px;
+		align-self: end;
+	}
 }
