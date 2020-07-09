@@ -1,0 +1,26 @@
+.Button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font: inherit;
+	padding: 10px;
+	margin: 10px;
+	font-weight: bold;
+	
+}
+
+.MenuButton {
+	font-size: 18px;
+	color: #ffffff;
+	border-radius: 15px;
+	width: 20%;
+	margin: 10px auto;
+	text-transform: uppercase;
+	background: #e91e63c9;
+}
+
+.MenuButton:hover {
+	background: #e63d77c9
+}
