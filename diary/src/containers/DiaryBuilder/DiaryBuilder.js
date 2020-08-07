@@ -4,7 +4,7 @@ import s from './DiaryBuilder.css'
 
 const diaryMenuTitle = [
 	{
-		text: 'Чувства',
+		text: 'Чувства test',
 	},
 	{
 		text: 'Тело',
