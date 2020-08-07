@@ -5,22 +5,23 @@
 	outline: none;
 	cursor: pointer;
 	font: inherit;
-	padding: 10px;
-	margin: 10px;
+	margin: 5px;
+	padding-left: 30px;
 	font-weight: bold;
+	text-align: left;
 	
 }
 
 .MenuButton {
 	font-size: 18px;
-	color: #ffffff;
-	border-radius: 15px;
-	width: 20%;
+	color: #000;
+	border-radius: 2px;
+	width: 100%;
 	margin: 10px auto;
-	text-transform: uppercase;
-	background: #e91e63c9;
+	background: transparent;
 }
 
 .MenuButton:hover {
-	background: #e63d77c9
+	color: grey
 }
+

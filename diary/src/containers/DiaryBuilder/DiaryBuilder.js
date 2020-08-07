@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Button from '../../components/UI/Button/Button.js'
+import s from './DiaryBuilder.css'
 
 const diaryMenuTitle = [
 	{
@@ -31,9 +32,11 @@ class DiaryBuilder extends Component {
 			<>
 				{
 					diaryMenuTitle.map((item, i) => (
-						<Button key={i} btnType="MenuButton">
-							{item.text}
-						</Button>
+						<div className={s.SideBar}>
+							<Button key={i} btnType="MenuButton">
+								{item.text}
+							</Button>
+						</div>
 					))
 				}
 				

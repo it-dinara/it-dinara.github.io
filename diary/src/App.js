@@ -1,12 +1,12 @@
 import React from 'react';
-import s from './App.css'
 import DiaryBuilder from "./containers/DiaryBuilder/DiaryBuilder.js";
+import Layout from "./hoc/Layout/Layout.js";
 
 function App() {
   return (
-    <div className={s.App}>
+    <Layout>
       < DiaryBuilder / >
-    </div>
+    </Layout>
   );
 }
 
