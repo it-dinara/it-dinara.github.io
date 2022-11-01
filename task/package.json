@@ -4,7 +4,7 @@
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.9.4",
     "gulp-connect": "^5.5.0",
     "gulp-livereload": "^3.8.1",
