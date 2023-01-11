@@ -6,8 +6,8 @@
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.4",
-    "gulp-connect": "^5.5.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-livereload": "^4.0.2",
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
