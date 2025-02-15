@@ -55,8 +55,6 @@ const data = [
   },
 ];
 
-//I show z-index only for uv property
-
 const Chart = function Chart() {
   function getZScore(
     arr: typeof data,
@@ -107,50 +105,56 @@ const Chart = function Chart() {
   const offPV = gradientOffset("pv");
 
   return (
-    <ResponsiveContainer
-      width={700}
-      height="80%"
-      minHeight={"100vh"}
-      minWidth={"320px"}
-    >
-      <ComposedChart
-        width={500}
-        height={300}
-        data={updatedData}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
+    <>
+      <h2 style={{ margin: "0 0 20px" }}>
+        The z-scores were calculated for pv property only.
+      </h2>
+      <ResponsiveContainer
+        width={700}
+        height="30%"
+        minHeight={"40vh"}
+        minWidth={"320px"}
+        maxHeight={500}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <defs>
-          <linearGradient id="splitColorPV" x1="0" y1="0" x2="0" y2="1">
-            <stop offset={offPV} stopColor="red" stopOpacity={1} />
-            <stop offset={offPV} stopColor="green" />
-          </linearGradient>
-        </defs>
-        <Line
-          type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        <Area
-          type="monotone"
-          dataKey="zscorePV"
-          stroke="red"
-          fill="url(#splitColorPV)"
-          activeDot={{ r: 8 }}
-        />
-      </ComposedChart>
-    </ResponsiveContainer>
+        <ComposedChart
+          width={500}
+          height={300}
+          data={updatedData}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <defs>
+            <linearGradient id="splitColorPV" x1="0" y1="0" x2="0" y2="1">
+              <stop offset={offPV} stopColor="red" stopOpacity={1} />
+              <stop offset={offPV} stopColor="green" />
+            </linearGradient>
+          </defs>
+          <Line
+            type="monotone"
+            dataKey="pv"
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
+          />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Area
+            type="monotone"
+            dataKey="zscorePV"
+            stroke="red"
+            fill="url(#splitColorPV)"
+            activeDot={{ r: 8 }}
+          />
+        </ComposedChart>
+      </ResponsiveContainer>
+    </>
   );
 };
 

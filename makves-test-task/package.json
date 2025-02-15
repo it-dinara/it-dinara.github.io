@@ -1,6 +1,5 @@
 {
   "name": "makves-test-task",
-  "home": "https://it-dinara.github.io/it-dinara.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,8 +7,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
