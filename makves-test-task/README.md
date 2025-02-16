@@ -1,3 +1,21 @@
+
+<br>
+
+# The result
+
+https://it-dinara.github.io/makves-test-task/dist/index.html
+
+<br>
+
+# Тестовое задание
+
+
+Необходимо модифицировать пример http://recharts.org/en-US/examples/SimpleLineChart
+- раскрасить все участки графиков на которых модуль z-score > 1 в красный цвет. Цвет точек графика должен совпадать с цветом участка.
+- справка по расчету z-score: https://en.wikipedia.org/wiki/Standard_score
+
+<br>
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
