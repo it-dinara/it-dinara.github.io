@@ -6,7 +6,7 @@ var food;
 function setup () {
   createCanvas(600, 600);
   s = new Snake();
-  frameRate(10);
+  frameRate(7);
   pickLocation();
 }
 

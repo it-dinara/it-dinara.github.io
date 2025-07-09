@@ -1,0 +1,10 @@
+string
+number
+undefined
+NaN
+boolean
+BigInt
+Symbol
+null == undefined; null !== undefined;
+Obj
+
