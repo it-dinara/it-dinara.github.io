@@ -1,0 +1,245 @@
+:root {
+  // dark
+  --color-sidebar-background-dark-default: #202127;
+  --color-sidebar-background-dark-hover: #2d2e34;
+  --color-sidebar-background-dark-active: #393a3f;
+  --color-text-dark-default: #f0f2ff;
+  --color-text-dark-hover: #f0f2ff;
+  --color-text-dark-active: #f0f2ff;
+  --color-text-logo-dark-default: #3b82f6;
+  --color-button-background-dark-default: #202127;
+  --color-button-background-dark-active: #4b5966;
+  --color-pages-background-dark-default: #3b4048;
+
+  // light
+  --color-sidebar-background-light-default: #fff;
+  --color-sidebar-background-light-hover: #f0f2ff;
+  --color-sidebar-background-light-active: #f0f2ff;
+  --color-text-light-default: #97a5b9;
+  --color-text-light-hover: #091b31;
+  --color-text-light-active: #0000b5;
+  --color-text-logo-light-default: #0000b5;
+  --color-button-background-light-default: #fff;
+  --color-button-background-light-active: #e2e8f0;
+  --color-pages-background-light-default: #e2e8f0;
+}
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.87);
+  height: 100vh;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+button:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input,
+option,
+textarea,
+::placeholder {
+  font-size: 13px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+textarea,
+select,
+input {
+  outline: none;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+  outline: 2px solid var(--blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
