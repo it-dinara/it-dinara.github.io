@@ -55,7 +55,6 @@ export default function App() {
             <Route path="/messages" element={<Heading>Messages</Heading>} />
             <Route path="/settings" element={<Heading>Settings</Heading>} />
             <Route path="/support" element={<Heading>Support</Heading>} />
-            <Route path="*" element={<Heading>Page Not Found</Heading>} />
           </Routes>
         </Pages>
       </Layout>
