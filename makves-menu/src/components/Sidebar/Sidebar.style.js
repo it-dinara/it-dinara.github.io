@@ -41,7 +41,7 @@ const Header = styled.button`
     opacity: ${({ $opened }) => ($opened ? 1 : 0)};
     transition: width ${sidebarTheme.transitions.default},
       opacity ${sidebarTheme.transitions.fast};
-      margin-left: ${({ $opened }) => ($opened ? "-25px" : "0")};
+    margin-left: "-25px";
   }
 
   .toggle-icon {
