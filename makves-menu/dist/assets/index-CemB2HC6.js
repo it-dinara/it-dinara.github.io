@@ -626,6 +626,7 @@ Please change the parent <Route path="${f}"> to <Route path="${f==="/"?"*":`${f}
 
   img {
     height: 32px;
+    width: 32px;
   }
 
   span {
@@ -639,6 +640,7 @@ Please change the parent <Route path="${f}"> to <Route path="${f==="/"?"*":`${f}
     opacity: `,`;
     transition: width `,`,
       opacity `,`;
+      margin-left: `,`;
   }
 
   .toggle-icon {
@@ -652,7 +654,7 @@ Please change the parent <Route path="${f}"> to <Route path="${f==="/"?"*":`${f}
     right: `,`;
     top: 17px;
   }
-`],j2.dimensions.headerPadding,x2.logo,({$opened:c})=>c?"auto":"0",({$opened:c})=>c?1:0,j2.transitions.default,j2.transitions.fast,({$opened:c})=>c&&"rotate(0)",j2.transitions.default,({$opened:c})=>c?x2.buttonActive:x2.buttonBackground,x2.text,({$opened:c})=>c?"-10px":"-44px"),qd=t2.nav.withConfig({displayName:"Menu",componentId:"sc-2ktl7g-2"})([`
+`],j2.dimensions.headerPadding,x2.logo,({$opened:c})=>c?"176px":"0",({$opened:c})=>c?1:0,j2.transitions.default,j2.transitions.fast,({$opened:c})=>c?"-25px":"0",({$opened:c})=>c&&"rotate(0)",j2.transitions.default,({$opened:c})=>c?x2.buttonActive:x2.buttonBackground,x2.text,({$opened:c})=>c?"-10px":"-44px"),qd=t2.nav.withConfig({displayName:"Menu",componentId:"sc-2ktl7g-2"})([`
   flex: 1;
   margin-top: 24px;
   display: flex;
@@ -852,7 +854,7 @@ Please change the parent <Route path="${f}"> to <Route path="${f==="/"?"*":`${f}
   transform: translate3d(`,`, 0, 0);
   transition-delay: "1000ms";
   animation: `,` 10s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
-`],k4,({$checked:c})=>c?1:0,({$checked:c})=>c?"0":"3px",S4),Gd=({toggleMode:c,mode:e,opened:l})=>{const[n,t]=g.useState(e!=="light");function s(){t(!n),c()}return E.jsxs(oK,{children:[E.jsx(rK,{id:"dn",checked:n,onChange:s}),E.jsxs(iK,{htmlFor:"dn",$checked:n,children:[E.jsxs(fK,{$checked:n,$opened:l,children:[E.jsx("span",{className:"crater--1"}),E.jsx("span",{className:"crater--2"}),E.jsx("span",{className:"crater--3"})]}),E.jsx(uK,{$checked:n}),E.jsx(mK,{$checked:n}),E.jsx(pK,{$checked:n}),E.jsx(dK,{$checked:n}),E.jsx(zK,{$checked:n}),E.jsx(LK,{$checked:n})]})]})};Gd.propTypes={toggleMode:_.func.isRequired,mode:_.oneOf(["light","dark"]).isRequired,opened:_.bool};const hK=[{title:"Home",icon:"fas-solid fa-house",path:"/"},{title:"Sales",icon:"chart-line",path:"/sales"},{title:"Costs",icon:"chart-column",path:"/costs"},{title:"Payments",icon:"wallet",path:"/payments"},{title:"Finances",icon:"chart-pie",path:"/finances"},{title:"Messages",icon:"envelope",path:"/messages"}],MK=[{title:"Settings",icon:"sliders",path:"/settings"},{title:"Support",icon:"phone-volume",path:"/support"}],Yd=({color:c,toggleMode:e})=>{const l=localStorage.getItem("sidebarOpened")==="true",[n,t]=g.useState(l||!1);return g.useEffect(()=>{localStorage.setItem("sidebarOpened",n)},[n]),E.jsx(gd,{theme:{mode:c,...j2},children:E.jsxs(tK,{$opened:n,children:[E.jsx(Gd,{toggleMode:e,mode:c,opened:n}),E.jsxs(sK,{$opened:n,"aria-expanded":n,onClick:()=>t(!n),type:"button",children:[E.jsx("img",{src:vY,alt:"Logo"}),E.jsx("span",{children:"TensorFlow"}),E.jsx(n0,{className:"toggle-icon",icon:n?"angle-left":"angle-right"})]}),E.jsx(qd,{children:hK.map(s=>E.jsxs(wn,{to:s.path,$opened:n,children:[E.jsx(n0,{icon:s.icon}),E.jsx("span",{children:s.title})]},s.title))}),E.jsx(aK,{children:MK.map(s=>E.jsxs(wn,{to:s.path,$opened:n,children:[E.jsx(n0,{icon:s.icon}),E.jsx("span",{children:s.title})]},s.title))})]})})};Yd.propTypes={color:_.string,toggleMode:_.func};xC.add(sG);const CK=t2.div.withConfig({displayName:"Layout",componentId:"sc-o0hk5m-0"})([`
+`],k4,({$checked:c})=>c?1:0,({$checked:c})=>c?"0":"3px",S4),Gd=({toggleMode:c,mode:e,opened:l})=>{const n=e!=="light",t=()=>{c()};return E.jsxs(oK,{children:[E.jsx(rK,{id:"dn",checked:n,onChange:t,"aria-label":"Toggle day/night mode"}),E.jsxs(iK,{htmlFor:"dn",$checked:n,children:[E.jsxs(fK,{$checked:n,$opened:l,children:[E.jsx("span",{className:"crater--1"}),E.jsx("span",{className:"crater--2"}),E.jsx("span",{className:"crater--3"})]}),E.jsx(uK,{$checked:n}),E.jsx(mK,{$checked:n}),E.jsx(pK,{$checked:n}),E.jsx(dK,{$checked:n}),E.jsx(zK,{$checked:n}),E.jsx(LK,{$checked:n})]})]})};Gd.propTypes={toggleMode:_.func.isRequired,mode:_.oneOf(["light","dark"]).isRequired,opened:_.bool};const hK=[{title:"Home",icon:"fas-solid fa-house",path:"/"},{title:"Sales",icon:"chart-line",path:"/sales"},{title:"Costs",icon:"chart-column",path:"/costs"},{title:"Payments",icon:"wallet",path:"/payments"},{title:"Finances",icon:"chart-pie",path:"/finances"},{title:"Messages",icon:"envelope",path:"/messages"}],MK=[{title:"Settings",icon:"sliders",path:"/settings"},{title:"Support",icon:"phone-volume",path:"/support"}],Yd=({color:c,toggleMode:e})=>{const l=localStorage.getItem("sidebarOpened")==="true",[n,t]=g.useState(l||!1);return g.useEffect(()=>{localStorage.setItem("sidebarOpened",n)},[n]),E.jsx(gd,{theme:{mode:c,...j2},children:E.jsxs(tK,{$opened:n,children:[E.jsx(Gd,{toggleMode:e,mode:c,opened:n}),E.jsxs(sK,{$opened:n,"aria-expanded":n,onClick:()=>t(!n),type:"button","aria-label":"Toggle sidebar",children:[E.jsx("img",{src:vY,alt:"Logo"}),E.jsx("span",{children:"TensorFlow"}),E.jsx(n0,{className:"toggle-icon",icon:n?"angle-left":"angle-right"})]}),E.jsx(qd,{children:hK.map(s=>E.jsxs(wn,{to:s.path,$opened:n,children:[E.jsx(n0,{icon:s.icon}),E.jsx("span",{children:s.title})]},s.title))}),E.jsx(aK,{children:MK.map(s=>E.jsxs(wn,{to:s.path,$opened:n,children:[E.jsx(n0,{icon:s.icon}),E.jsx("span",{children:s.title})]},s.title))})]})})};Yd.propTypes={color:_.string,toggleMode:_.func};xC.add(sG);const CK=t2.div.withConfig({displayName:"Layout",componentId:"sc-o0hk5m-0"})([`
   display: flex;
   height: 100vh;
   width: 100vw;

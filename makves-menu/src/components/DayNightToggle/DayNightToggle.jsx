@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import {
   ToggleWrapper,
@@ -14,17 +13,21 @@ import {
 } from "./DayNightToggle.style";
 
 const DayNightToggle = ({ toggleMode, mode, opened }) => {
-  const [checked, setChecked] = useState(mode === "light" ? false : true);
-  function handleChange() {
-    setChecked(!checked);
+  const checked = mode !== "light";
+  const handleChange = () => {
     toggleMode();
-  }
+  };
 
   return (
     <ToggleWrapper>
-      <HiddenCheckbox id="dn" checked={checked} onChange={handleChange} />
+      <HiddenCheckbox
+        id="dn"
+        checked={checked}
+        onChange={handleChange}
+        aria-label="Toggle day/night mode"
+      />
 
-      <ToggleLabel htmlFor="dn" $checked={checked} >
+      <ToggleLabel htmlFor="dn" $checked={checked}>
         <ToggleItem $checked={checked} $opened={opened}>
           <span className="crater--1" />
           <span className="crater--2" />

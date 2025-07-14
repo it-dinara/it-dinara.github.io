@@ -27,6 +27,7 @@ const Header = styled.button`
 
   img {
     height: 32px;
+    width: 32px;
   }
 
   span {
@@ -36,10 +37,11 @@ const Header = styled.button`
     white-space: nowrap;
     overflow: hidden;
     color: ${themeColors.logo};
-    width: ${({ $opened }) => ($opened ? "auto" : "0")};
+    width: ${({ $opened }) => ($opened ? "176px" : "0")};
     opacity: ${({ $opened }) => ($opened ? 1 : 0)};
     transition: width ${sidebarTheme.transitions.default},
       opacity ${sidebarTheme.transitions.fast};
+      margin-left: ${({ $opened }) => ($opened ? "-25px" : "0")};
   }
 
   .toggle-icon {

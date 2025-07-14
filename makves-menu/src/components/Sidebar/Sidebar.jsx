@@ -35,6 +35,8 @@ const Sidebar = ({ color, toggleMode }) => {
     localStorage.setItem("sidebarOpened", opened);
   }, [opened]);
 
+  
+
   return (
     <ThemeProvider theme={{ mode: color, ...sidebarTheme }}>
       <SidebarContainer $opened={opened}>
@@ -44,6 +46,7 @@ const Sidebar = ({ color, toggleMode }) => {
           aria-expanded={opened}
           onClick={() => setOpened(!opened)}
           type="button"
+          aria-label="Toggle sidebar"
         >
           <img src={logo} alt="Logo" />
           <span>TensorFlow</span>
